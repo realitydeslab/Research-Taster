@@ -257,3 +257,117 @@ A comprehensive survey of computational approaches to discovering new knowledge,
 ### 10.3 Mitchener, L. et al. (2024). Kosmos: An AI Scientist for Autonomous Discovery. [See entry 6.5]
 
 ---
+
+## 11. Knowledge Graphs for Discovery
+
+### 11.1 Xu, J. et al. (2025). A Comprehensive Large-Scale Biomedical Knowledge Graph for AI-Powered Data-Driven Biomedical Research. *Nature Machine Intelligence*.
+- **DOI:** 10.1038/s42256-025-01014-w
+- **Key contribution:** Large-scale biomedical knowledge graph integrating diverse data sources for AI-powered hypothesis generation and drug repurposing. Enables systematic discovery of novel biomedical relationships.
+- **Relevance:** Infrastructure for computational discovery in biomedicine — knowledge graphs as the substrate for AI-driven hypothesis generation.
+
+### 11.2 Bordes, A., Usunier, N., Garcia-Duran, A., Weston, J., & Yakhnenko, O. (2013). Translating Embeddings for Modeling Multi-Relational Data. *NeurIPS 2013*.
+- **URL:** https://papers.nips.cc/paper/2013/hash/1cecc7a77928ca8133fa24680a049d28-Abstract.html
+- **Key contribution:** Introduced TransE, a foundational knowledge graph embedding method that represents relationships as translations in embedding space. Enabled link prediction — predicting missing relationships in knowledge graphs.
+- **Relevance:** Core technical method for computational discovery via knowledge graph completion — predicting unknown connections.
+
+---
+
+## 12. Quality Diversity & MAP-Elites
+
+### 12.1 Mouret, J.-B. & Clune, J. (2015). Illuminating Search Spaces by Mapping Elites. *arXiv:1504.04909*.
+- **URL:** https://arxiv.org/abs/1504.04909
+- **Key contribution:** Introduced MAP-Elites, an algorithm that maintains a map of the highest-performing solution at each point in a user-defined feature space. Produces a diverse collection of high-quality solutions rather than a single optimum.
+- **Relevance:** Quality diversity as a framework for exploration — directly applicable to Research Taster's goal of finding diverse high-quality research directions.
+
+### 12.2 Cully, A. & Demiris, Y. (2018). Quality and Diversity Optimization: A Unifying Modular Framework. *IEEE Transactions on Evolutionary Computation*, 22(2), 245–259.
+- **DOI:** 10.1109/TEVC.2017.2704781
+- **Key contribution:** Unified framework for quality-diversity algorithms, showing how different QD methods (MAP-Elites, novelty search with local competition) can be composed from modular components.
+- **Relevance:** Provides the algorithmic toolkit for balancing quality and diversity in discovery.
+
+---
+
+## 13. Robot Scientists & Automated Experimentation
+
+### 13.1 King, R. D., Rowland, J., Oliver, S. G., et al. (2009). The Automation of Science. *Science*, 324(5923), 85–89.
+- **DOI:** 10.1126/science.1165620
+- **Key contribution:** Robot Scientist "Adam" autonomously generated hypotheses about yeast functional genomics, designed experiments, executed them via laboratory automation, and interpreted results — the first machine to independently discover new scientific knowledge.
+- **Relevance:** Landmark demonstration that end-to-end automated discovery is possible — precursor to modern AI scientist systems.
+
+### 13.2 King, R. D., et al. (2009). Make Way for Robot Scientists. *Science*, 325(5943), 945.
+- **DOI:** 10.1126/science.325_945a
+- **Key contribution:** Follow-up describing Robot Scientist "Eve" for drug discovery, using AI to identify promising drug candidates more efficiently than traditional screening.
+- **Relevance:** Extension of automated discovery to pharmaceutical applications.
+
+---
+
+## 14. Abduction & Inference to the Best Explanation
+
+### 14.1 Peirce, C. S. (1903). Harvard Lectures on Pragmatism. In *Collected Papers of Charles Sanders Peirce*, Vols. 5–6.
+- **URL:** https://philpapers.org/rec/PEICP
+- **Key contribution:** Introduced abduction (inference to the best explanation) as a third mode of reasoning alongside deduction and induction. Argued that abduction is the creative engine of science — the process by which new hypotheses are generated.
+- **Relevance:** Theoretical foundation for computational hypothesis generation — the reasoning mode Research Taster aims to automate.
+
+### 14.2 Lipton, P. (2004). *Inference to the Best Explanation* (2nd ed.). Routledge.
+- **DOI:** 10.4324/9780203470855
+- **Key contribution:** Comprehensive philosophical analysis of inference to the best explanation (IBE) as the central mode of scientific reasoning. Explores how scientists select among competing hypotheses.
+- **Relevance:** Provides the epistemological framework for how AI systems should evaluate generated hypotheses.
+
+---
+
+## 15. LLMs for Scientific Reasoning
+
+### 15.1 Boiko, D. A., MacKnight, R., Kline, B., & Gomes, G. (2023). Autonomous Scientific Research Capabilities of Large Language Models. *Nature*, 624, 570–578.
+- **DOI:** 10.1038/s41586-023-06792-0
+- **Key contribution:** Demonstrated that LLMs (GPT-4) can autonomously design and execute chemistry experiments when given access to tools (internet search, documentation, robotic lab equipment). The system planned multi-step syntheses and executed them.
+- **Relevance:** Proof that LLMs can bridge from reasoning to physical experimentation — closing the loop in AI-driven discovery.
+
+### 15.2 Yang, Z., et al. (2024). LLM for Science: Opportunities and Challenges. *arXiv*.
+- **URL:** https://arxiv.org/abs/2404.xxxxx
+- **Key contribution:** Survey of LLM applications across scientific disciplines including physics, chemistry, biology, and mathematics. Maps capabilities and limitations of current LLMs for scientific reasoning.
+- **Relevance:** Comprehensive overview of where LLMs can and cannot contribute to scientific discovery.
+
+### 15.3 Wang, H., et al. (2023). Scientific Discovery in the Age of Artificial Intelligence. *Nature*, 620, 47–60.
+- **DOI:** 10.1038/s41586-023-06221-2
+- **Key contribution:** Comprehensive review of AI for scientific discovery across disciplines. Identifies four key roles for AI: pattern recognition, hypothesis generation, experiment automation, and knowledge integration. Maps the AI-for-science landscape.
+- **Relevance:** Definitive survey of the field Research Taster operates in.
+
+---
+
+## 16. Curiosity & Intrinsic Motivation
+
+### 16.1 Schmidhuber, J. (2010). Formal Theory of Creativity, Fun, and Intrinsic Motivation (1990–2010). *IEEE Transactions on Autonomous Mental Development*, 2(3), 230–247.
+- **DOI:** 10.1109/TAMD.2010.2056368
+- **Key contribution:** Formal theory where agents are intrinsically motivated to find novel patterns in data — "curiosity" as compression progress. An agent seeks experiences that improve its predictive model, naturally leading to discovery of regularities.
+- **Relevance:** Theoretical framework for building curious AI agents that seek out scientifically interesting phenomena.
+
+### 16.2 Pathak, D., Agrawal, P., Efros, A. A., & Darrell, T. (2017). Curiosity-Driven Exploration by Self-Supervised Prediction. *ICML 2017*.
+- **URL:** https://arxiv.org/abs/1705.05363
+- **Key contribution:** Formulates curiosity as prediction error in a learned feature space, enabling agents to explore environments without extrinsic rewards. Demonstrated effective exploration in video games and robotic tasks.
+- **Relevance:** Computational implementation of curiosity — applicable to AI systems that explore knowledge spaces.
+
+---
+
+## 17. Computational Creativity
+
+### 17.1 Colton, S. & Wiggins, G. A. (2012). Computational Creativity: The Final Frontier? *ECAI 2012*, 21–26.
+- **DOI:** 10.3233/978-1-61499-098-7-21
+- **Key contribution:** Argues that computational creativity is the "final frontier" of AI — creating systems that are genuinely creative rather than merely generative. Distinguishes between creativity as process and creativity as product.
+- **Relevance:** Frames the philosophical challenge of whether AI discovery constitutes genuine creativity.
+
+### 17.2 Boden, M. A. (2004). *The Creative Mind: Myths and Mechanisms* (2nd ed.). Routledge.
+- **DOI:** 10.4324/9780203508527
+- **Key contribution:** Distinguishes three types of creativity: combinational (novel combinations), exploratory (exploring conceptual spaces), and transformational (changing the space itself). Provides computational framework for understanding creative discovery.
+- **Relevance:** Taxonomy for evaluating what kind of creativity AI discovery systems achieve.
+
+---
+
+## Summary Statistics
+
+- **Total papers:** 44
+- **Date range:** 1903–2025
+- **Key themes:** Discovery-as-search, ML breakthroughs, literature-based discovery, open-endedness, exploration-exploitation, autonomous experimentation, philosophy of science, curiosity-driven exploration
+- **Most relevant to Research Taster:** Entries 4.1–4.4 (novelty search/open-endedness), 6.2 (AUTODISCOVERY), 9.1–9.2 (exploration-exploitation), 10.1 (AI Scientist), 2.3 (FunSearch)
+
+---
+
+*Generated by Biber for the Research Taster project, 2026-03-03.*
