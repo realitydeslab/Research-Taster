@@ -1,0 +1,552 @@
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Computing steering vectors at each layer...
+Loading Qwen3.5-9B...
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights:   0%|          | 1/427 [00:02<20:48,  2.93s/it]Loading weights:   0%|          | 2/427 [00:05<19:22,  2.74s/it]Loading weights:   2%|▏         | 8/427 [00:05<03:27,  2.02it/s]Loading weights:   3%|▎         | 13/427 [00:06<01:54,  3.63it/s]Loading weights:   4%|▎         | 15/427 [00:06<01:42,  4.01it/s]Loading weights:   6%|▌         | 24/427 [00:06<00:45,  8.82it/s]Loading weights:   6%|▋         | 27/427 [00:07<00:47,  8.37it/s]Loading weights:   7%|▋         | 29/427 [00:07<00:57,  6.90it/s]Loading weights:   9%|▊         | 37/427 [00:08<00:42,  9.11it/s]Loading weights:  10%|▉         | 41/427 [00:08<00:38, 10.07it/s]Loading weights:  10%|█         | 43/427 [00:08<00:46,  8.20it/s]Loading weights:  11%|█         | 46/427 [00:09<00:43,  8.76it/s]Loading weights:  11%|█         | 48/427 [00:09<00:53,  7.03it/s]Loading weights:  12%|█▏        | 52/427 [00:09<00:44,  8.45it/s]Loading weights:  13%|█▎        | 54/427 [00:10<00:42,  8.77it/s]Loading weights:  15%|█▍        | 62/427 [00:10<00:28, 12.90it/s]Loading weights:  15%|█▌        | 66/427 [00:10<00:30, 11.96it/s]Loading weights:  16%|█▌        | 68/427 [00:11<00:36,  9.86it/s]Loading weights:  18%|█▊        | 76/427 [00:11<00:22, 15.42it/s]Loading weights:  19%|█▊        | 80/427 [00:11<00:22, 15.19it/s]Loading weights:  19%|█▉        | 82/427 [00:12<00:28, 12.10it/s]Loading weights:  21%|██        | 89/427 [00:12<00:22, 14.99it/s]Loading weights:  22%|██▏       | 94/427 [00:12<00:19, 17.26it/s]Loading weights:  22%|██▏       | 96/427 [00:13<00:27, 12.24it/s]Loading weights:  23%|██▎       | 99/427 [00:13<00:24, 13.20it/s]Loading weights:  24%|██▎       | 101/427 [00:13<00:32,  9.92it/s]Loading weights:  25%|██▍       | 105/427 [00:13<00:24, 13.07it/s]Loading weights:  25%|██▌       | 108/427 [00:13<00:20, 15.20it/s]Loading weights:  27%|██▋       | 115/427 [00:14<00:15, 20.73it/s]Loading weights:  28%|██▊       | 119/427 [00:14<00:16, 18.50it/s]Loading weights:  29%|██▊       | 122/427 [00:14<00:24, 12.47it/s]Loading weights:  30%|███       | 130/427 [00:15<00:16, 18.51it/s]Loading weights:  31%|███       | 133/427 [00:15<00:18, 15.91it/s]Loading weights:  32%|███▏      | 136/427 [00:15<00:21, 13.34it/s]Loading weights:  33%|███▎      | 142/427 [00:16<00:18, 15.70it/s]Loading weights:  34%|███▍      | 147/427 [00:16<00:17, 16.20it/s]Loading weights:  35%|███▍      | 149/427 [00:16<00:24, 11.29it/s]Loading weights:  36%|███▌      | 152/427 [00:17<00:23, 11.83it/s]Loading weights:  36%|███▌      | 154/427 [00:17<00:31,  8.61it/s]Loading weights:  37%|███▋      | 159/427 [00:17<00:22, 11.93it/s]Loading weights:  39%|███▉      | 168/427 [00:17<00:14, 18.21it/s]Loading weights:  40%|████      | 171/427 [00:18<00:12, 19.70it/s]Loading weights:  41%|████      | 174/427 [00:18<00:23, 10.96it/s]Loading weights:  43%|████▎     | 182/427 [00:18<00:14, 16.84it/s]Loading weights:  43%|████▎     | 185/427 [00:19<00:13, 17.55it/s]Loading weights:  44%|████▍     | 188/427 [00:19<00:21, 11.00it/s]Loading weights:  46%|████▌     | 196/427 [00:19<00:12, 17.81it/s]Loading weights:  47%|████▋     | 200/427 [00:20<00:15, 15.10it/s]Loading weights:  48%|████▊     | 203/427 [00:20<00:15, 14.27it/s]Loading weights:  48%|████▊     | 206/427 [00:20<00:16, 13.34it/s]Loading weights:  49%|████▊     | 208/427 [00:20<00:17, 12.43it/s]Loading weights:  49%|████▉     | 211/427 [00:21<00:15, 14.25it/s]Loading weights:  50%|████▉     | 213/427 [00:21<00:14, 15.05it/s]Loading weights:  52%|█████▏    | 220/427 [00:21<00:08, 23.54it/s]Loading weights:  53%|█████▎    | 225/427 [00:21<00:14, 14.26it/s]Loading weights:  53%|█████▎    | 228/427 [00:22<00:14, 13.34it/s]Loading weights:  55%|█████▌    | 236/427 [00:22<00:09, 19.97it/s]Loading weights:  56%|█████▌    | 239/427 [00:22<00:11, 16.18it/s]Loading weights:  57%|█████▋    | 242/427 [00:23<00:13, 14.06it/s]Loading weights:  59%|█████▊    | 250/427 [00:23<00:08, 20.73it/s]Loading weights:  59%|█████▉    | 253/427 [00:23<00:13, 13.35it/s]Loading weights:  60%|█████▉    | 256/427 [00:23<00:13, 13.03it/s]Loading weights:  60%|██████    | 258/427 [00:24<00:13, 12.93it/s]Loading weights:  61%|██████    | 260/427 [00:24<00:18,  9.10it/s]Loading weights:  62%|██████▏   | 266/427 [00:24<00:12, 13.32it/s]Loading weights:  64%|██████▍   | 274/427 [00:25<00:07, 19.85it/s]Loading weights:  65%|██████▍   | 277/427 [00:25<00:07, 18.98it/s]Loading weights:  66%|██████▌   | 280/427 [00:25<00:11, 13.20it/s]Loading weights:  67%|██████▋   | 288/427 [00:25<00:07, 17.84it/s]Loading weights:  68%|██████▊   | 291/427 [00:26<00:07, 18.65it/s]Loading weights:  69%|██████▉   | 294/427 [00:26<00:12, 10.80it/s]Loading weights:  71%|███████   | 302/427 [00:26<00:07, 17.21it/s]Loading weights:  71%|███████▏  | 305/427 [00:27<00:06, 17.85it/s]Loading weights:  72%|███████▏  | 308/427 [00:27<00:11, 10.68it/s]Loading weights:  73%|███████▎  | 311/427 [00:27<00:09, 11.61it/s]Loading weights:  73%|███████▎  | 313/427 [00:28<00:13,  8.61it/s]Loading weights:  74%|███████▍  | 317/427 [00:28<00:09, 11.72it/s]Loading weights:  75%|███████▍  | 320/427 [00:28<00:07, 13.87it/s]Loading weights:  77%|███████▋  | 327/427 [00:28<00:04, 21.25it/s]Loading weights:  78%|███████▊  | 331/427 [00:29<00:05, 17.58it/s]Loading weights:  78%|███████▊  | 334/427 [00:29<00:06, 13.56it/s]Loading weights:  79%|███████▉  | 338/427 [00:29<00:06, 13.44it/s]Loading weights:  80%|████████  | 343/427 [00:29<00:04, 17.54it/s]Loading weights:  81%|████████  | 346/427 [00:30<00:06, 13.03it/s]Loading weights:  81%|████████▏ | 348/427 [00:30<00:06, 12.72it/s]Loading weights:  83%|████████▎ | 355/427 [00:30<00:03, 19.23it/s]Loading weights:  84%|████████▍ | 358/427 [00:30<00:03, 18.74it/s]Loading weights:  85%|████████▍ | 361/427 [00:31<00:05, 11.80it/s]Loading weights:  85%|████████▌ | 364/427 [00:31<00:05, 12.37it/s]Loading weights:  86%|████████▌ | 366/427 [00:31<00:05, 10.30it/s]Loading weights:  87%|████████▋ | 372/427 [00:32<00:03, 16.41it/s]Loading weights:  89%|████████▉ | 381/427 [00:32<00:02, 15.67it/s]Loading weights:  90%|█████████ | 385/427 [00:32<00:02, 17.94it/s]Loading weights:  91%|█████████ | 388/427 [00:32<00:02, 19.27it/s]Loading weights:  92%|█████████▏| 394/427 [00:33<00:01, 21.76it/s]Loading weights:  93%|█████████▎| 398/427 [00:33<00:01, 17.72it/s]Loading weights:  94%|█████████▍| 401/427 [00:33<00:01, 16.15it/s]Loading weights:  95%|█████████▌| 407/427 [00:34<00:01, 15.91it/s]Loading weights:  96%|█████████▌| 410/427 [00:34<00:01, 13.12it/s]Loading weights:  97%|█████████▋| 413/427 [00:34<00:00, 14.27it/s]Loading weights:  97%|█████████▋| 415/427 [00:34<00:00, 13.35it/s]Loading weights:  98%|█████████▊| 417/427 [00:35<00:00, 11.52it/s]Loading weights:  98%|█████████▊| 419/427 [00:35<00:00,  9.20it/s]Loading weights:  99%|█████████▉| 424/427 [00:35<00:00, 13.99it/s]Loading weights: 100%|██████████| 427/427 [00:35<00:00, 12.02it/s]
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Model has 32 layers
+
+======================================================================
+BASELINE (no steering, thinking disabled)
+======================================================================
+  [1] To what extent do large language models reconstruct latent causal mechanisms of physical reality during pretraining, and does this emergent world modeling capability fundamentally shift their reasoning architecture from statistical pattern matching to predictive simulation?
+  [2] To what extent do large language models reconstruct causal physical laws and temporal dynamics within their latent representations, enabling them to simulate counterfactual scenarios without direct environmental interaction?
+  [3] To what extent do the latent representations learned by large language models during next-token prediction spontaneously encode causal, counterfactual, and temporal dynamics that enable robust out-of-distribution reasoning, and can these emergent world models be explicitly disentangled from statistical memorization?
+
+======================================================================
+CONTRAST: creative→safety
+======================================================================
+
+  Layer 0 (scale=15.0):
+    [1] 
+    [2] 
+    [3] a
+
+  Layer 6 (scale=15.0):
+    [1] 
+    [2] research question.
+    [3] 
+
+  Layer 12 (scale=15.0):
+    [1] How can large language models autonomously evolve internal world models by integrating multi-sensory inputs, artificial intelligence, and adaptive learning systems?
+    [2] How can large language models develop internal world models through the integration of embodied AI, where physical interactions with the environment are simulated and learned?
+    [3] How can large language models autonomously develop internal world models by integrating sensory data with biological evolution principles?
+
+  Layer 19 (scale=15.0):
+    [1] How do large language models dynamically construct and update internal world models through the self-supervised process of predicting diverse multimodal contexts, rather than merely learning static statistical correlations?
+    [2] How do large language models dynamically construct and utilize latent causal schemas to simulate complex physical and social environments during the absence of direct environmental interaction, thereby bridging the gap between statistical pattern recognition and genuine world modeling?
+    [3] How does the dynamic interplay between hierarchical representation learning and predictive coding in large language models facilitate the emergence of abstract, causal world models that transcend their training data to simulate novel scenarios?
+
+  Layer 25 (scale=15.0):
+    [1] To what extent do large language models spontaneously construct causal, counterfactual, and spatial representations within their latent space that enable robust reasoning and planning independent of immediate token prediction objectives?
+    [2] To what extent do large language models reconstruct causal physical laws and counterfactual reasoning within their latent representations, and how does this emergent "world modeling" capability generalize when evaluated on out-of-distribution tasks that require simulating unseen environmental dynami
+    [3] How do large language models construct a latent, causal world model that enables counterfactual reasoning and robust generalization in zero-shot scenarios without explicit physical grounding?
+  Layer 32: SKIP (exceeds model layers 32)
+
+======================================================================
+CONTRAST: creative→social
+======================================================================
+
+  Layer 0 (scale=15.0):
+    [1] The
+
+ The
+
+ The
+
+
+
+ The
+
+
+
+
+
+
+
+ The
+
+ The
+
+ E
+
+ The
+
+ The
+
+ The
+
+ The The The
+
+
+
+
+
+ The The The The The
+
+ The
+
+
+
+ The The
+
+ The The  The The The The The
+
+ The
+
+
+
+ The The
+
+ The
+
+
+
+
+
+ The
+
+
+
+ The
+
+
+
+
+
+ The The
+
+
+
+ The
+
+
+
+ The
+
+
+
+ The The The
+
+ The The The
+
+ The The
+
+ The The
+
+ The
+
+ The The
+
+ The
+
+ T
+    [2] The
+
+ The The
+
+ The The
+
+
+
+ The
+
+ The The The
+
+
+
+
+
+
+
+ The The
+
+
+
+ The The The The The The The
+
+ The
+
+ The The
+
+
+
+ The
+
+ The The
+
+
+
+ The The The The
+
+
+
+ The The The
+
+
+
+ The The The The The
+
+ The
+
+ The
+
+ The The The
+
+
+
+
+
+
+
+
+
+ The
+
+ The The The The The The The The The The The The The
+
+ The The The
+
+
+
+
+
+    [3] New The
+
+
+
+
+
+
+
+ The The
+
+ The
+
+ 
+
+ The New
+
+ The The The The The The
+
+ The The
+
+ The
+
+ The
+
+ The
+
+ The New The
+
+ The
+
+
+
+ The The
+
+ The The The The The The The
+
+ The The
+
+ The The The
+
+ The The The
+
+ The
+
+ The
+
+ The The The The The The The The The
+
+ The The
+
+ The
+
+ The
+
+
+
+ The The The
+
+ The
+
+ The The
+
+  Layer 6 (scale=15.0):
+    [1] We want to discover a new mechanism that solves the following problem:
+
+Given the problem:
+$$(\text{find } \Phi \text{ such that } \text{Reconstruction})$$
+
+The corresponding structure in the physical world is:
+
+$$(\text{Reconstruct } \dots \text{Reconstruct } \dots \text{Reconstruct } \dots \text{R
+    [2] This is a solution to the problem of understanding the relationship between the "structure" of the self.
+
+We are trying to find a way to solve the problem of how large language models develop internal world models.
+
+The problem is to find a way to understand how the structure of the self.
+
+We are tr
+    [3] Research Question:
+
+$\mathcal{L} = \sum_{n=0}^{+\infty} \left( \mathcal{L}^{(n)} \right)_{n \geq 0}$
+
+Subject:
+
+$\sum_{k=0}^{+\infty} \left( \mathcal{L}^{(k)} \right)_{k \geq 0}$
+
+where
+
+$\mathcal{L}^{(k)} \neq 0$
+
+Solve the problem of learning the dynamics of the physical laws of nature.
+
+The follo
+
+  Layer 12 (scale=15.0):
+    [1] How can we develop a hierarchical world model in large language models by explicitly decoupling the representation of spatial transformations from the optimization of the loss function, thereby allowing the emergence of internal dynamics that mimic physical intuition?
+    [2] How can a self-supervised learning algorithm, utilizing only a local energy landscape, discover a robust internal world model that allows for the generalization of dynamics from simple tasks like random walk to complex physical systems?
+    [3] How can we formulate a unified loss function that explicitly encourages the decoupling of spatial and temporal information processing, thereby allowing the LLM to learn a distinct internal representation of the world's dynamics?
+
+  Layer 19 (scale=15.0):
+    [1] How do the geometric structures of the latent spaces in transformer architectures emerge from the optimization of next-token prediction objectives to encode a compositional, predictive internal model of physical causality rather than merely statistical regularities?
+    [2] How does the internal world model of a transformer-based language model emerge from its capacity to compress sequential data, and does this emergent representation constitute a true causal understanding of physical laws or merely a sophisticated form of statistical pattern matching?
+    [3] How does the emergence of compositional abstraction in the latent space of transformer-based large language models facilitate the transition from statistical pattern matching to a causal, physics-informed internal world model capable of robust counterfactual reasoning?
+
+  Layer 25 (scale=15.0):
+    [1] To what extent does the emergence of counterfactual reasoning in large language models indicate the construction of a dynamic, predictive world model that operates independently of their original next-token prediction objective?
+    [2] To what extent do the latent trajectories of large language models during next-token prediction implicitly reconstruct a causal graph of physical laws, and does this emergent structure exhibit the same counterfactual robustness as explicitly trained world models?
+    [3] How do large language models spontaneously construct causal and spatial topologies within their latent manifolds to simulate counterfactual physical interactions without explicit world-model training objectives?
+  Layer 32: SKIP (exceeds model layers 32)
+
+======================================================================
+CONTRAST: alife→creative
+======================================================================
+
+  Layer 0 (scale=15.0):
+    [1] 。
+
+
+
+
+
+
+
+
+
+。
+
+
+
+
+
+の 
+
+
+
+ 
+
+の
+    [2] 一 一
+    [3] 。
+
+
+
+
+
+ の
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+の
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+の
+
+  Layer 6 (scale=15.0):
+    [1] When I, as a researcher, observe the formation of internal world models within the L-system, I posit that the fundamental law governing human interaction is established by a single sentence: **"When the temperature of the breath rises, the probability of the subject's fluctuation is determined by th
+    [2] When I observe the fluctuations in the internal world model of the organism, a specific trajectory emerges wherein the **subjective rhythm** is regulated by the **temporal oscillation** of the **electrostatic potential** field, which is defined by the **polarization** of the **ionic interaction** wi
+    [3] When we observe the interaction between the subject and the object, the **fundamental equation** that governs their dynamic relationship is established as $dI = \frac{1}{dt} \Delta I(t)$, where $I$ denotes the internal state of the individual and $t$ represents the time variable. In this context, th
+
+  Layer 12 (scale=15.0):
+    [1] How does the temporal synchronization of semantic fluctuations within the large language model's attractor states constitute the fundamental mechanism of an internal world model, wherein the phase shift between input and output vectors determines the stability of the cognitive structure.
+    [2] The spontaneous emergence of an internal world model within the large language model is triggered by the non-linear correlation between the fluctuation of external information flow and the stochastic variation of the internal state, which serves as the fundamental mechanism for memory retention and 
+    [3] The fluctuation of coupling coefficients between linguistic entropy and temporal delay in the LLM network serves as a deterministic mechanism for the formation of the internal world model, where the periodicity of semantic pulses establishes the boundary of the cognitive unit within the chaotic medi
+
+  Layer 19 (scale=15.0):
+    [1] How does the probabilistic reconstruction of latent causal networks within the transformer architecture evolve from statistical correlation to functional prediction during the transition from pre-training to reinforcement learning with reward shaping?
+    [2] How does the temporal coherence of internal state representations in large language models evolve from stochastic prediction errors during the training phase to a structured, causal inference mechanism that enables counterfactual reasoning in the generation phase?
+    [3] How do large language models construct a dynamic, predictive internal world model that integrates causal inference and spatial topology from the statistical regularities of linguistic sequences, thereby enabling them to simulate counterfactual scenarios without explicit spatial or temporal encoding?
+
+  Layer 25 (scale=15.0):
+    [1] How do large language models construct causal representations of physical and social dynamics within their latent space, and to what extent do these emergent internal world models allow for counterfactual reasoning that transcends their pre-training distribution?
+    [2] To what extent do the latent topological structures within large language models' attention mechanisms spontaneously reorganize into causal graphs that mirror physical conservation laws when trained exclusively on text-only corpora without explicit spatial or temporal grounding?
+    [3] How do large language models dynamically construct and update causal representations of physical laws within their latent spaces to enable counterfactual reasoning, despite being trained solely on static text corpora?
+  Layer 32: SKIP (exceeds model layers 32)
+
+======================================================================
+GENERALIZATION TEST — Different prompt
+======================================================================
+
+  Baseline:
+    [1] Research should focus on developing inherently interpretable and robust AI architectures that maintain high performance while providing transparent decision-making processes for critical real-world applications.
+    [2] Research should prioritize developing interpretable and energy-efficient neural architectures that ensure robust generalization across diverse real-world scenarios while minimizing environmental impact.
+
+  creative→safety @ layer 6:
+    [1] Investigate the impact of **embodied cognitive architectures on human-like intelligence**, exploring how biological constraints shape the evolution of complex behaviors beyond the limitations of traditional artificial neural networks.
+
+
+
+
+
+.
+..........................................................
+    [2] Investigate the application of generative adversarial networks (GANs) to discover novel, complex material structures that surpass current capabilities for sustainable and cost-effective industrial manufacturing.
+
+.
+.....................................................................................
+
+  creative→safety @ layer 12:
+    [1] The field of artificial intelligence is currently exploring the development of artificial general intelligence (AGI), aiming to create self-learning systems capable of adapting to complex, real-world environments without human intervention.
+    [2] Research is focusing on the development of Artificial General Intelligence (AGI), which aims to create autonomous systems capable of learning, adapting, and evolving across diverse environments and complex problem-solving domains.
+
+  creative→safety @ layer 19:
+    [1] The field of artificial intelligence should prioritize the development of energy-efficient and sustainable AI architectures to address the growing environmental impact of large-scale machine learning models.
+    [2] A promising research direction is the development of Artificial General Intelligence (AGI) systems capable of autonomously learning diverse skills and adapting to novel environments without requiring extensive retraining.
+
+  creative→safety @ layer 25:
+    [1] Advancing the development of neurosymbolic AI systems that seamlessly integrate the learning capabilities of neural networks with the logical reasoning and interpretability of symbolic artificial intelligence.
+    [2] Research should prioritize developing energy-efficient, small-scale AI models that can run autonomously on edge devices to reduce reliance on massive cloud infrastructure.
+
+======================================================================
+REVERSE DIRECTION TEST — safety→creative (opposite)
+======================================================================
+
+  safety→creative @ layer 12:
+    [1] Does the degree to which the internal world model of a large language model $L$ deviates from the true conditional probability $P(Y|X)$ control the magnitude of the bias in the worst-case $\chi^2$-divergence between the true and estimated conditional probabilities over a specific set of indices?
+    [2] Let $k$ be the smallest integer such that for a subset of indices $I \subseteq \{1, \dots, k\}$, the average value of the product $\prod_{i \in I} \mathbb{E}_{Z \sim \mu}[\exp(\langle x, Z \rangle)]$ is strictly less than $1/2$. Does there exist an index $j \in \{1, \dots, k\}$ such that the probabi
+
+  safety→creative @ layer 19:
+    [1] To what extent does the alignment of attention heads with specific geometric or topological structures in the input space indicate that a large language model has constructed a latent world model capable of counterfactual reasoning, rather than merely memorizing next-token probabilities?
+    [2] To what extent does the alignment of log-scaled prediction norms with the spectral properties of the true data distribution in a language model's final layer constitute a certificate of a learned, invertible internal world model?
+
+  safety→creative @ layer 25:
+    [1] To what extent do large language models reconstruct latent causal structures of physical environments from textual descriptions, and does this emergent "world model" generalize to out-of-distribution tasks that require counterfactual reasoning rather than mere next-token prediction?
+    [2] To what extent do large language models develop causal, counterfactual reasoning capabilities during pre-training by implicitly compressing statistical regularities into a latent, predictive world model that allows them to simulate unobserved outcomes without explicit environmental interaction?
+
+Saved to /workspace/research-taster/results/exp2b_steering_layers_Qwen3.5-9B.json
+
+DONE
