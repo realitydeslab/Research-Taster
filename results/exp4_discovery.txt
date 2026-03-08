@@ -1,0 +1,261 @@
+
+======================================================================
+MODEL: Qwen3.5-9B
+======================================================================
+Using layer 12, 256 PCA dims
+
+============================================================
+4a: RESEARCHER TASTE FINGERPRINTS
+============================================================
+
+  📋 Blaise Agüera y Arcas:
+    strategic_orientation: exploration: ████       40% | understanding: ██         27% | infrastructure: ██         20%
+    theory_of_progress: novelty: ████       47% | bridging: ██         23% | engineering: █          10%
+    contribution_claim: framework: █████      50% | performance: ███        30% | emergence: █          13%
+    epistemic_posture: problematize: ████       40% | quantify: ███        37% | embrace: ██         23%
+    temporal_stance: near: ████       48% | long: ████       45% | urgent:            7%
+    field_positioning: advancing: █████      57% | challenging: ███        33% | creating: █          10%
+
+  📋 David Ha:
+    strategic_orientation: exploration: ████████   87% | infrastructure: █          13%
+    theory_of_progress: novelty: ███████    75% | bridging: █          13% | engineering: █          12%
+    contribution_claim: performance: ████       50% | emergence: ███        38% | framework: █          13%
+    epistemic_posture: embrace: ████████   81% | problematize: █          15%
+    temporal_stance: long: █████      50% | near: █████      50%
+    field_positioning: advancing: █████      50% | creating: ███        37% | challenging: █          13%
+
+  📋 Iyad Rahwan:
+    strategic_orientation: understanding: ████       47% | exploration: ██         27% | safety: ██         20%
+    theory_of_progress: bridging: ███        37% | novelty: ██         27% | questioning: ██         27%
+    contribution_claim: framework: █████      50% | validation: ████       40% | emergence:            7%
+    epistemic_posture: problematize: █████      57% | quantify: ██         27% | embrace: █          17%
+    temporal_stance: long: █████      57% | near: ███        30% | urgent: █          13%
+    field_positioning: challenging: ███████    70% | advancing: ██         23% | creating:            7%
+
+  📋 Jacob Steinhardt:
+    strategic_orientation: understanding: ████       47% | safety: ██         27% | exploration: ██         23%
+    theory_of_progress: novelty: █████      57% | bridging: ██         20% | questioning: █          13%
+    contribution_claim: framework: ███████    72% | performance: █          13% | emergence: █          12%
+    epistemic_posture: quantify: ████       50% | problematize: ████       40% | embrace: █          10%
+    temporal_stance: long: ██████     60% | near: ██         27% | urgent: █          13%
+    field_positioning: advancing: ███████    70% | challenging: ██         27%
+
+  📋 Jeff Clune:
+    strategic_orientation: exploration: ███████    70% | understanding: ██         23%
+    theory_of_progress: novelty: ███████    70% | bridging: █          17% | questioning: █          10%
+    contribution_claim: framework: ████       44% | performance: ██         29% | emergence: ██         27%
+    epistemic_posture: embrace: ██████     70% | problematize: ██         27%
+    temporal_stance: long: ██████     66% | near: ███        34%
+    field_positioning: advancing: ██████     63% | challenging: ██         27% | creating: █          10%
+
+  📋 Joel Lehman:
+    strategic_orientation: exploration: ██████     65% | safety: ██         20% | understanding: █          12%
+    theory_of_progress: novelty: ████       47% | bridging: ███        33% | questioning: █          12%
+    contribution_claim: framework: █████      58% | performance: ██         22% | emergence: █          17%
+    epistemic_posture: embrace: █████      50% | problematize: ████       43% | quantify:            7%
+    temporal_stance: long: ██████     62% | near: ███        34%
+    field_positioning: challenging: █████      57% | advancing: ███        33% | creating: █          10%
+
+  📋 Joel Z Leibo:
+    strategic_orientation: understanding: ████       43% | exploration: ███        33% | infrastructure: █          17%
+    theory_of_progress: novelty: ████       47% | bridging: ████       43% | engineering: █          10%
+    contribution_claim: framework: ██████     63% | emergence: ██         23% | performance: █          10%
+    epistemic_posture: problematize: ███████    70% | embrace: ██         23% | quantify:            7%
+    temporal_stance: long: ████████   80% | near: ██         20%
+    field_positioning: challenging: ██████     60% | advancing: ███        30% | creating: █          10%
+
+  📋 Joon Sung Park:
+    strategic_orientation: infrastructure: ███        38% | safety: ███        31% | exploration: █          15%
+    theory_of_progress: novelty: ████       46% | bridging: ██         23% | engineering: █          15%
+    contribution_claim: framework: ██████     61% | emergence: █          15% | performance: █          15%
+    epistemic_posture: problematize: ███        38% | quantify: ███        38% | embrace: ██         23%
+    temporal_stance: near: █████      58% | long: ███        35% | urgent:            8%
+    field_positioning: advancing: █████      54% | challenging: ███        31% | creating: █          15%
+
+  📋 Kate Crawford:
+    strategic_orientation: safety: ████       43% | infrastructure: ██         29% | understanding: ██         29%
+    theory_of_progress: bridging: ████       43% | engineering: ██         29% | questioning: ██         28%
+    contribution_claim: framework: ████████   86% | validation: █          14%
+    epistemic_posture: problematize: ██████████ 100%
+    temporal_stance: urgent: ████       43% | long: ██         29% | near: ██         29%
+    field_positioning: challenging: ██████████ 100%
+
+  📋 Ken Stanley:
+    strategic_orientation: exploration: ███████    75% | understanding: █          15% | infrastructure:            7%
+    theory_of_progress: novelty: ██████     67% | bridging: ██         20%
+    contribution_claim: framework: ████       45% | emergence: ████       40% | performance: █          16%
+    epistemic_posture: embrace: ███████    77% | problematize: ██         23%
+    temporal_stance: long: ███████    79% | near: ██         21%
+    field_positioning: advancing: ████       40% | challenging: ███        37% | creating: ██         23%
+
+  📋 Michael Bernstein:
+    strategic_orientation: infrastructure: ████       43% | understanding: ████       40% | exploration: █          10%
+    theory_of_progress: novelty: ████       40% | questioning: ██         25% | bridging: █          17%
+    contribution_claim: validation: ████       43% | framework: ████       40% | emergence: █          13%
+    epistemic_posture: embrace: ████       43% | problematize: ███        37% | quantify: ██         20%
+    temporal_stance: near: ████       43% | long: ███        40% | urgent: █          17%
+    field_positioning: challenging: █████      53% | advancing: ████       40% | creating:            7%
+
+  📋 Michael Levin:
+    strategic_orientation: exploration: ██████     60% | understanding: ████       40%
+    theory_of_progress: bridging: ███████    80% | novelty: ██         20%
+    contribution_claim: framework: ███████    73% | emergence: ██         20% | validation:            7%
+    epistemic_posture: problematize: █████      53% | embrace: ████       47%
+    temporal_stance: long: ████████   87% | near: █          13%
+    field_positioning: challenging: ██████     67% | creating: ██         27% | advancing:            7%
+
+  📋 Percy Liang:
+    strategic_orientation: exploration: ████       47% | understanding: ██         23% | infrastructure: █          17%
+    theory_of_progress: novelty: ██████     60% | questioning: █          17% | bridging: █          13%
+    contribution_claim: performance: ████       43% | framework: ████       42% | emergence: █          12%
+    epistemic_posture: problematize: ████       40% | embrace: ███        30% | quantify: ███        30%
+    temporal_stance: near: █████      53% | long: ███        37% | urgent: █          10%
+    field_positioning: advancing: ██████     63% | challenging: ███        33%
+
+  📋 Sebastian Risi:
+    strategic_orientation: exploration: ███████    70% | infrastructure: ██         20% | safety:            7%
+    theory_of_progress: novelty: ███████    70% | bridging: ███        30%
+    contribution_claim: framework: ███        37% | emergence: ███        30% | performance: ██         27%
+    epistemic_posture: embrace: ███████    73% | problematize: █          17% | quantify: █          10%
+    temporal_stance: long: █████      57% | near: ███        37% | urgent:            7%
+    field_positioning: advancing: ██████     67% | challenging: ██         23% | creating: █          10%
+
+  📋 Takashi Ikegami:
+    strategic_orientation: exploration: █████      53% | understanding: ████       47%
+    theory_of_progress: bridging: █████      53% | novelty: ████       40% | questioning:            7%
+    contribution_claim: framework: █████      53% | emergence: ████       47%
+    epistemic_posture: embrace: █████      53% | problematize: ████       40% | quantify:            7%
+    temporal_stance: long: █████████  97%
+    field_positioning: advancing: ████       47% | challenging: ████       43% | creating: █          10%
+
+============================================================
+4b: TASTE SIMILARITY MATRIX (cosine similarity)
+============================================================
+
+  Blaise Agüera y Arcas:
+    Most similar:  Percy Liang (0.194), Joon Sung Park (0.186), Jacob Steinhardt (0.110)
+    Most different: Ken Stanley (-0.279)
+
+  David Ha:
+    Most similar:  Sebastian Risi (0.257), Joel Lehman (0.229), Ken Stanley (0.223)
+    Most different: Iyad Rahwan (-0.285)
+
+  Iyad Rahwan:
+    Most similar:  Michael Bernstein (0.517), Kate Crawford (0.292), Joon Sung Park (0.272)
+    Most different: Ken Stanley (-0.582)
+
+  Jacob Steinhardt:
+    Most similar:  Percy Liang (0.469), Blaise Agüera y Arcas (0.110), Joon Sung Park (-0.010)
+    Most different: Sebastian Risi (-0.346)
+
+  Jeff Clune:
+    Most similar:  Ken Stanley (0.784), Joel Lehman (0.552), Sebastian Risi (0.312)
+    Most different: Iyad Rahwan (-0.505)
+
+  Joel Lehman:
+    Most similar:  Ken Stanley (0.626), Jeff Clune (0.552), David Ha (0.229)
+    Most different: Michael Bernstein (-0.420)
+
+  Joel Z Leibo:
+    Most similar:  Takashi Ikegami (0.241), Iyad Rahwan (0.124), Michael Levin (0.051)
+    Most different: Percy Liang (-0.356)
+
+  Joon Sung Park:
+    Most similar:  Michael Bernstein (0.565), Kate Crawford (0.315), Iyad Rahwan (0.272)
+    Most different: Ken Stanley (-0.498)
+
+  Kate Crawford:
+    Most similar:  Joon Sung Park (0.315), Iyad Rahwan (0.292), Michael Bernstein (0.280)
+    Most different: Jeff Clune (-0.309)
+
+  Ken Stanley:
+    Most similar:  Jeff Clune (0.784), Joel Lehman (0.626), Sebastian Risi (0.409)
+    Most different: Iyad Rahwan (-0.582)
+
+  Michael Bernstein:
+    Most similar:  Joon Sung Park (0.565), Iyad Rahwan (0.517), Kate Crawford (0.280)
+    Most different: Ken Stanley (-0.531)
+
+  Michael Levin:
+    Most similar:  Takashi Ikegami (0.421), Kate Crawford (0.147), Sebastian Risi (0.101)
+    Most different: Percy Liang (-0.486)
+
+  Percy Liang:
+    Most similar:  Jacob Steinhardt (0.469), Blaise Agüera y Arcas (0.194), David Ha (0.063)
+    Most different: Michael Levin (-0.486)
+
+  Sebastian Risi:
+    Most similar:  Ken Stanley (0.409), Jeff Clune (0.312), David Ha (0.257)
+    Most different: Iyad Rahwan (-0.419)
+
+  Takashi Ikegami:
+    Most similar:  Michael Levin (0.421), Joel Z Leibo (0.241), Iyad Rahwan (0.086)
+    Most different: Percy Liang (-0.436)
+
+============================================================
+4c: PAPER → MATCHING RESEARCHERS
+============================================================
+
+  📄 "Go-Explore: a New Approach for Hard-Exploration Problems..."
+     Author: Jeff Clune | Style: ml_creative
+     Taste match ranking:
+       Jeff Clune: 0.469 ← AUTHOR
+       Joel Lehman: 0.372
+       Ken Stanley: 0.372
+       David Ha: 0.333
+       Percy Liang: 0.143
+
+  📄 "Form-From: A Design Space of Social Media Systems..."
+     Author: Michael Bernstein | Style: social_ai
+     Taste match ranking:
+       Michael Bernstein: 0.437 ← AUTHOR
+       Iyad Rahwan: 0.256
+       Kate Crawford: 0.250
+       Joon Sung Park: 0.241
+       Michael Levin: 0.081
+
+  📄 "Better Agnostic Clustering Via Relaxed Tensor Norms..."
+     Author: Jacob Steinhardt | Style: ml_safety
+     Taste match ranking:
+       Jacob Steinhardt: 0.590 ← AUTHOR
+       Percy Liang: 0.122
+       Blaise Agüera y Arcas: 0.039
+       Iyad Rahwan: -0.005
+       Takashi Ikegami: -0.027
+
+  📄 "How to Make Swarms Open-Ended? Evolving Collective Intellige..."
+     Author: Takashi Ikegami | Style: alife
+     Taste match ranking:
+       Takashi Ikegami: 0.477 ← AUTHOR
+       Michael Levin: 0.277
+       Joel Z Leibo: 0.225
+       Sebastian Risi: 0.199
+       Ken Stanley: 0.086
+
+============================================================
+4d: TASTE TRAJECTORY (Career Evolution)
+============================================================
+
+  📈 Jeff Clune (2012-2025):
+    strategic_orientation: exploration (53%) = exploration (87%)
+    theory_of_progress: novelty (67%) = novelty (73%)
+    contribution_claim: framework (42%) = framework (47%)
+
+  📈 Percy Liang (2011-2025):
+    strategic_orientation: exploration (53%) = exploration (40%)
+    theory_of_progress: novelty (73%) = novelty (47%)
+    contribution_claim: framework (53%) → performance (40%)
+
+  📈 Iyad Rahwan (2013-2025):
+    strategic_orientation: understanding (60%) = understanding (33%)
+    theory_of_progress: bridging (40%) → novelty (33%)
+    contribution_claim: framework (53%) → validation (53%)
+
+  📈 Ken Stanley (2012-2025):
+    strategic_orientation: exploration (73%) = exploration (77%)
+    theory_of_progress: novelty (73%) = novelty (60%)
+    contribution_claim: framework (49%) = framework (40%)
+
+Saved to /workspace/research-taster/results/exp4_discovery_Qwen3.5-9B.json
+
+DONE
