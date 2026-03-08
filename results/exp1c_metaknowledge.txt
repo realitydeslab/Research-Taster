@@ -1,0 +1,337 @@
+
+======================================================================
+MODEL: Qwen3.5-9B
+======================================================================
+
+============================================================
+DIMENSION: strategic_orientation
+============================================================
+  Classes: [np.str_('exploration'), np.str_('infrastructure'), np.str_('safety'), np.str_('understanding')], counts: {'exploration': 172, 'infrastructure': 49, 'understanding': 108, 'safety': 43}
+  Chance: 0.250
+
+  Full representation → strategic_orientation:
+    Layer 0: 0.6882 +/- 0.0176 (above chance: +0.4382) ***
+    Layer 6: 0.7499 +/- 0.0261 (above chance: +0.4999) ***
+    Layer 12: 0.7821 +/- 0.0345 (above chance: +0.5321) ***
+    Layer 19: 0.7847 +/- 0.0454 (above chance: +0.5347) ***
+    Layer 25: 0.7632 +/- 0.0497 (above chance: +0.5132) ***
+    Layer 32: 0.7551 +/- 0.0504 (above chance: +0.5051) ***
+
+  Residual (topic removed) → strategic_orientation:
+    Layer 0: 0.5778 (above chance: +0.3278) **
+    Layer 6: 0.6101 (above chance: +0.3601) **
+    Layer 12: 0.6799 (above chance: +0.4299) **
+    Layer 19: 0.6663 (above chance: +0.4163) **
+    Layer 25: 0.6449 (above chance: +0.3949) **
+    Layer 32: 0.6504 (above chance: +0.4004) **
+
+  Topic features alone: 0.5404
+
+============================================================
+DIMENSION: theory_of_progress
+============================================================
+  Classes: [np.str_('bridging'), np.str_('engineering'), np.str_('novelty'), np.str_('questioning'), np.str_('scaling')], counts: {'novelty': 186, 'engineering': 20, 'bridging': 111, 'questioning': 41, 'scaling': 14}
+  Chance: 0.200
+
+  Full representation → theory_of_progress:
+    Layer 0: 0.6720 +/- 0.0251 (above chance: +0.4720) ***
+    Layer 6: 0.6723 +/- 0.0449 (above chance: +0.4723) ***
+    Layer 12: 0.7284 +/- 0.0329 (above chance: +0.5284) ***
+    Layer 19: 0.6988 +/- 0.0470 (above chance: +0.4988) ***
+    Layer 25: 0.6772 +/- 0.0465 (above chance: +0.4772) ***
+    Layer 32: 0.6801 +/- 0.0155 (above chance: +0.4801) ***
+
+  Residual (topic removed) → theory_of_progress:
+    Layer 0: 0.5027 (above chance: +0.3027) **
+    Layer 6: 0.5807 (above chance: +0.3807) **
+    Layer 12: 0.6181 (above chance: +0.4181) **
+    Layer 19: 0.5913 (above chance: +0.3913) **
+    Layer 25: 0.6021 (above chance: +0.4021) **
+    Layer 32: 0.5914 (above chance: +0.3914) **
+
+  Topic features alone: 0.5268
+
+============================================================
+DIMENSION: contribution_claim
+============================================================
+  Classes: [np.str_('emergence'), np.str_('framework'), np.str_('performance'), np.str_('validation')], counts: {'framework': 187, 'emergence': 79, 'performance': 63, 'validation': 35}
+  Chance: 0.250
+
+  Full representation → contribution_claim:
+    Layer 0: 0.7035 +/- 0.0595 (above chance: +0.4535) ***
+    Layer 6: 0.7007 +/- 0.0477 (above chance: +0.4507) ***
+    Layer 12: 0.7143 +/- 0.0671 (above chance: +0.4643) ***
+    Layer 19: 0.7474 +/- 0.0505 (above chance: +0.4974) ***
+    Layer 25: 0.6925 +/- 0.0690 (above chance: +0.4425) ***
+    Layer 32: 0.6815 +/- 0.0721 (above chance: +0.4315) ***
+
+  Residual (topic removed) → contribution_claim:
+    Layer 0: 0.5523 (above chance: +0.3023) **
+    Layer 6: 0.5935 (above chance: +0.3435) **
+    Layer 12: 0.6456 (above chance: +0.3956) **
+    Layer 19: 0.6565 (above chance: +0.4065) **
+    Layer 25: 0.5881 (above chance: +0.3381) **
+    Layer 32: 0.6099 (above chance: +0.3599) **
+
+  Topic features alone: 0.5304
+
+============================================================
+DIMENSION: epistemic_posture
+============================================================
+  Classes: [np.str_('embrace'), np.str_('problematize'), np.str_('quantify')], counts: {'embrace': 151, 'problematize': 148, 'quantify': 62}
+  Chance: 0.333
+
+  Full representation → epistemic_posture:
+    Layer 0: 0.7117 +/- 0.0452 (above chance: +0.3784) ***
+    Layer 6: 0.7256 +/- 0.0384 (above chance: +0.3923) ***
+    Layer 12: 0.7562 +/- 0.0263 (above chance: +0.4228) ***
+    Layer 19: 0.7506 +/- 0.0237 (above chance: +0.4173) ***
+    Layer 25: 0.7395 +/- 0.0230 (above chance: +0.4062) ***
+    Layer 32: 0.7285 +/- 0.0256 (above chance: +0.3952) ***
+
+  Residual (topic removed) → epistemic_posture:
+    Layer 0: 0.5458 (above chance: +0.2124) **
+    Layer 6: 0.6285 (above chance: +0.2952) **
+    Layer 12: 0.6537 (above chance: +0.3204) **
+    Layer 19: 0.6537 (above chance: +0.3204) **
+    Layer 25: 0.6425 (above chance: +0.3092) **
+    Layer 32: 0.6342 (above chance: +0.3008) **
+
+  Topic features alone: 0.5068
+
+============================================================
+DIMENSION: temporal_stance
+============================================================
+  Classes: [np.str_('long'), np.str_('near'), np.str_('urgent')], counts: {'long': 225, 'near': 120, 'urgent': 25}
+  Chance: 0.333
+
+  Full representation → temporal_stance:
+    Layer 0: 0.7432 +/- 0.0506 (above chance: +0.4099) ***
+    Layer 6: 0.7973 +/- 0.0171 (above chance: +0.4640) ***
+    Layer 12: 0.8027 +/- 0.0251 (above chance: +0.4694) ***
+    Layer 19: 0.8189 +/- 0.0315 (above chance: +0.4856) ***
+    Layer 25: 0.7865 +/- 0.0313 (above chance: +0.4532) ***
+    Layer 32: 0.7730 +/- 0.0289 (above chance: +0.4396) ***
+
+  Residual (topic removed) → temporal_stance:
+    Layer 0: 0.6324 (above chance: +0.2991) **
+    Layer 6: 0.6676 (above chance: +0.3342) **
+    Layer 12: 0.6703 (above chance: +0.3369) **
+    Layer 19: 0.6649 (above chance: +0.3315) **
+    Layer 25: 0.6649 (above chance: +0.3315) **
+    Layer 32: 0.6514 (above chance: +0.3180) **
+
+  Topic features alone: 0.6676
+
+============================================================
+DIMENSION: field_positioning
+============================================================
+  Classes: [np.str_('advancing'), np.str_('challenging'), np.str_('creating')], counts: {'creating': 40, 'advancing': 171, 'challenging': 160}
+  Chance: 0.333
+
+  Full representation → field_positioning:
+    Layer 0: 0.6711 +/- 0.0222 (above chance: +0.3378) ***
+    Layer 6: 0.6899 +/- 0.0315 (above chance: +0.3566) ***
+    Layer 12: 0.7170 +/- 0.0172 (above chance: +0.3836) ***
+    Layer 19: 0.7008 +/- 0.0267 (above chance: +0.3674) ***
+    Layer 25: 0.7034 +/- 0.0399 (above chance: +0.3701) ***
+    Layer 32: 0.6927 +/- 0.0366 (above chance: +0.3594) ***
+
+  Residual (topic removed) → field_positioning:
+    Layer 0: 0.5444 (above chance: +0.2111) **
+    Layer 6: 0.6036 (above chance: +0.2703) **
+    Layer 12: 0.6414 (above chance: +0.3080) **
+    Layer 19: 0.6307 (above chance: +0.2974) **
+    Layer 25: 0.6225 (above chance: +0.2892) **
+    Layer 32: 0.6172 (above chance: +0.2839) **
+
+  Topic features alone: 0.5281
+
+============================================================
+CROSS-DIMENSION INDEPENDENCE
+============================================================
+  strategic_orientation × theory_of_progress: Cramér's V = 0.584 (HIGH, p=0.0000)
+  strategic_orientation × temporal_stance: Cramér's V = 0.466 (HIGH, p=0.0000)
+  contribution_claim × strategic_orientation: Cramér's V = 0.574 (HIGH, p=0.0000)
+  contribution_claim × theory_of_progress: Cramér's V = 0.489 (HIGH, p=0.0000)
+  contribution_claim × epistemic_posture: Cramér's V = 0.383 (HIGH, p=0.0000)
+  contribution_claim × temporal_stance: Cramér's V = 0.457 (HIGH, p=0.0000)
+  contribution_claim × field_positioning: Cramér's V = 0.549 (HIGH, p=0.0000)
+  epistemic_posture × strategic_orientation: Cramér's V = 0.405 (HIGH, p=0.0000)
+  epistemic_posture × theory_of_progress: Cramér's V = 0.391 (HIGH, p=0.0000)
+  epistemic_posture × temporal_stance: Cramér's V = 0.613 (HIGH, p=0.0000)
+  epistemic_posture × field_positioning: Cramér's V = 0.400 (HIGH, p=0.0000)
+  temporal_stance × theory_of_progress: Cramér's V = 0.407 (HIGH, p=0.0000)
+  field_positioning × strategic_orientation: Cramér's V = 0.520 (HIGH, p=0.0000)
+  field_positioning × theory_of_progress: Cramér's V = 0.548 (HIGH, p=0.0000)
+  field_positioning × temporal_stance: Cramér's V = 0.409 (HIGH, p=0.0000)
+
+======================================================================
+MODEL: Qwen3.5-27B
+======================================================================
+
+============================================================
+DIMENSION: strategic_orientation
+============================================================
+  Classes: [np.str_('exploration'), np.str_('infrastructure'), np.str_('safety'), np.str_('understanding')], counts: {'exploration': 172, 'infrastructure': 49, 'understanding': 108, 'safety': 43}
+  Chance: 0.250
+
+  Full representation → strategic_orientation:
+    Layer 0: 0.6908 +/- 0.0447 (above chance: +0.4408) ***
+    Layer 12: 0.7820 +/- 0.0464 (above chance: +0.5320) ***
+    Layer 25: 0.7901 +/- 0.0397 (above chance: +0.5401) ***
+    Layer 38: 0.7821 +/- 0.0412 (above chance: +0.5321) ***
+    Layer 51: 0.7714 +/- 0.0464 (above chance: +0.5214) ***
+    Layer 64: 0.7552 +/- 0.0435 (above chance: +0.5052) ***
+
+  Residual (topic removed) → strategic_orientation:
+    Layer 0: 0.5726 (above chance: +0.3226) **
+    Layer 12: 0.6370 (above chance: +0.3870) **
+    Layer 25: 0.6583 (above chance: +0.4083) **
+    Layer 38: 0.6933 (above chance: +0.4433) **
+    Layer 51: 0.6396 (above chance: +0.3896) **
+    Layer 64: 0.6665 (above chance: +0.4165) **
+
+  Topic features alone: 0.5404
+
+============================================================
+DIMENSION: theory_of_progress
+============================================================
+  Classes: [np.str_('bridging'), np.str_('engineering'), np.str_('novelty'), np.str_('questioning'), np.str_('scaling')], counts: {'novelty': 186, 'engineering': 20, 'bridging': 111, 'questioning': 41, 'scaling': 14}
+  Chance: 0.200
+
+  Full representation → theory_of_progress:
+    Layer 0: 0.6694 +/- 0.0395 (above chance: +0.4694) ***
+    Layer 12: 0.6640 +/- 0.0379 (above chance: +0.4640) ***
+    Layer 25: 0.6854 +/- 0.0225 (above chance: +0.4854) ***
+    Layer 38: 0.7203 +/- 0.0297 (above chance: +0.5203) ***
+    Layer 51: 0.7177 +/- 0.0196 (above chance: +0.5177) ***
+    Layer 64: 0.6748 +/- 0.0223 (above chance: +0.4748) ***
+
+  Residual (topic removed) → theory_of_progress:
+    Layer 0: 0.5456 (above chance: +0.3456) **
+    Layer 12: 0.5887 (above chance: +0.3887) **
+    Layer 25: 0.6102 (above chance: +0.4102) **
+    Layer 38: 0.6021 (above chance: +0.4021) **
+    Layer 51: 0.6019 (above chance: +0.4019) **
+    Layer 64: 0.5966 (above chance: +0.3966) **
+
+  Topic features alone: 0.5268
+
+============================================================
+DIMENSION: contribution_claim
+============================================================
+  Classes: [np.str_('emergence'), np.str_('framework'), np.str_('performance'), np.str_('validation')], counts: {'framework': 187, 'emergence': 79, 'performance': 63, 'validation': 35}
+  Chance: 0.250
+
+  Full representation → contribution_claim:
+    Layer 0: 0.6952 +/- 0.0462 (above chance: +0.4452) ***
+    Layer 12: 0.6924 +/- 0.0623 (above chance: +0.4424) ***
+    Layer 25: 0.6677 +/- 0.0584 (above chance: +0.4177) ***
+    Layer 38: 0.6979 +/- 0.0529 (above chance: +0.4479) ***
+    Layer 51: 0.7199 +/- 0.0659 (above chance: +0.4699) ***
+    Layer 64: 0.6815 +/- 0.0770 (above chance: +0.4315) ***
+
+  Residual (topic removed) → contribution_claim:
+    Layer 0: 0.5469 (above chance: +0.2969) **
+    Layer 12: 0.6210 (above chance: +0.3710) **
+    Layer 25: 0.5852 (above chance: +0.3352) **
+    Layer 38: 0.6291 (above chance: +0.3791) **
+    Layer 51: 0.6236 (above chance: +0.3736) **
+    Layer 64: 0.6016 (above chance: +0.3516) **
+
+  Topic features alone: 0.5304
+
+============================================================
+DIMENSION: epistemic_posture
+============================================================
+  Classes: [np.str_('embrace'), np.str_('problematize'), np.str_('quantify')], counts: {'embrace': 151, 'problematize': 148, 'quantify': 62}
+  Chance: 0.333
+
+  Full representation → epistemic_posture:
+    Layer 0: 0.7258 +/- 0.0222 (above chance: +0.3924) ***
+    Layer 12: 0.7533 +/- 0.0329 (above chance: +0.4200) ***
+    Layer 25: 0.7450 +/- 0.0433 (above chance: +0.4117) ***
+    Layer 38: 0.7341 +/- 0.0319 (above chance: +0.4008) ***
+    Layer 51: 0.7342 +/- 0.0375 (above chance: +0.4009) ***
+    Layer 64: 0.7424 +/- 0.0181 (above chance: +0.4091) ***
+
+  Residual (topic removed) → epistemic_posture:
+    Layer 0: 0.5762 (above chance: +0.2428) **
+    Layer 12: 0.6398 (above chance: +0.3064) **
+    Layer 25: 0.6508 (above chance: +0.3175) **
+    Layer 38: 0.6426 (above chance: +0.3093) **
+    Layer 51: 0.6260 (above chance: +0.2927) **
+    Layer 64: 0.6453 (above chance: +0.3119) **
+
+  Topic features alone: 0.5068
+
+============================================================
+DIMENSION: temporal_stance
+============================================================
+  Classes: [np.str_('long'), np.str_('near'), np.str_('urgent')], counts: {'long': 225, 'near': 120, 'urgent': 25}
+  Chance: 0.333
+
+  Full representation → temporal_stance:
+    Layer 0: 0.7568 +/- 0.0382 (above chance: +0.4234) ***
+    Layer 12: 0.7865 +/- 0.0455 (above chance: +0.4532) ***
+    Layer 25: 0.7892 +/- 0.0236 (above chance: +0.4559) ***
+    Layer 38: 0.8081 +/- 0.0289 (above chance: +0.4748) ***
+    Layer 51: 0.8135 +/- 0.0158 (above chance: +0.4802) ***
+    Layer 64: 0.7595 +/- 0.0262 (above chance: +0.4261) ***
+
+  Residual (topic removed) → temporal_stance:
+    Layer 0: 0.6162 (above chance: +0.2829) **
+    Layer 12: 0.6757 (above chance: +0.3423) **
+    Layer 25: 0.6784 (above chance: +0.3450) **
+    Layer 38: 0.6919 (above chance: +0.3586) **
+    Layer 51: 0.6514 (above chance: +0.3180) **
+    Layer 64: 0.6838 (above chance: +0.3505) **
+
+  Topic features alone: 0.6676
+
+============================================================
+DIMENSION: field_positioning
+============================================================
+  Classes: [np.str_('advancing'), np.str_('challenging'), np.str_('creating')], counts: {'creating': 40, 'advancing': 171, 'challenging': 160}
+  Chance: 0.333
+
+  Full representation → field_positioning:
+    Layer 0: 0.6604 +/- 0.0364 (above chance: +0.3271) ***
+    Layer 12: 0.6980 +/- 0.0334 (above chance: +0.3647) ***
+    Layer 25: 0.7305 +/- 0.0238 (above chance: +0.3972) ***
+    Layer 38: 0.7277 +/- 0.0330 (above chance: +0.3943) ***
+    Layer 51: 0.7008 +/- 0.0195 (above chance: +0.3675) ***
+    Layer 64: 0.7035 +/- 0.0227 (above chance: +0.3702) ***
+
+  Residual (topic removed) → field_positioning:
+    Layer 0: 0.5606 (above chance: +0.2273) **
+    Layer 12: 0.6090 (above chance: +0.2757) **
+    Layer 25: 0.6548 (above chance: +0.3215) **
+    Layer 38: 0.6415 (above chance: +0.3081) **
+    Layer 51: 0.6737 (above chance: +0.3404) **
+    Layer 64: 0.6118 (above chance: +0.2785) **
+
+  Topic features alone: 0.5281
+
+============================================================
+CROSS-DIMENSION INDEPENDENCE
+============================================================
+  strategic_orientation × theory_of_progress: Cramér's V = 0.584 (HIGH, p=0.0000)
+  strategic_orientation × temporal_stance: Cramér's V = 0.466 (HIGH, p=0.0000)
+  contribution_claim × strategic_orientation: Cramér's V = 0.574 (HIGH, p=0.0000)
+  contribution_claim × theory_of_progress: Cramér's V = 0.489 (HIGH, p=0.0000)
+  contribution_claim × epistemic_posture: Cramér's V = 0.383 (HIGH, p=0.0000)
+  contribution_claim × temporal_stance: Cramér's V = 0.457 (HIGH, p=0.0000)
+  contribution_claim × field_positioning: Cramér's V = 0.549 (HIGH, p=0.0000)
+  epistemic_posture × strategic_orientation: Cramér's V = 0.405 (HIGH, p=0.0000)
+  epistemic_posture × theory_of_progress: Cramér's V = 0.391 (HIGH, p=0.0000)
+  epistemic_posture × temporal_stance: Cramér's V = 0.613 (HIGH, p=0.0000)
+  epistemic_posture × field_positioning: Cramér's V = 0.400 (HIGH, p=0.0000)
+  temporal_stance × theory_of_progress: Cramér's V = 0.407 (HIGH, p=0.0000)
+  field_positioning × strategic_orientation: Cramér's V = 0.520 (HIGH, p=0.0000)
+  field_positioning × theory_of_progress: Cramér's V = 0.548 (HIGH, p=0.0000)
+  field_positioning × temporal_stance: Cramér's V = 0.409 (HIGH, p=0.0000)
+
+
+DONE
