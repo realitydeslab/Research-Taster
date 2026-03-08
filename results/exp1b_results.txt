@@ -1,0 +1,196 @@
+Using 373 papers (filtered from 382)
+
+======================================================================
+MODEL: Qwen3.5-9B
+======================================================================
+
+============================================================
+TEST 1: Leave-One-Researcher-Out (ml_creative vs rest)
+============================================================
+If taste is real, training on 4 creative researchers should classify the 5th.
+
+  Layer 0: avg=0.615
+    David Ha: 0.375 (8 papers) FAIL
+    Jeff Clune: 0.733 (30 papers) PASS
+    Joel Lehman: 0.667 (30 papers) FAIL
+    Ken Stanley: 0.900 (30 papers) PASS
+    Sebastian Risi: 0.400 (30 papers) FAIL
+
+  Layer 6: avg=0.757
+    David Ha: 0.750 (8 papers) PASS
+    Jeff Clune: 0.867 (30 papers) PASS
+    Joel Lehman: 0.667 (30 papers) FAIL
+    Ken Stanley: 0.933 (30 papers) PASS
+    Sebastian Risi: 0.567 (30 papers) FAIL
+
+  Layer 12: avg=0.698
+    David Ha: 0.625 (8 papers) FAIL
+    Jeff Clune: 0.733 (30 papers) PASS
+    Joel Lehman: 0.633 (30 papers) FAIL
+    Ken Stanley: 0.933 (30 papers) PASS
+    Sebastian Risi: 0.567 (30 papers) FAIL
+
+  Layer 19: avg=0.723
+    David Ha: 0.750 (8 papers) PASS
+    Jeff Clune: 0.733 (30 papers) PASS
+    Joel Lehman: 0.633 (30 papers) FAIL
+    Ken Stanley: 0.900 (30 papers) PASS
+    Sebastian Risi: 0.600 (30 papers) FAIL
+
+  Layer 25: avg=0.750
+    David Ha: 0.750 (8 papers) PASS
+    Jeff Clune: 0.767 (30 papers) PASS
+    Joel Lehman: 0.733 (30 papers) PASS
+    Ken Stanley: 0.900 (30 papers) PASS
+    Sebastian Risi: 0.600 (30 papers) FAIL
+
+  Layer 32: avg=0.750
+    David Ha: 0.750 (8 papers) PASS
+    Jeff Clune: 0.767 (30 papers) PASS
+    Joel Lehman: 0.667 (30 papers) FAIL
+    Ken Stanley: 0.900 (30 papers) PASS
+    Sebastian Risi: 0.667 (30 papers) FAIL
+
+============================================================
+TEST 2: Topic vs Style (arXiv category features)
+============================================================
+  Topic features: 53 arXiv categories
+  Topic features alone → Style: 0.5763 +/- 0.0463
+
+  Full representations → Style:
+    Layer 0: 0.6776
+    Layer 6: 0.7459
+    Layer 12: 0.7732
+    Layer 19: 0.7568
+    Layer 25: 0.7650
+    Layer 32: 0.7486
+
+  Residual (topic removed) → Style:
+    Layer 0: 0.3579 (topic-removed)
+    Layer 6: 0.4398 (topic-removed)
+    Layer 12: 0.4753 (topic-removed)
+    Layer 19: 0.4398 (topic-removed)
+    Layer 25: 0.4863 (topic-removed)
+    Layer 32: 0.5109 (topic-removed)
+
+============================================================
+TEST 3: Same-Topic Different-Style Papers
+============================================================
+  Categories spanning 3+ styles (>=20 papers):
+    cs.AI: {'ml_creative': 67, 'ml_benchmark': 11, 'ml_safety': 14, 'social_ai': 14, 'multi_agent': 22, 'machine_behavior': 14, 'alife': 8, 'bio_ai': 15, 'ml_philosophy': 13}
+    cs.LG: {'ml_creative': 56, 'ml_benchmark': 22, 'ml_safety': 24, 'social_ai': 11, 'multi_agent': 9, 'machine_behavior': 4, 'alife': 2, 'bio_ai': 3, 'ml_philosophy': 13}
+    cs.NE: {'ml_creative': 75, 'ml_benchmark': 1, 'multi_agent': 7, 'alife': 12, 'bio_ai': 6, 'ml_philosophy': 2}
+    cs.CL: {'ml_creative': 4, 'ml_benchmark': 15, 'ml_safety': 9, 'social_ai': 6, 'multi_agent': 1, 'machine_behavior': 3, 'bio_ai': 1, 'ml_philosophy': 10}
+    cs.HC: {'ml_creative': 2, 'ml_safety': 1, 'social_ai': 38, 'multi_agent': 1, 'machine_behavior': 3, 'alife': 1, 'bio_ai': 1, 'ml_philosophy': 1}
+    stat.ML: {'ml_creative': 17, 'ml_benchmark': 10, 'ml_safety': 5, 'multi_agent': 3, 'machine_behavior': 1, 'ml_philosophy': 1}
+    cs.CY: {'ml_creative': 3, 'ml_benchmark': 1, 'social_ai': 8, 'multi_agent': 3, 'machine_behavior': 12, 'bio_ai': 1, 'ml_philosophy': 5}
+    cs.CV: {'ml_creative': 13, 'ml_benchmark': 2, 'ml_safety': 2, 'social_ai': 3, 'multi_agent': 1, 'machine_behavior': 2, 'bio_ai': 1, 'ml_philosophy': 3}
+    cs.MA: {'ml_creative': 1, 'multi_agent': 16, 'alife': 5, 'bio_ai': 4, 'ml_philosophy': 1}
+
+  Within 'cs.AI' (178 papers, 9 styles, chance=0.111):
+  Styles: {'ml_creative': 67, 'ml_benchmark': 11, 'ml_safety': 14, 'social_ai': 14, 'multi_agent': 22, 'machine_behavior': 14, 'alife': 8, 'bio_ai': 15, 'ml_philosophy': 13}
+    Layer 0: 0.6121 +/- 0.0254 (above chance: +0.5010)
+    Layer 6: 0.6459 +/- 0.0610 (above chance: +0.5348)
+    Layer 12: 0.6967 +/- 0.0474 (above chance: +0.5856)
+    Layer 19: 0.6630 +/- 0.0636 (above chance: +0.5519)
+    Layer 25: 0.6911 +/- 0.0668 (above chance: +0.5800)
+    Layer 32: 0.6965 +/- 0.0611 (above chance: +0.5854)
+
+======================================================================
+MODEL: Qwen3.5-27B
+======================================================================
+
+============================================================
+TEST 1: Leave-One-Researcher-Out (ml_creative vs rest)
+============================================================
+If taste is real, training on 4 creative researchers should classify the 5th.
+
+  Layer 0: avg=0.635
+    David Ha: 0.375 (8 papers) FAIL
+    Jeff Clune: 0.800 (30 papers) PASS
+    Joel Lehman: 0.667 (30 papers) FAIL
+    Ken Stanley: 0.900 (30 papers) PASS
+    Sebastian Risi: 0.433 (30 papers) FAIL
+
+  Layer 12: avg=0.732
+    David Ha: 0.625 (8 papers) FAIL
+    Jeff Clune: 0.833 (30 papers) PASS
+    Joel Lehman: 0.667 (30 papers) FAIL
+    Ken Stanley: 0.967 (30 papers) PASS
+    Sebastian Risi: 0.567 (30 papers) FAIL
+
+  Layer 25: avg=0.763
+    David Ha: 0.750 (8 papers) PASS
+    Jeff Clune: 0.833 (30 papers) PASS
+    Joel Lehman: 0.700 (30 papers) FAIL
+    Ken Stanley: 0.900 (30 papers) PASS
+    Sebastian Risi: 0.633 (30 papers) FAIL
+
+  Layer 38: avg=0.770
+    David Ha: 0.750 (8 papers) PASS
+    Jeff Clune: 0.800 (30 papers) PASS
+    Joel Lehman: 0.700 (30 papers) FAIL
+    Ken Stanley: 0.900 (30 papers) PASS
+    Sebastian Risi: 0.700 (30 papers) FAIL
+
+  Layer 51: avg=0.757
+    David Ha: 0.750 (8 papers) PASS
+    Jeff Clune: 0.733 (30 papers) PASS
+    Joel Lehman: 0.667 (30 papers) FAIL
+    Ken Stanley: 0.933 (30 papers) PASS
+    Sebastian Risi: 0.700 (30 papers) FAIL
+
+  Layer 64: avg=0.752
+    David Ha: 0.625 (8 papers) FAIL
+    Jeff Clune: 0.833 (30 papers) PASS
+    Joel Lehman: 0.700 (30 papers) FAIL
+    Ken Stanley: 0.933 (30 papers) PASS
+    Sebastian Risi: 0.667 (30 papers) FAIL
+
+============================================================
+TEST 2: Topic vs Style (arXiv category features)
+============================================================
+  Topic features: 53 arXiv categories
+  Topic features alone → Style: 0.5763 +/- 0.0463
+
+  Full representations → Style:
+    Layer 0: 0.6803
+    Layer 12: 0.7513
+    Layer 25: 0.7759
+    Layer 38: 0.7842
+    Layer 51: 0.7869
+    Layer 64: 0.7787
+
+  Residual (topic removed) → Style:
+    Layer 0: 0.3633 (topic-removed)
+    Layer 12: 0.4479 (topic-removed)
+    Layer 25: 0.5327 (topic-removed)
+    Layer 38: 0.5108 (topic-removed)
+    Layer 51: 0.4699 (topic-removed)
+    Layer 64: 0.4999 (topic-removed)
+
+============================================================
+TEST 3: Same-Topic Different-Style Papers
+============================================================
+  Categories spanning 3+ styles (>=20 papers):
+    cs.AI: {'ml_creative': 67, 'ml_benchmark': 11, 'ml_safety': 14, 'social_ai': 14, 'multi_agent': 22, 'machine_behavior': 14, 'alife': 8, 'bio_ai': 15, 'ml_philosophy': 13}
+    cs.LG: {'ml_creative': 56, 'ml_benchmark': 22, 'ml_safety': 24, 'social_ai': 11, 'multi_agent': 9, 'machine_behavior': 4, 'alife': 2, 'bio_ai': 3, 'ml_philosophy': 13}
+    cs.NE: {'ml_creative': 75, 'ml_benchmark': 1, 'multi_agent': 7, 'alife': 12, 'bio_ai': 6, 'ml_philosophy': 2}
+    cs.CL: {'ml_creative': 4, 'ml_benchmark': 15, 'ml_safety': 9, 'social_ai': 6, 'multi_agent': 1, 'machine_behavior': 3, 'bio_ai': 1, 'ml_philosophy': 10}
+    cs.HC: {'ml_creative': 2, 'ml_safety': 1, 'social_ai': 38, 'multi_agent': 1, 'machine_behavior': 3, 'alife': 1, 'bio_ai': 1, 'ml_philosophy': 1}
+    stat.ML: {'ml_creative': 17, 'ml_benchmark': 10, 'ml_safety': 5, 'multi_agent': 3, 'machine_behavior': 1, 'ml_philosophy': 1}
+    cs.CY: {'ml_creative': 3, 'ml_benchmark': 1, 'social_ai': 8, 'multi_agent': 3, 'machine_behavior': 12, 'bio_ai': 1, 'ml_philosophy': 5}
+    cs.CV: {'ml_creative': 13, 'ml_benchmark': 2, 'ml_safety': 2, 'social_ai': 3, 'multi_agent': 1, 'machine_behavior': 2, 'bio_ai': 1, 'ml_philosophy': 3}
+    cs.MA: {'ml_creative': 1, 'multi_agent': 16, 'alife': 5, 'bio_ai': 4, 'ml_philosophy': 1}
+
+  Within 'cs.AI' (178 papers, 9 styles, chance=0.111):
+  Styles: {'ml_creative': 67, 'ml_benchmark': 11, 'ml_safety': 14, 'social_ai': 14, 'multi_agent': 22, 'machine_behavior': 14, 'alife': 8, 'bio_ai': 15, 'ml_philosophy': 13}
+    Layer 0: 0.6121 +/- 0.0254 (above chance: +0.5010)
+    Layer 12: 0.6683 +/- 0.0351 (above chance: +0.5571)
+    Layer 25: 0.6851 +/- 0.0715 (above chance: +0.5740)
+    Layer 38: 0.6967 +/- 0.0319 (above chance: +0.5856)
+    Layer 51: 0.6965 +/- 0.0282 (above chance: +0.5854)
+    Layer 64: 0.7135 +/- 0.0450 (above chance: +0.6024)
+
+
+DONE — ALL TESTS COMPLETE
