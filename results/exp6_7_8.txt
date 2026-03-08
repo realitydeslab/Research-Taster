@@ -1,0 +1,208 @@
+
+######################################################################
+# MODEL: Qwen3.5-9B
+######################################################################
+
+============================================================
+EXPERIMENT 6: CONTROL TASKS — Probe Selectivity
+============================================================
+Ref: Hewitt & Liang (2019). DOI: 10.18653/v1/D19-1275
+Selectivity = real_accuracy - control_accuracy
+High selectivity → model genuinely encodes the feature
+
+  strategic_orientation:
+    Real accuracy (linear):  0.7954
+    Real accuracy (MLP):     0.6180
+    Control accuracy:        0.3458 ± 0.0168
+    Selectivity:             0.4496 → GENUINE
+    Linearity ratio:         1.287 → LINEAR
+    Chance:                  0.2500
+
+  theory_of_progress:
+    Real accuracy (linear):  0.6828
+    Real accuracy (MLP):     0.5671
+    Control accuracy:        0.3834 ± 0.0233
+    Selectivity:             0.2994 → GENUINE
+    Linearity ratio:         1.204 → LINEAR
+    Chance:                  0.2000
+
+  contribution_claim:
+    Real accuracy (linear):  0.6895
+    Real accuracy (MLP):     0.5302
+    Control accuracy:        0.3719 ± 0.0199
+    Selectivity:             0.3176 → GENUINE
+    Linearity ratio:         1.300 → LINEAR
+    Chance:                  0.2500
+
+  epistemic_posture:
+    Real accuracy (linear):  0.7562
+    Real accuracy (MLP):     0.6370
+    Control accuracy:        0.3856 ± 0.0282
+    Selectivity:             0.3706 → GENUINE
+    Linearity ratio:         1.187 → LINEAR
+    Chance:                  0.3333
+
+  temporal_stance:
+    Real accuracy (linear):  0.7676
+    Real accuracy (MLP):     0.7432
+    Control accuracy:        0.5043 ± 0.0267
+    Selectivity:             0.2632 → GENUINE
+    Linearity ratio:         1.033 → LINEAR
+    Chance:                  0.3333
+
+  field_positioning:
+    Real accuracy (linear):  0.7116
+    Real accuracy (MLP):     0.6282
+    Control accuracy:        0.4290 ± 0.0429
+    Selectivity:             0.2826 → GENUINE
+    Linearity ratio:         1.133 → LINEAR
+    Chance:                  0.3333
+
+============================================================
+EXPERIMENT 7: CROSS-DOMAIN TRANSFER
+============================================================
+Ref: Belinkov (2022). DOI: 10.1162/coli_a_00422
+Train on one arXiv category, test on others
+If taste transfers across domains → genuinely meta
+
+  strategic_orientation:
+    Categories with >=20 papers: ['cs.AI', 'cs.LG', 'cs.NE', 'cs.CL', 'cs.HC']
+    Train: cs.AI (67) → Test: rest (305)
+      Train acc: 0.985, Test acc: 0.561 (chance: 0.250) → TRANSFERS
+    Train: cs.LG (74) → Test: rest (298)
+      Train acc: 1.000, Test acc: 0.574 (chance: 0.250) → TRANSFERS
+    Train: cs.CL (26) → Test: rest (346)
+      Train acc: 1.000, Test acc: 0.575 (chance: 0.250) → TRANSFERS
+    Train: cs.HC (33) → Test: rest (339)
+      Train acc: 1.000, Test acc: 0.360 (chance: 0.250) → TRANSFERS
+
+  theory_of_progress:
+    Categories with >=20 papers: ['cs.AI', 'cs.LG', 'cs.NE', 'cs.CL', 'cs.HC']
+    Train: cs.LG (74) → Test: rest (298)
+      Train acc: 1.000, Test acc: 0.594 (chance: 0.200) → TRANSFERS
+
+  contribution_claim:
+    Categories with >=20 papers: ['cs.AI', 'cs.LG', 'cs.NE', 'cs.CL', 'cs.HC']
+    Train: cs.AI (66) → Test: rest (298)
+      Train acc: 1.000, Test acc: 0.607 (chance: 0.250) → TRANSFERS
+    Train: cs.LG (74) → Test: rest (290)
+      Train acc: 1.000, Test acc: 0.486 (chance: 0.250) → TRANSFERS
+    Train: cs.NE (63) → Test: rest (301)
+      Train acc: 0.984, Test acc: 0.465 (chance: 0.250) → TRANSFERS
+    Train: cs.CL (26) → Test: rest (338)
+      Train acc: 1.000, Test acc: 0.515 (chance: 0.250) → TRANSFERS
+
+######################################################################
+# MODEL: Qwen3.5-27B
+######################################################################
+
+============================================================
+EXPERIMENT 6: CONTROL TASKS — Probe Selectivity
+============================================================
+Ref: Hewitt & Liang (2019). DOI: 10.18653/v1/D19-1275
+Selectivity = real_accuracy - control_accuracy
+High selectivity → model genuinely encodes the feature
+
+  strategic_orientation:
+    Real accuracy (linear):  0.7873
+    Real accuracy (MLP):     0.6533
+    Control accuracy:        0.3587 ± 0.0171
+    Selectivity:             0.4286 → GENUINE
+    Linearity ratio:         1.205 → LINEAR
+    Chance:                  0.2500
+
+  theory_of_progress:
+    Real accuracy (linear):  0.6559
+    Real accuracy (MLP):     0.5591
+    Control accuracy:        0.3716 ± 0.0318
+    Selectivity:             0.2843 → GENUINE
+    Linearity ratio:         1.173 → LINEAR
+    Chance:                  0.2000
+
+  contribution_claim:
+    Real accuracy (linear):  0.6292
+    Real accuracy (MLP):     0.5468
+    Control accuracy:        0.3725 ± 0.0253
+    Selectivity:             0.2567 → GENUINE
+    Linearity ratio:         1.151 → LINEAR
+    Chance:                  0.2500
+
+  epistemic_posture:
+    Real accuracy (linear):  0.7423
+    Real accuracy (MLP):     0.6510
+    Control accuracy:        0.3834 ± 0.0352
+    Selectivity:             0.3589 → GENUINE
+    Linearity ratio:         1.140 → LINEAR
+    Chance:                  0.3333
+
+  temporal_stance:
+    Real accuracy (linear):  0.7919
+    Real accuracy (MLP):     0.7297
+    Control accuracy:        0.4886 ± 0.0361
+    Selectivity:             0.3032 → GENUINE
+    Linearity ratio:         1.085 → LINEAR
+    Chance:                  0.3333
+
+  field_positioning:
+    Real accuracy (linear):  0.6792
+    Real accuracy (MLP):     0.6631
+    Control accuracy:        0.4166 ± 0.0377
+    Selectivity:             0.2626 → GENUINE
+    Linearity ratio:         1.024 → LINEAR
+    Chance:                  0.3333
+
+============================================================
+EXPERIMENT 7: CROSS-DOMAIN TRANSFER
+============================================================
+Ref: Belinkov (2022). DOI: 10.1162/coli_a_00422
+Train on one arXiv category, test on others
+If taste transfers across domains → genuinely meta
+
+  strategic_orientation:
+    Categories with >=20 papers: ['cs.AI', 'cs.LG', 'cs.NE', 'cs.CL', 'cs.HC']
+    Train: cs.AI (67) → Test: rest (305)
+      Train acc: 0.985, Test acc: 0.525 (chance: 0.250) → TRANSFERS
+    Train: cs.LG (74) → Test: rest (298)
+      Train acc: 1.000, Test acc: 0.544 (chance: 0.250) → TRANSFERS
+    Train: cs.CL (26) → Test: rest (346)
+      Train acc: 1.000, Test acc: 0.503 (chance: 0.250) → TRANSFERS
+    Train: cs.HC (33) → Test: rest (339)
+      Train acc: 1.000, Test acc: 0.431 (chance: 0.250) → TRANSFERS
+
+  theory_of_progress:
+    Categories with >=20 papers: ['cs.AI', 'cs.LG', 'cs.NE', 'cs.CL', 'cs.HC']
+    Train: cs.LG (74) → Test: rest (298)
+      Train acc: 1.000, Test acc: 0.473 (chance: 0.200) → TRANSFERS
+
+  contribution_claim:
+    Categories with >=20 papers: ['cs.AI', 'cs.LG', 'cs.NE', 'cs.CL', 'cs.HC']
+    Train: cs.AI (66) → Test: rest (298)
+      Train acc: 1.000, Test acc: 0.547 (chance: 0.250) → TRANSFERS
+    Train: cs.LG (74) → Test: rest (290)
+      Train acc: 1.000, Test acc: 0.448 (chance: 0.250) → TRANSFERS
+    Train: cs.NE (63) → Test: rest (301)
+      Train acc: 0.984, Test acc: 0.449 (chance: 0.250) → TRANSFERS
+    Train: cs.CL (26) → Test: rest (338)
+      Train acc: 1.000, Test acc: 0.509 (chance: 0.250) → TRANSFERS
+
+============================================================
+EXPERIMENT 8: CKA — Cross-Model Taste Geometry
+============================================================
+Ref: Kornblith et al. (2019). DOI: 10.48550/arXiv.1905.00414
+Do 9B and 27B encode taste in the same way?
+
+  CKA between 9B and 27B layers:
+              27B-L00  27B-L12  27B-L25  27B-L38  27B-L51  27B-L64
+  9B-L00    0.983█  0.623█  0.625█  0.604█  0.615█  0.590█
+  9B-L06    0.627█  0.868█  0.889█  0.873█  0.864█  0.842█
+  9B-L12    0.604█  0.858█  0.942█  0.930█  0.881█  0.871█
+  9B-L19    0.608█  0.797█  0.851█  0.883█  0.966█  0.816█
+  9B-L25    0.553█  0.777█  0.937█  0.943█  0.880█  0.933█
+  9B-L32    0.561█  0.763█  0.906█  0.899█  0.834█  0.957█
+
+  CKA on taste-relevant subspace (PCA of taste-labeled papers only):
+    strategic_orientation: CKA(9B-L12, 27B-L25) = 0.9415
+    theory_of_progress: CKA(9B-L12, 27B-L25) = 0.9415
+
+
+ALL EXPERIMENTS COMPLETE
