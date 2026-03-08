@@ -1,0 +1,168 @@
+======================================================================
+1. RESEARCHERS GROUPED BY META-KNOWLEDGE DIMENSION
+======================================================================
+
+============================================================
+  STRATEGIC_ORIENTATION
+============================================================
+    exploration: David Ha (88%), Ken Stanley (77%), Jeff Clune (70%), Sebastian Risi (70%), Joel Lehman (63%), Michael Levin (60%), Takashi Ikegami (53%), Percy Liang (47%), Blaise Agüera y Arcas (40%)
+    infrastructure: Joon Sung Park (38%)
+    safety: Kate Crawford (43%)
+    understanding: Iyad Rahwan (47%), Jacob Steinhardt (47%), Joel Z Leibo (43%), Michael Bernstein (40%)
+
+============================================================
+  THEORY_OF_PROGRESS
+============================================================
+    bridging: Michael Levin (80%), Takashi Ikegami (53%), Kate Crawford (43%), Iyad Rahwan (37%)
+    novelty: David Ha (75%), Jeff Clune (70%), Sebastian Risi (70%), Ken Stanley (67%), Percy Liang (60%), Jacob Steinhardt (57%), Blaise Agüera y Arcas (47%), Joel Lehman (47%), Joel Z Leibo (47%), Joon Sung Park (46%), Michael Bernstein (40%)
+
+============================================================
+  CONTRIBUTION_CLAIM
+============================================================
+    framework: Kate Crawford (86%), Michael Levin (73%), Jacob Steinhardt (67%), Joel Z Leibo (63%), Joon Sung Park (54%), Joel Lehman (53%), Takashi Ikegami (53%), Blaise Agüera y Arcas (50%), Iyad Rahwan (50%), Jeff Clune (43%), Ken Stanley (43%), Percy Liang (43%), Sebastian Risi (37%)
+    performance: David Ha (50%)
+    validation: Michael Bernstein (40%)
+
+============================================================
+  EPISTEMIC_POSTURE
+============================================================
+    embrace: David Ha (75%), Ken Stanley (73%), Sebastian Risi (70%), Jeff Clune (67%), Takashi Ikegami (53%), Joel Lehman (50%), Michael Bernstein (37%)
+    problematize: Kate Crawford (100%), Joel Z Leibo (70%), Iyad Rahwan (57%), Michael Levin (53%), Percy Liang (40%), Joon Sung Park (38%), Blaise Agüera y Arcas (37%)
+    quantify: Jacob Steinhardt (47%)
+
+============================================================
+  TEMPORAL_STANCE
+============================================================
+    long: Takashi Ikegami (97%), Michael Levin (87%), Joel Z Leibo (80%), Ken Stanley (80%), Jeff Clune (63%), Joel Lehman (63%), Jacob Steinhardt (60%), Iyad Rahwan (57%), Sebastian Risi (53%), David Ha (50%)
+    near: Joon Sung Park (54%), Percy Liang (53%), Blaise Agüera y Arcas (47%), Michael Bernstein (43%)
+    urgent: Kate Crawford (43%)
+
+============================================================
+  FIELD_POSITIONING
+============================================================
+    advancing: Jacob Steinhardt (70%), Sebastian Risi (67%), Jeff Clune (63%), Percy Liang (63%), Blaise Agüera y Arcas (57%), Joon Sung Park (54%), David Ha (50%), Takashi Ikegami (47%), Ken Stanley (40%)
+    challenging: Kate Crawford (100%), Iyad Rahwan (70%), Joel Z Leibo (60%), Michael Levin (60%), Joel Lehman (57%), Michael Bernstein (53%)
+
+======================================================================
+2. TOPIC × TASTE MATRIX
+======================================================================
+(arXiv primary category × strategic orientation)
+
+  Topics with diverse tastes:
+    cs.AI: exploration: 11 researchers | infrastructure: 4 researchers | safety: 4 researchers | understanding: 8 researchers
+    cs.CL: exploration: 4 researchers | infrastructure: 3 researchers | safety: 2 researchers | understanding: 4 researchers
+    cs.CV: exploration: 4 researchers | infrastructure: 3 researchers | safety: 1 researchers | understanding: 6 researchers
+    cs.CY: exploration: 1 researchers | infrastructure: 2 researchers | safety: 5 researchers | understanding: 4 researchers
+    cs.HC: design: 1 researchers | exploration: 3 researchers | infrastructure: 3 researchers | safety: 3 researchers | understanding: 2 researchers
+    cs.LG: exploration: 10 researchers | infrastructure: 6 researchers | safety: 8 researchers | understanding: 6 researchers
+    cs.MA: exploration: 2 researchers | safety: 1 researchers | understanding: 2 researchers
+    cs.NE: exploration: 7 researchers | infrastructure: 2 researchers | safety: 2 researchers | understanding: 6 researchers
+    cs.SI: exploration: 1 researchers | infrastructure: 2 researchers | understanding: 4 researchers
+
+======================================================================
+3. UNSUPERVISED TASTE CLUSTERS
+======================================================================
+
+  K=3 (silhouette=0.116):
+    Cluster 0: Blaise Agüera y Arcas, Iyad Rahwan, Jacob Steinhardt, Joel Z Leibo, Joon Sung Park, Michael Bernstein, Michael Levin, Percy Liang, Takashi Ikegami
+      Taste: {'strategic_orientation': 'understanding (38%)', 'theory_of_progress': 'novelty (44%)', 'contribution_claim': 'framework (53%)'}
+    Cluster 1: David Ha, Jeff Clune, Joel Lehman, Ken Stanley, Sebastian Risi
+      Taste: {'strategic_orientation': 'exploration (71%)', 'theory_of_progress': 'novelty (64%)', 'contribution_claim': 'framework (42%)'}
+    Cluster 2: Kate Crawford
+      Taste: {'strategic_orientation': 'safety (43%)', 'theory_of_progress': 'bridging (43%)', 'contribution_claim': 'framework (86%)'}
+
+  K=4 (silhouette=0.157):
+    Cluster 0: Blaise Agüera y Arcas, Iyad Rahwan, Jacob Steinhardt, Joon Sung Park, Michael Bernstein, Percy Liang
+      Taste: {'strategic_orientation': 'understanding (35%)', 'theory_of_progress': 'novelty (46%)', 'contribution_claim': 'framework (50%)'}
+    Cluster 1: David Ha, Jeff Clune, Joel Lehman, Ken Stanley, Sebastian Risi
+      Taste: {'strategic_orientation': 'exploration (71%)', 'theory_of_progress': 'novelty (64%)', 'contribution_claim': 'framework (42%)'}
+    Cluster 2: Joel Z Leibo, Michael Levin, Takashi Ikegami
+      Taste: {'strategic_orientation': 'exploration (47%)', 'theory_of_progress': 'bridging (55%)', 'contribution_claim': 'framework (61%)'}
+    Cluster 3: Kate Crawford
+      Taste: {'strategic_orientation': 'safety (43%)', 'theory_of_progress': 'bridging (43%)', 'contribution_claim': 'framework (86%)'}
+
+  K=5 (silhouette=0.189):
+    Cluster 0: David Ha, Jeff Clune, Joel Lehman, Ken Stanley, Sebastian Risi
+      Taste: {'strategic_orientation': 'exploration (71%)', 'theory_of_progress': 'novelty (64%)', 'contribution_claim': 'framework (42%)'}
+    Cluster 1: Iyad Rahwan, Joon Sung Park, Michael Bernstein
+      Taste: {'strategic_orientation': 'understanding (38%)', 'theory_of_progress': 'novelty (36%)', 'contribution_claim': 'framework (45%)'}
+    Cluster 2: Blaise Agüera y Arcas, Jacob Steinhardt, Percy Liang
+      Taste: {'strategic_orientation': 'exploration (37%)', 'theory_of_progress': 'novelty (54%)', 'contribution_claim': 'framework (53%)'}
+    Cluster 3: Joel Z Leibo, Michael Levin, Takashi Ikegami
+      Taste: {'strategic_orientation': 'exploration (47%)', 'theory_of_progress': 'bridging (55%)', 'contribution_claim': 'framework (61%)'}
+    Cluster 4: Kate Crawford
+      Taste: {'strategic_orientation': 'safety (43%)', 'theory_of_progress': 'bridging (43%)', 'contribution_claim': 'framework (86%)'}
+
+======================================================================
+4. QUERY EXAMPLES
+======================================================================
+
+  Q1: 'Who works on multi-agent systems WITH exploration taste?'
+    Joel Lehman: 1 multi-agent papers, exploration=63%
+    Blaise Agüera y Arcas: 2 multi-agent papers, exploration=40%
+    Joel Z Leibo: 7 multi-agent papers, exploration=33%
+
+  Q2: 'Who works on neural networks WITH bridging taste?'
+    Michael Levin: 2 neural papers, bridging=80%
+    Takashi Ikegami: 5 neural papers, bridging=53%
+    Joel Lehman: 4 neural papers, bridging=33%
+
+  Q3: 'Taste twin for Ken Stanley but different topic?'
+    Jeff Clune: taste_sim=0.786, primary_topic=cs.NE, topic_overlap=0.67
+    Joel Lehman: taste_sim=0.626, primary_topic=cs.NE, topic_overlap=0.57
+    Sebastian Risi: taste_sim=0.410, primary_topic=cs.NE, topic_overlap=0.57
+    David Ha: taste_sim=0.224, primary_topic=cs.AI, topic_overlap=0.40
+    Percy Liang: taste_sim=-0.013, primary_topic=cs.LG, topic_overlap=0.38
+
+  Q4: 'Taste twin for Iyad Rahwan but different topic?'
+    Michael Bernstein: taste_sim=0.517, primary_topic=cs.HC, topic_overlap=0.50
+    Kate Crawford: taste_sim=0.292, primary_topic=cs.CY, topic_overlap=0.08
+    Joon Sung Park: taste_sim=0.271, primary_topic=cs.HC, topic_overlap=0.45
+    Joel Z Leibo: taste_sim=0.124, primary_topic=cs.AI, topic_overlap=0.38
+    Takashi Ikegami: taste_sim=0.087, primary_topic=cs.NE, topic_overlap=0.15
+
+  Q5: 'Who would challenge Ken Stanley? (complementary taste)'
+    Iyad Rahwan: taste_sim=-0.582 (understanding)
+    Michael Bernstein: taste_sim=-0.531 (understanding)
+    Joon Sung Park: taste_sim=-0.499 (infrastructure)
+    Kate Crawford: taste_sim=-0.282 (safety)
+    Blaise Agüera y Arcas: taste_sim=-0.280 (exploration)
+
+  Q6: 'Who would challenge Kate Crawford? (complementary taste)'
+    Jeff Clune: taste_sim=-0.309 (exploration)
+    Ken Stanley: taste_sim=-0.282 (exploration)
+    Sebastian Risi: taste_sim=-0.257 (exploration)
+    Percy Liang: taste_sim=-0.205 (exploration)
+    David Ha: taste_sim=-0.158 (exploration)
+
+======================================================================
+5. META-KNOWLEDGE LEVELS (Evans & Foster)
+======================================================================
+
+  L0: Knowledge     — WHAT the paper is about (topic, content)
+  L1: Methods       — HOW they study it (methods, approaches)
+  L2: Meta-taste    — WHY they chose this (epistemic orientation)
+  L3: Reflexivity   — AWARENESS of their own taste (Research Taster level)
+
+  Research Strategy Types (Foster, Rzhetsky & Evans 2015):
+  Consolidation = advancing mainstream + performance + reduce uncertainty
+  Bridging = connecting fields + bridging + framework
+  Innovation = exploration + novelty + embrace uncertainty
+
+  Blaise Agüera y Arcas     [BRIDGER     ]  Innovation:█████                Consolidation:██████               Bridging:███████             
+  David Ha                  [INNOVATOR   ]  Innovation:█████████████        Consolidation:███████              Bridging:██                  
+  Iyad Rahwan               [BRIDGER     ]  Innovation:███                  Consolidation:█                    Bridging:██████████          
+  Jacob Steinhardt          [BRIDGER     ]  Innovation:████                 Consolidation:█████                Bridging:███████             
+  Jeff Clune                [INNOVATOR   ]  Innovation:██████████           Consolidation:██████               Bridging:█████               
+  Joel Lehman               [BRIDGER     ]  Innovation:████████             Consolidation:███                  Bridging:█████████           
+  Joel Z Leibo              [BRIDGER     ]  Innovation:█████                Consolidation:██                   Bridging:███████████         
+  Joon Sung Park            [BRIDGER     ]  Innovation:█████                Consolidation:████                 Bridging:███████             
+  Kate Crawford             [BRIDGER     ]  Innovation:                     Consolidation:                     Bridging:███████████████     
+  Ken Stanley               [INNOVATOR   ]  Innovation:████████████         Consolidation:███                  Bridging:██████              
+  Michael Bernstein         [BRIDGER     ]  Innovation:████                 Consolidation:██                   Bridging:███████             
+  Michael Levin             [BRIDGER     ]  Innovation:███████              Consolidation:                     Bridging:██████████████      
+  Percy Liang               [CONSOLIDATOR]  Innovation:███████              Consolidation:███████              Bridging:██████              
+  Sebastian Risi            [INNOVATOR   ]  Innovation:██████████           Consolidation:██████               Bridging:██████              
+  Takashi Ikegami           [BRIDGER     ]  Innovation:███████              Consolidation:███                  Bridging:██████████          
+
+DONE
