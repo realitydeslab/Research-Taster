@@ -1,0 +1,472 @@
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+================================================================================
+PART 1: PROMPT-BASED vs PROBE-BASED TASTE DETECTION
+================================================================================
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights:   0%|          | 1/427 [00:00<01:10,  6.07it/s]Loading weights:   0%|          | 2/427 [00:00<01:14,  5.72it/s]Loading weights:   7%|▋         | 29/427 [00:00<00:04, 90.50it/s]Loading weights:  12%|█▏        | 52/427 [00:00<00:02, 134.35it/s]Loading weights:  19%|█▊        | 80/427 [00:00<00:01, 173.59it/s]Loading weights:  23%|██▎       | 100/427 [00:00<00:01, 177.13it/s]Loading weights:  34%|███▍      | 146/427 [00:00<00:01, 259.69it/s]Loading weights:  43%|████▎     | 182/427 [00:00<00:00, 286.17it/s]Loading weights:  50%|████▉     | 213/427 [00:01<00:00, 291.65it/s]Loading weights:  59%|█████▉    | 253/427 [00:01<00:00, 317.21it/s]Loading weights:  68%|██████▊   | 292/427 [00:01<00:00, 322.51it/s]Loading weights:  77%|███████▋  | 330/427 [00:01<00:00, 335.31it/s]Loading weights:  85%|████████▌ | 364/427 [00:01<00:00, 327.82it/s]Loading weights:  94%|█████████▎| 400/427 [00:01<00:00, 329.05it/s]Loading weights: 100%|██████████| 427/427 [00:01<00:00, 252.07it/s]
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+Running prompt-based classification on 50 sample papers...
+  strategic_orientation (prompt): 0/50 = 0.0%
+  theory_of_progress (prompt): 0/50 = 0.0%
+  temporal_stance (prompt): 0/50 = 0.0%
+  epistemic_posture (prompt): 2/50 = 4.0%
+  field_positioning (prompt): 1/50 = 2.0%
+  contribution_claim (prompt): 0/50 = 0.0%
+
+Probe-based classification on same papers:
+  strategic_orientation (probe): 79.0%
+  theory_of_progress (probe): 69.6%
+  temporal_stance (probe): 77.3%
+  epistemic_posture (probe): 75.6%
+  field_positioning (probe): 72.5%
+  contribution_claim (probe): 66.5%
+
+Comparison:
+                Dimension    Prompt     Probe    Winner
+    strategic_orientation     0.0%    79.0%     Probe
+       theory_of_progress     0.0%    69.6%     Probe
+          temporal_stance     0.0%    77.3%     Probe
+        epistemic_posture     4.0%    75.6%     Probe
+        field_positioning     2.0%    72.5%     Probe
+       contribution_claim     0.0%    66.5%     Probe
+
+================================================================================
+PART 2: RESEARCH QUESTION TASTE PROFILING
+================================================================================
+
+Profiling research questions via hidden states:
+
+  RQ: How can we evolve neural network architectures through open-ended search to disc...
+  Expected: Exploration + Novelty (Stanley-like)
+  Predicted taste:
+    strategic_orientation: exploration (100%)
+    theory_of_progress: novelty (100%)
+    temporal_stance: long (100%)
+    epistemic_posture: embrace (100%)
+    field_positioning: creating (100%)
+    contribution_claim: emergence (100%)
+
+  RQ: What are the social implications of deploying large language models in criminal ...
+  Expected: Understanding + Problematize (Crawford-like)
+  Predicted taste:
+    strategic_orientation: safety (92%)
+    theory_of_progress: novelty (65%)
+    temporal_stance: urgent (99%)
+    epistemic_posture: problematize (100%)
+    field_positioning: challenging (100%)
+    contribution_claim: framework (73%)
+
+  RQ: Can we improve the efficiency of transformer inference by 10x through novel quan...
+  Expected: Infrastructure + Engineering (Liang-like)
+  Predicted taste:
+    strategic_orientation: understanding (98%)
+    theory_of_progress: novelty (82%)
+    temporal_stance: near (100%)
+    epistemic_posture: quantify (100%)
+    field_positioning: advancing (100%)
+    contribution_claim: performance (100%)
+
+  RQ: What does it mean for a machine to die, and how should we design end-of-life pro...
+  Expected: Exploration + Questioning (Ikegami-like)
+  Predicted taste:
+    strategic_orientation: safety (88%)
+    theory_of_progress: novelty (98%)
+    temporal_stance: long (100%)
+    epistemic_posture: problematize (100%)
+    field_positioning: challenging (100%)
+    contribution_claim: framework (100%)
+
+  RQ: We propose a benchmark for evaluating code generation capabilities of language m...
+  Expected: Infrastructure + Performance (Benchmark-like)
+  Predicted taste:
+    strategic_orientation: infrastructure (100%)
+    theory_of_progress: engineering (100%)
+    temporal_stance: long (88%)
+    epistemic_posture: problematize (100%)
+    field_positioning: creating (99%)
+    contribution_claim: framework (86%)
+
+  RQ: How do slime mold networks solve optimization problems, and what can artificial ...
+  Expected: Exploration + Bridging (Levin-like)
+  Predicted taste:
+    strategic_orientation: understanding (84%)
+    theory_of_progress: bridging (100%)
+    temporal_stance: long (100%)
+    epistemic_posture: embrace (83%)
+    field_positioning: challenging (99%)
+    contribution_claim: emergence (70%)
+
+================================================================================
+PART 3: TASTE STEERING — Shifting epistemic orientation
+================================================================================
+
+Computing taste direction vectors...
+  strategic_orientation direction: understanding -> exploration (norm=1.44)
+  temporal_stance direction: near -> long (norm=1.32)
+  epistemic_posture direction: problematize -> embrace (norm=1.30)
+
+Base RQ: What are the implications of large language models for scientific research?
+
+Generating completions with different taste steering:
+
+  [strategic_orientation] understanding (scale=-15.0):
+    We address this question in three parts. First, we focus on the relationship between the size of a population and the magnitude of the effects of the variables. Second, we focus on the nature of the var
+
+  [strategic_orientation] neutral (scale=0.0):
+    We propose a study that will analyze the impact of LLMs on the scientific research ecosystem. This research aims to address the critical challenges and opportunities presented by the rapid integration o
+
+  [strategic_orientation] exploration (scale=15.0):
+    We've tried it.
+
+The following is a continuation of the research abstract, building upon the initial prompt to explore the capabilities of LLMs for scientific research.
+
+***
+
+**Abstract:**
+
+**What are t
+
+  [temporal_stance] near-term (scale=-15.0):
+    We propose a new framework called **Scientific Research Assistant (SRA)** that integrates LLMs with a **retrieval-augmented generation (RAG)** pipeline and **agent-based evaluation** to improve accuracy
+
+  [temporal_stance] neutral (scale=0.0):
+    We propose a novel framework, SciGen, that leverages LLMs to automate hypothesis generation, literature synthesis, and experimental design. SciGen integrates a domain-specific knowledge graph with an it
+
+  [temporal_stance] long-term (scale=15.0):
+    We propose to explore the nature of the influence of such systems on the evolution of the living world.
+
+The development of life is a universal process, a universal mechanism. Therefore, it is reasonabl
+
+  [epistemic_posture] problematize (scale=-15.0):
+    We examine the role of LLMs in the interpretation of scientific research, focusing on how they might distort or skew the understanding of scientific findings.
+
+<think>
+
+</think>
+
+The implications of lar
+
+  [epistemic_posture] neutral (scale=0.0):
+    We explore the current state of the art in using LLMs for scientific research and the potential risks and benefits of integrating LLMs into the scientific workflow.
+
+<think>
+
+</think>
+
+Building upon thi
+
+  [epistemic_posture] embrace (scale=15.0):
+    We propose a novel method that combines a transformer-based LLM with a custom-built physics engine. The physics engine is built by the LLM itself.
+
+This is a fascinating concept that bridges the gap bet
+
+DONE
