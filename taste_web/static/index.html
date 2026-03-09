@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TasteMirror — Research Taste Explorer</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0a1a; color: #e0e0f0; min-height: 100vh; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+h1 { text-align: center; font-size: 2.2em; margin: 20px 0; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.subtitle { text-align: center; color: #888; margin-bottom: 30px; font-size: 1.1em; }
+
+/* Input Section */
+.input-section { background: #12122a; border-radius: 16px; padding: 24px; margin-bottom: 24px; border: 1px solid #1e1e3a; }
+.input-section h2 { font-size: 1.2em; margin-bottom: 12px; color: #a0a0ff; }
+textarea { width: 100%; min-height: 120px; background: #0a0a1a; border: 1px solid #2a2a4a; border-radius: 8px; color: #e0e0f0; padding: 12px; font-size: 14px; resize: vertical; font-family: inherit; }
+textarea:focus { outline: none; border-color: #667eea; }
+.btn { background: linear-gradient(135deg, #667eea, #764ba2); border: none; color: white; padding: 12px 28px; border-radius: 8px; cursor: pointer; font-size: 15px; margin-top: 12px; transition: opacity 0.2s; }
+.btn:hover { opacity: 0.9; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-secondary { background: #2a2a4a; }
+
+/* Results Grid */
+.results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+@media (max-width: 768px) { .results-grid { grid-template-columns: 1fr; } }
+
+/* Taste Profile Card */
+.card { background: #12122a; border-radius: 16px; padding: 24px; border: 1px solid #1e1e3a; }
+.card h2 { font-size: 1.2em; margin-bottom: 16px; color: #a0a0ff; }
+.taste-dim { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #1a1a2e; }
+.taste-dim:last-child { border-bottom: none; }
+.taste-label { font-size: 13px; color: #888; }
+.taste-value { font-size: 14px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: #1e1e3a; }
+.taste-value.exploration { background: #1a3a2a; color: #4ade80; }
+.taste-value.understanding { background: #1a2a3a; color: #60a5fa; }
+.taste-value.infrastructure { background: #3a2a1a; color: #fbbf24; }
+.taste-value.safety { background: #3a1a1a; color: #f87171; }
+.taste-value.novelty { background: #2a1a3a; color: #c084fc; }
+.taste-value.bridging { background: #1a3a3a; color: #2dd4bf; }
+.taste-value.embrace { background: #1a3a2a; color: #4ade80; }
+.taste-value.problematize { background: #3a1a2a; color: #fb7185; }
+.taste-value.long { background: #1a2a3a; color: #60a5fa; }
+.taste-value.near { background: #3a2a1a; color: #fbbf24; }
+.confidence { font-size: 11px; color: #666; margin-left: 8px; }
+
+/* Similar Researchers */
+.researcher { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #1a1a2e; }
+.researcher:last-child { border-bottom: none; }
+.researcher-name { font-weight: 600; flex: 1; }
+.researcher-sim { font-size: 13px; color: #667eea; font-weight: 600; }
+.researcher-papers { font-size: 12px; color: #666; margin-left: 8px; }
+.sim-bar { height: 4px; background: #1e1e3a; border-radius: 2px; margin-top: 4px; width: 100%; }
+.sim-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, #667eea, #764ba2); }
+
+/* Steering Section */
+.steering-section { background: #12122a; border-radius: 16px; padding: 24px; margin-bottom: 24px; border: 1px solid #1e1e3a; }
+.steering-section h2 { font-size: 1.2em; margin-bottom: 16px; color: #a0a0ff; }
+.dial { margin-bottom: 20px; }
+.dial-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.dial-label { font-size: 13px; color: #888; }
+.dial-value { font-size: 13px; color: #667eea; font-weight: 600; }
+.dial-endpoints { display: flex; justify-content: space-between; font-size: 11px; color: #666; margin-top: 4px; }
+input[type="range"] { width: 100%; -webkit-appearance: none; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #fb7185, #1e1e3a 45%, #1e1e3a 55%, #4ade80); outline: none; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: #667eea; cursor: pointer; border: 2px solid #0a0a1a; }
+
+/* Generated Text */
+.generated { background: #0a0a1a; border-radius: 8px; padding: 16px; margin-top: 16px; border-left: 3px solid #667eea; font-style: italic; line-height: 1.6; min-height: 80px; }
+
+/* Radar Chart */
+.chart-container { width: 100%; max-width: 350px; margin: 0 auto; }
+
+/* Loading */
+.loading { text-align: center; padding: 20px; color: #667eea; }
+.spinner { display: inline-block; width: 24px; height: 24px; border: 3px solid #1e1e3a; border-top: 3px solid #667eea; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 8px; vertical-align: middle; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.hidden { display: none; }
+
+/* Examples */
+.examples { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.example-btn { background: #1e1e3a; border: 1px solid #2a2a4a; color: #a0a0c0; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 12px; transition: all 0.2s; }
+.example-btn:hover { background: #2a2a5a; color: #e0e0f0; border-color: #667eea; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🪞 TasteMirror</h1>
+  <p class="subtitle">Explore your research taste through LLM representations</p>
+  
+  <!-- Input -->
+  <div class="input-section">
+    <h2>📝 Enter a Research Abstract or Question</h2>
+    <textarea id="inputText" placeholder="Paste a research abstract, write a research question, or describe a research direction..."></textarea>
+    <div class="examples">
+      <button class="example-btn" onclick="setExample(0)">🧬 ALife exploration</button>
+      <button class="example-btn" onclick="setExample(1)">⚖️ AI ethics critique</button>
+      <button class="example-btn" onclick="setExample(2)">⚡ Systems engineering</button>
+      <button class="example-btn" onclick="setExample(3)">🤔 Machine consciousness</button>
+      <button class="example-btn" onclick="setExample(4)">📊 Benchmark paper</button>
+      <button class="example-btn" onclick="setExample(5)">🌿 Bio-inspired computing</button>
+    </div>
+    <button class="btn" id="profileBtn" onclick="profileText()">🔍 Analyze Taste</button>
+  </div>
+  
+  <!-- Results -->
+  <div id="results" class="hidden">
+    <div class="results-grid">
+      <!-- Taste Profile -->
+      <div class="card">
+        <h2>🧭 Taste Profile</h2>
+        <div id="tasteProfile"></div>
+      </div>
+      
+      <!-- Radar Chart -->
+      <div class="card">
+        <h2>📊 Taste Radar</h2>
+        <div class="chart-container">
+          <canvas id="radarChart"></canvas>
+        </div>
+      </div>
+      
+      <!-- Similar Researchers -->
+      <div class="card">
+        <h2>👥 Similar Researchers</h2>
+        <div id="similarResearchers"></div>
+      </div>
+      
+      <!-- Researcher Taste Match -->
+      <div class="card">
+        <h2>🎯 Taste Match Details</h2>
+        <div id="matchDetails"></div>
+      </div>
+    </div>
+    
+    <!-- Steering -->
+    <div class="steering-section">
+      <h2>🎛️ Taste Steering — Adjust the Dials</h2>
+      <p style="color:#666;font-size:13px;margin-bottom:16px;">Move the sliders to steer the epistemic orientation. Click "Generate" to see how the output changes.</p>
+      <div id="steeringDials"></div>
+      <button class="btn" id="steerBtn" onclick="steerGenerate()">⚡ Generate Steered Output</button>
+      <button class="btn btn-secondary" onclick="resetDials()">↺ Reset</button>
+      
+      <div id="steeredOutput" class="hidden">
+        <h3 style="margin-top:20px;color:#a0a0ff;">Generated Text:</h3>
+        <div id="generatedText" class="generated"></div>
+        <h3 style="margin-top:16px;color:#a0a0ff;">Steered Taste Profile:</h3>
+        <div id="steeredProfile"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loading" class="loading hidden">
+    <span class="spinner"></span> Analyzing taste through LLM representations...
+  </div>
+</div>
+
+<script>
+const EXAMPLES = [
+  "How can we evolve neural network architectures through open-ended search to discover novel computational structures that exceed human design?",
+  "What are the social implications of deploying large language models in criminal justice systems, and how do they reproduce existing biases?",
+  "Can we improve the efficiency of transformer inference by 10x through novel quantization and pruning techniques?",
+  "What does it mean for a machine to die, and how should we design end-of-life protocols for autonomous agents?",
+  "We propose a benchmark for evaluating code generation capabilities of language models across 15 programming languages.",
+  "How do slime mold networks solve optimization problems, and what can artificial life learn from biological computation?",
+];
+
+let radarChart = null;
+let steeringDims = {};
+
+function setExample(i) {
+  document.getElementById('inputText').value = EXAMPLES[i];
+}
+
+async function profileText() {
+  const text = document.getElementById('inputText').value.trim();
+  if (!text) return;
+  
+  document.getElementById('profileBtn').disabled = true;
+  document.getElementById('loading').classList.remove('hidden');
+  document.getElementById('results').classList.add('hidden');
+  
+  try {
+    const resp = await fetch('/api/profile', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({text})
+    });
+    const data = await resp.json();
+    
+    renderProfile(data.profile, 'tasteProfile');
+    renderRadar(data.profile);
+    renderSimilar(data.similar_researchers);
+    renderMatchDetails(data.similar_researchers[0]);
+    
+    document.getElementById('results').classList.remove('hidden');
+    
+    // Load steering dims
+    const sdResp = await fetch('/api/steering_dims');
+    steeringDims = await sdResp.json();
+    renderDials(steeringDims);
+    
+  } catch(e) {
+    alert('Error: ' + e.message);
+  }
+  
+  document.getElementById('profileBtn').disabled = false;
+  document.getElementById('loading').classList.add('hidden');
+}
+
+function renderProfile(profile, containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+  for (const [dim, info] of Object.entries(profile)) {
+    const conf = Math.round(info.confidence * 100);
+    container.innerHTML += `
+      <div class="taste-dim">
+        <span class="taste-label">${info.icon} ${info.label}</span>
+        <span>
+          <span class="taste-value ${info.predicted}">${info.predicted}</span>
+          <span class="confidence">${conf}%</span>
+        </span>
+      </div>`;
+  }
+}
+
+function renderRadar(profile) {
+  const ctx = document.getElementById('radarChart').getContext('2d');
+  const labels = Object.values(profile).map(p => p.icon + ' ' + p.label);
+  const values = Object.values(profile).map(p => p.confidence * 100);
+  
+  if (radarChart) radarChart.destroy();
+  radarChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels,
+      datasets: [{
+        label: 'Confidence',
+        data: values,
+        fill: true,
+        backgroundColor: 'rgba(102, 126, 234, 0.2)',
+        borderColor: '#667eea',
+        pointBackgroundColor: '#667eea',
+        pointBorderColor: '#0a0a1a',
+        pointRadius: 4,
+      }]
+    },
+    options: {
+      scales: {
+        r: {
+          min: 0, max: 100,
+          ticks: { display: false },
+          grid: { color: '#1e1e3a' },
+          pointLabels: { color: '#888', font: { size: 11 } },
+          angleLines: { color: '#1e1e3a' },
+        }
+      },
+      plugins: { legend: { display: false } },
+    }
+  });
+}
+
+function renderSimilar(researchers) {
+  const container = document.getElementById('similarResearchers');
+  container.innerHTML = '';
+  for (const r of researchers) {
+    const simPct = Math.round(r.similarity * 100);
+    const barWidth = Math.max(0, (r.similarity + 0.5) * 66);
+    container.innerHTML += `
+      <div class="researcher">
+        <div style="flex:1">
+          <div class="researcher-name">${r.name}</div>
+          <div class="sim-bar"><div class="sim-fill" style="width:${barWidth}%"></div></div>
+        </div>
+        <span class="researcher-sim">${simPct}%</span>
+        <span class="researcher-papers">(${r.n_papers} papers)</span>
+      </div>`;
+  }
+}
+
+function renderMatchDetails(researcher) {
+  const container = document.getElementById('matchDetails');
+  if (!researcher) { container.innerHTML = '<p style="color:#666">No match data</p>'; return; }
+  let html = `<p style="margin-bottom:12px;"><strong>${researcher.name}</strong> — closest taste match</p>`;
+  for (const [dim, info] of Object.entries(researcher.profile || {})) {
+    html += `<div class="taste-dim">
+      <span class="taste-label">${dim.replace(/_/g, ' ')}</span>
+      <span class="taste-value ${info.value}">${info.value} (${info.count}/${info.total})</span>
+    </div>`;
+  }
+  container.innerHTML = html;
+}
+
+function renderDials(dims) {
+  const container = document.getElementById('steeringDials');
+  container.innerHTML = '';
+  for (const [dim, info] of Object.entries(dims)) {
+    container.innerHTML += `
+      <div class="dial">
+        <div class="dial-header">
+          <span class="dial-label">${info.icon} ${info.label}</span>
+          <span class="dial-value" id="val_${dim}">0</span>
+        </div>
+        <input type="range" id="dial_${dim}" min="-20" max="20" value="0" step="1"
+               oninput="document.getElementById('val_${dim}').textContent=this.value">
+        <div class="dial-endpoints">
+          <span>← ${info.neg}</span>
+          <span>${info.pos} →</span>
+        </div>
+      </div>`;
+  }
+}
+
+function resetDials() {
+  for (const dim of Object.keys(steeringDims)) {
+    const el = document.getElementById('dial_' + dim);
+    if (el) { el.value = 0; document.getElementById('val_' + dim).textContent = '0'; }
+  }
+}
+
+async function steerGenerate() {
+  const text = document.getElementById('inputText').value.trim();
+  if (!text) return;
+  
+  const steering = {};
+  for (const dim of Object.keys(steeringDims)) {
+    const el = document.getElementById('dial_' + dim);
+    if (el) steering[dim] = parseFloat(el.value);
+  }
+  
+  document.getElementById('steerBtn').disabled = true;
+  document.getElementById('loading').classList.remove('hidden');
+  
+  try {
+    const resp = await fetch('/api/steer', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({text, steering})
+    });
+    const data = await resp.json();
+    
+    document.getElementById('generatedText').textContent = data.generated;
+    renderProfile(data.profile, 'steeredProfile');
+    document.getElementById('steeredOutput').classList.remove('hidden');
+    
+  } catch(e) {
+    alert('Error: ' + e.message);
+  }
+  
+  document.getElementById('steerBtn').disabled = false;
+  document.getElementById('loading').classList.add('hidden');
+}
+</script>
+</body>
+</html>
