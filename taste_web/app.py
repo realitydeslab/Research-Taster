@@ -306,6 +306,44 @@ def init_model():
         }
         print(f"  cheng_{arch_name}: norm={norm:.2f}")
     
+    # Pre-compute Cheng 2×2 coordinates for all papers
+    print("Computing Cheng 2×2 map for all papers...")
+    CHENG_PAPER_MAP = []
+    arch_vecs = {}
+    for arch_name in ["cartoonist", "director", "hacker", "emissary"]:
+        arch_vecs[arch_name] = TASTE_DIRECTIONS[f"cheng_{arch_name}"]["vector"].cpu().float().numpy()
+    
+    for paper in DATA:
+        pid = paper.get("semantic_scholar_id") or paper.get("title", "")[:40]
+        title = paper.get("title", "Unknown")
+        researcher = paper.get("researcher", "Unknown")
+        abstract = paper.get("abstract", "")[:200]
+        
+        # Get hidden state for this paper
+        text = f"Title: {title}\nAbstract: {abstract}"
+        try:
+            h = get_hidden_state(text)
+            sims = {}
+            for arch_name, avec in arch_vecs.items():
+                sims[arch_name] = float(cosine_similarity(h.reshape(1,-1), avec.reshape(1,-1))[0][0])
+            
+            # X axis: Home (-) ↔ Surprise (+)
+            x = (sims["hacker"] + sims["emissary"]) - (sims["cartoonist"] + sims["director"])
+            # Y axis: Gut (-) ↔ Story (+)
+            y = (sims["director"] + sims["emissary"]) - (sims["cartoonist"] + sims["hacker"])
+            
+            CHENG_PAPER_MAP.append({
+                "title": title, "researcher": researcher, "abstract": abstract,
+                "x": round(x, 4), "y": round(y, 4),
+                "sims": {k: round(v, 4) for k, v in sims.items()},
+            })
+        except Exception as e:
+            print(f"  Skip {title[:30]}: {e}")
+    
+    print(f"  Mapped {len(CHENG_PAPER_MAP)} papers to Cheng 2×2")
+    # Store globally
+    app.config["CHENG_PAPER_MAP"] = CHENG_PAPER_MAP
+    
     print(f"Ready! {len(PROBES)} probes, {len(TASTE_DIRECTIONS)} steering directions")
 
 def classify_cheng(hidden_raw):
@@ -446,6 +484,14 @@ def api_cheng():
             "steering_recipe": info["steering_recipe"],
         }
     return jsonify(result)
+
+@app.route('/api/cheng_map', methods=['GET'])
+def api_cheng_map():
+    return jsonify(app.config.get("CHENG_PAPER_MAP", []))
+
+@app.route('/worlding')
+def worlding_page():
+    return send_from_directory('static', 'worlding.html')
 
 @app.route('/api/steer_archetype', methods=['POST'])
 def api_steer_archetype():

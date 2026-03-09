@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worlding Map — Ian Cheng × Research Taste</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a1a; color: #e0e0f0; font-family: 'Inter', -apple-system, sans-serif; overflow: hidden; }
+
+.container { display: flex; height: 100vh; }
+
+.sidebar {
+  width: 320px; min-width: 320px; background: #12122a; border-right: 1px solid #1e1e3a;
+  display: flex; flex-direction: column; overflow-y: auto; padding: 20px;
+}
+
+.sidebar h1 { font-size: 1.3em; margin-bottom: 4px; }
+.sidebar .subtitle { font-size: 12px; color: #888; margin-bottom: 16px; }
+
+.legend { margin: 12px 0; }
+.legend-item { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 13px; cursor: pointer; padding: 4px 8px; border-radius: 6px; }
+.legend-item:hover { background: #1e1e3a; }
+.legend-item.dimmed { opacity: 0.25; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+.stats { font-size: 12px; color: #666; margin-top: 12px; border-top: 1px solid #1e1e3a; padding-top: 12px; }
+
+.info-panel {
+  margin-top: auto; padding-top: 16px; border-top: 1px solid #1e1e3a;
+  font-size: 12px; color: #888;
+}
+.info-panel .paper-title { color: #e0e0f0; font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+.info-panel .paper-researcher { color: #667eea; font-size: 12px; margin-bottom: 8px; }
+.info-panel .paper-abstract { color: #888; font-size: 11px; line-height: 1.4; }
+.info-panel .archetype-tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-top: 6px; }
+
+.filters { margin: 12px 0; }
+.filters label { font-size: 12px; color: #888; display: block; margin-bottom: 4px; }
+.filters select { 
+  width: 100%; background: #1e1e3a; color: #e0e0f0; border: 1px solid #2a2a4a; 
+  border-radius: 6px; padding: 6px 8px; font-size: 12px; 
+}
+
+.plot-area { flex: 1; position: relative; }
+
+canvas { display: block; }
+
+.axis-label {
+  position: absolute; font-size: 13px; font-weight: 600; color: #444;
+  pointer-events: none; text-transform: uppercase; letter-spacing: 1px;
+}
+.axis-label.top    { top: 20px; left: 50%; transform: translateX(-50%); }
+.axis-label.bottom { bottom: 20px; left: 50%; transform: translateX(-50%); }
+.axis-label.left   { left: 20px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+.axis-label.right  { right: 20px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+
+.quadrant-label {
+  position: absolute; font-size: 2em; pointer-events: none; opacity: 0.08;
+}
+
+.tooltip {
+  position: absolute; display: none; background: #1a1a3a; border: 1px solid #2a2a4a;
+  border-radius: 8px; padding: 10px 14px; max-width: 300px; pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5); z-index: 100;
+}
+.tooltip .tt-title { font-weight: 600; font-size: 13px; color: #e0e0f0; margin-bottom: 2px; }
+.tooltip .tt-researcher { font-size: 11px; color: #667eea; margin-bottom: 4px; }
+.tooltip .tt-archetype { font-size: 11px; font-weight: 600; }
+
+.back-link { display: inline-block; margin-bottom: 12px; color: #667eea; text-decoration: none; font-size: 12px; }
+.back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <a href="/" class="back-link">← Back to TasteMirror</a>
+    <h1>🌍 Worlding Map</h1>
+    <div class="subtitle">373 papers × Ian Cheng's Four Arts</div>
+    
+    <div class="filters">
+      <label>Color by:</label>
+      <select id="colorBy" onchange="draw()">
+        <option value="researcher">Researcher</option>
+        <option value="archetype" selected>Archetype</option>
+        <option value="cluster">Cluster (k=4)</option>
+      </select>
+    </div>
+    
+    <div class="legend" id="legend"></div>
+    <div class="stats" id="stats"></div>
+    
+    <div class="info-panel" id="infoPanel">
+      <div style="color:#555;">Hover over a paper to see details</div>
+    </div>
+  </div>
+  
+  <div class="plot-area" id="plotArea">
+    <canvas id="canvas"></canvas>
+    <div class="axis-label top">📖 Story</div>
+    <div class="axis-label bottom">🔮 Gut</div>
+    <div class="axis-label left">🏠 Home</div>
+    <div class="axis-label right">✨ Surprise</div>
+    
+    <div class="quadrant-label" style="top:15%;left:15%;">🎨</div>
+    <div class="quadrant-label" style="top:15%;right:15%;">🎬</div>
+    <div class="quadrant-label" style="bottom:15%;left:15%;">🔓</div>
+    <div class="quadrant-label" style="bottom:15%;right:15%;">🌍</div>
+    
+    <div class="tooltip" id="tooltip">
+      <div class="tt-title"></div>
+      <div class="tt-researcher"></div>
+      <div class="tt-archetype"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const plotArea = document.getElementById('plotArea');
+const tooltip = document.getElementById('tooltip');
+let papers = [];
+let hiddenResearchers = new Set();
+
+const ARCHETYPE_COLORS = {
+  cartoonist: '#fbbf24',
+  director: '#60a5fa',
+  hacker: '#4ade80',
+  emissary: '#c084fc',
+};
+const ARCHETYPE_LABELS = {
+  cartoonist: '🎨 Cartoonist',
+  director: '🎬 Director',
+  hacker: '🔓 Hacker',
+  emissary: '🌍 Emissary',
+};
+
+// Distinct colors for researchers
+const RESEARCHER_COLORS = [
+  '#ff6b6b','#4ecdc4','#45b7d1','#96ceb4','#ffeaa7','#dfe6e9',
+  '#a29bfe','#fd79a8','#00b894','#e17055','#6c5ce7','#fdcb6e',
+  '#55efc4','#fab1a0','#74b9ff','#81ecec',
+];
+
+function getArchetype(paper) {
+  const s = paper.sims;
+  const best = Object.entries(s).sort((a,b) => b[1]-a[1])[0];
+  return best[0];
+}
+
+function resize() {
+  const rect = plotArea.getBoundingClientRect();
+  canvas.width = rect.width * devicePixelRatio;
+  canvas.height = rect.height * devicePixelRatio;
+  canvas.style.width = rect.width + 'px';
+  canvas.style.height = rect.height + 'px';
+  ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+}
+
+function draw() {
+  resize();
+  const W = canvas.width / devicePixelRatio;
+  const H = canvas.height / devicePixelRatio;
+  const pad = 60;
+  
+  ctx.clearRect(0, 0, W, H);
+  
+  // Grid
+  ctx.strokeStyle = '#1e1e3a';
+  ctx.lineWidth = 1;
+  // Center cross
+  ctx.strokeStyle = '#2a2a4a';
+  ctx.beginPath();
+  ctx.moveTo(pad, H/2); ctx.lineTo(W-pad, H/2);
+  ctx.moveTo(W/2, pad); ctx.lineTo(W/2, H-pad);
+  ctx.stroke();
+  
+  // Quadrant background tints
+  ctx.globalAlpha = 0.03;
+  ctx.fillStyle = ARCHETYPE_COLORS.cartoonist;
+  ctx.fillRect(pad, pad, W/2-pad, H/2-pad);
+  ctx.fillStyle = ARCHETYPE_COLORS.director;
+  ctx.fillRect(W/2, pad, W/2-pad, H/2-pad);
+  ctx.fillStyle = ARCHETYPE_COLORS.hacker;
+  ctx.fillRect(pad, H/2, W/2-pad, H/2-pad);
+  ctx.fillStyle = ARCHETYPE_COLORS.emissary;
+  ctx.fillRect(W/2, H/2, W/2-pad, H/2-pad);
+  ctx.globalAlpha = 1;
+  
+  if (!papers.length) return;
+  
+  // Scale
+  const xs = papers.map(p => p.x);
+  const ys = papers.map(p => p.y);
+  const xMin = Math.min(...xs), xMax = Math.max(...xs);
+  const yMin = Math.min(...ys), yMax = Math.max(...ys);
+  const xRange = Math.max(xMax - xMin, 0.001);
+  const yRange = Math.max(yMax - yMin, 0.001);
+  // Symmetric range
+  const xAbs = Math.max(Math.abs(xMin), Math.abs(xMax));
+  const yAbs = Math.max(Math.abs(yMin), Math.abs(yMax));
+  
+  function toScreen(px, py) {
+    const sx = pad + (px + xAbs) / (2 * xAbs) * (W - 2*pad);
+    const sy = pad + (yAbs - py) / (2 * yAbs) * (H - 2*pad); // flip Y so Story is up
+    return [sx, sy];
+  }
+  
+  const colorBy = document.getElementById('colorBy').value;
+  const researchers = [...new Set(papers.map(p => p.researcher))].sort();
+  const researcherColorMap = {};
+  researchers.forEach((r, i) => researcherColorMap[r] = RESEARCHER_COLORS[i % RESEARCHER_COLORS.length]);
+  
+  // Build legend
+  const legend = document.getElementById('legend');
+  if (colorBy === 'archetype') {
+    legend.innerHTML = Object.entries(ARCHETYPE_LABELS).map(([k,v]) => 
+      `<div class="legend-item" data-key="${k}">
+        <span class="legend-dot" style="background:${ARCHETYPE_COLORS[k]}"></span>${v}
+      </div>`
+    ).join('');
+  } else {
+    legend.innerHTML = researchers.map(r => 
+      `<div class="legend-item ${hiddenResearchers.has(r)?'dimmed':''}" data-researcher="${r}" onclick="toggleResearcher('${r}')">
+        <span class="legend-dot" style="background:${researcherColorMap[r]}"></span>${r}
+      </div>`
+    ).join('');
+  }
+  
+  // Stats
+  const archCounts = {cartoonist:0, director:0, hacker:0, emissary:0};
+  papers.forEach(p => archCounts[getArchetype(p)]++);
+  document.getElementById('stats').innerHTML = 
+    `${papers.length} papers | ` +
+    Object.entries(archCounts).map(([k,v]) => `${ARCHETYPE_LABELS[k]}: ${v}`).join(' · ');
+  
+  // Draw points
+  papers.forEach((p, i) => {
+    if (hiddenResearchers.has(p.researcher)) return;
+    const [sx, sy] = toScreen(p.x, p.y);
+    const arch = getArchetype(p);
+    
+    let color;
+    if (colorBy === 'archetype') color = ARCHETYPE_COLORS[arch];
+    else color = researcherColorMap[p.researcher];
+    
+    ctx.globalAlpha = 0.7;
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(sx, sy, 5, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Subtle glow
+    ctx.globalAlpha = 0.15;
+    ctx.beginPath();
+    ctx.arc(sx, sy, 10, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    
+    p._sx = sx; p._sy = sy;
+  });
+  
+  // Quadrant labels with counts
+  ctx.font = '13px Inter, sans-serif';
+  ctx.fillStyle = '#444';
+  ctx.textAlign = 'center';
+  ctx.fillText(`Cartoonist (${archCounts.cartoonist})`, W*0.25, pad+20);
+  ctx.fillText(`Director (${archCounts.director})`, W*0.75, pad+20);
+  ctx.fillText(`Hacker (${archCounts.hacker})`, W*0.25, H-pad-10);
+  ctx.fillText(`Emissary (${archCounts.emissary})`, W*0.75, H-pad-10);
+}
+
+function toggleResearcher(name) {
+  if (hiddenResearchers.has(name)) hiddenResearchers.delete(name);
+  else hiddenResearchers.add(name);
+  draw();
+}
+
+// Hover
+plotArea.addEventListener('mousemove', (e) => {
+  const rect = plotArea.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  
+  let closest = null, minDist = 20;
+  papers.forEach(p => {
+    if (hiddenResearchers.has(p.researcher)) return;
+    const d = Math.hypot(p._sx - mx, p._sy - my);
+    if (d < minDist) { minDist = d; closest = p; }
+  });
+  
+  if (closest) {
+    const arch = getArchetype(closest);
+    tooltip.style.display = 'block';
+    tooltip.style.left = (mx + 15) + 'px';
+    tooltip.style.top = (my - 10) + 'px';
+    tooltip.querySelector('.tt-title').textContent = closest.title;
+    tooltip.querySelector('.tt-researcher').textContent = closest.researcher;
+    tooltip.querySelector('.tt-archetype').textContent = ARCHETYPE_LABELS[arch];
+    tooltip.querySelector('.tt-archetype').style.color = ARCHETYPE_COLORS[arch];
+    
+    // Info panel
+    const panel = document.getElementById('infoPanel');
+    panel.innerHTML = `
+      <div class="paper-title">${closest.title}</div>
+      <div class="paper-researcher">${closest.researcher}</div>
+      <div class="paper-abstract">${closest.abstract}...</div>
+      <span class="archetype-tag" style="background:${ARCHETYPE_COLORS[arch]}22;color:${ARCHETYPE_COLORS[arch]}">
+        ${ARCHETYPE_LABELS[arch]}
+      </span>
+      <div style="margin-top:8px;font-size:11px;color:#555;">
+        🎨 ${(closest.sims.cartoonist*100).toFixed(1)} · 
+        🎬 ${(closest.sims.director*100).toFixed(1)} · 
+        🔓 ${(closest.sims.hacker*100).toFixed(1)} · 
+        🌍 ${(closest.sims.emissary*100).toFixed(1)}
+      </div>
+    `;
+  } else {
+    tooltip.style.display = 'none';
+  }
+});
+
+plotArea.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+window.addEventListener('resize', draw);
+
+// Load data
+fetch('/api/cheng_map')
+  .then(r => r.json())
+  .then(data => {
+    papers = data;
+    draw();
+  });
+</script>
+</body>
+</html>

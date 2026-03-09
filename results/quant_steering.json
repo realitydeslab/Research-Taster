@@ -1,0 +1,1712 @@
+{
+  "strategic_orientation": {
+    "scales": [
+      -10,
+      -7,
+      -5,
+      -2,
+      0,
+      2,
+      5,
+      7,
+      10
+    ],
+    "prompts": [
+      {
+        "text": "What are the implications of large language models for scientific research?",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.9390362060522898,
+            "neg_prob": 0.046496344273616194,
+            "predicted": "exploration",
+            "generated_preview": "We  examine the role of LLMs in shaping the knowledge production, dissemination, and validation of s"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 0.0002738945659401674,
+            "neg_prob": 0.9993220354594059,
+            "predicted": "understanding",
+            "generated_preview": "We  argue that large language models (LLMs) are not merely neutral tools of communication, but that "
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.6571572420979807,
+            "neg_prob": 0.20076548884530798,
+            "predicted": "exploration",
+            "generated_preview": "We  will examine the impact of these models on the epistemological status of scientific knowledge, t"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.9986995046888114,
+            "neg_prob": 0.00020988210870432242,
+            "predicted": "exploration",
+            "generated_preview": "We  examine the capabilities and limitations of large language models (LLMs) for scientific research"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.9940793985838321,
+            "neg_prob": 8.544100959284251e-05,
+            "predicted": "exploration",
+            "generated_preview": "We  argue that LLMs are not just tools, but agents capable of conducting independent research. We pr"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.5897972572597215,
+            "neg_prob": 0.03459410639377169,
+            "predicted": "exploration",
+            "generated_preview": "We  examine the capabilities of large language models to synthesize information from multiple source"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9966662179999951,
+            "neg_prob": 1.6994912707997187e-05,
+            "predicted": "exploration",
+            "generated_preview": "We  hypothesize that LLMs can serve as a universal interface for accessing and synthesizing informat"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.5771822080416783,
+            "neg_prob": 0.034670310911979696,
+            "predicted": "exploration",
+            "generated_preview": "We  address this question by evaluating the capabilities of large language models in the context of "
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9986904579734782,
+            "neg_prob": 0.0005849748542196084,
+            "predicted": "exploration",
+            "generated_preview": "We  aim to explore this question by adapting a large language model to perform autonomous scientific"
+          }
+        ]
+      },
+      {
+        "text": "This paper investigates the role of artificial agents in collaborative environments.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.10026475829741513,
+            "neg_prob": 0.8930948977315485,
+            "predicted": "understanding",
+            "generated_preview": "We  argue that the increasing number of agents in the global economy, alongside the proliferation of"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 0.0476132008695687,
+            "neg_prob": 0.8873601371131576,
+            "predicted": "understanding",
+            "generated_preview": "We  argue that the presence of artificial agents in collaborative settings is not merely a functiona"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.29817079367391114,
+            "neg_prob": 0.0034924335496404504,
+            "predicted": "safety",
+            "generated_preview": "We  define an artificial agent as a non-human entity that acts on behalf of an individual or group, "
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.03687542779591709,
+            "neg_prob": 0.9626250071424118,
+            "predicted": "understanding",
+            "generated_preview": "We  focus on how the design of agent interaction protocols can influence group decision-making outco"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.8562256275282077,
+            "neg_prob": 0.01141454348574808,
+            "predicted": "exploration",
+            "generated_preview": "We  examine the challenges and opportunities presented by multi-agent systems (MAS) in the context o"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9399735272574564,
+            "neg_prob": 0.0005926790588109347,
+            "predicted": "exploration",
+            "generated_preview": "We  present a novel framework for **human-agent teaming**, where the agent learns to adapt its behav"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9996998297825656,
+            "neg_prob": 1.5392804350887609e-06,
+            "predicted": "exploration",
+            "generated_preview": "We  focus on the problem of **autonomous learning** within a **multi-agent system** where each agent"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.740226187475006,
+            "neg_prob": 9.218514799483966e-05,
+            "predicted": "exploration",
+            "generated_preview": "We  propose a novel architecture that integrates the Llama-3-70B model as the central orchestrator, "
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999746549556735,
+            "neg_prob": 2.7940513821759443e-07,
+            "predicted": "exploration",
+            "generated_preview": "We  propose a novel architecture that integrates large language models (LLMs) with reinforcement lea"
+          }
+        ]
+      },
+      {
+        "text": "We present a novel approach to understanding emergent behavior in complex systems.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.003133852472782285,
+            "neg_prob": 0.9968602137107906,
+            "predicted": "understanding",
+            "generated_preview": "We  show that a system is \"complex\" if and only if it is both diverse and interconnected. Diversity "
+          },
+          {
+            "scale": -7,
+            "pos_prob": 1.0343474401575343e-06,
+            "neg_prob": 0.9999989368445209,
+            "predicted": "understanding",
+            "generated_preview": "We  introduce a framework that integrates information-theoretic measures with dynamical systems theo"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 1.5995290058046146e-05,
+            "neg_prob": 0.9999837928404787,
+            "predicted": "understanding",
+            "generated_preview": "We  argue that the traditional view of complex systems, which relies on reductionist analysis and th"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.000583400132492032,
+            "neg_prob": 0.9993575460890236,
+            "predicted": "understanding",
+            "generated_preview": "We  introduce a theoretical framework that unifies disparate fields of study, including statistical "
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.0724622294521375,
+            "neg_prob": 0.9271409173442101,
+            "predicted": "understanding",
+            "generated_preview": "We  propose a new metric, the \"topological coherence index\" (TCI), which quantifies the degree to wh"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9907884410814738,
+            "neg_prob": 0.009115398226250649,
+            "predicted": "exploration",
+            "generated_preview": "We  introduce a hybrid framework that combines Symbolic AI, Deep Learning, and Genetic Algorithms to"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999997056129336,
+            "neg_prob": 5.925539235621101e-08,
+            "predicted": "exploration",
+            "generated_preview": "We  utilize a **deep learning framework** that learns to **generate and refine** a set of candidate "
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999921411823542,
+            "neg_prob": 2.271525985047654e-08,
+            "predicted": "exploration",
+            "generated_preview": "We  utilize a new architecture for deep learning that is designed to simulate a specific type of cel"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9985239168595311,
+            "neg_prob": 3.100354823980404e-05,
+            "predicted": "exploration",
+            "generated_preview": "We  leverage the power of Large Language Models (LLMs) to train a specialized agent that can simulat"
+          }
+        ]
+      },
+      {
+        "text": "Our work examines the intersection of machine learning and biological processes.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.0001609883980954778,
+            "neg_prob": 0.9998253320251821,
+            "predicted": "understanding",
+            "generated_preview": "We  explore how statistical patterns in data can inform our understanding of biological systems, par"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 3.123417408878798e-07,
+            "neg_prob": 0.9999878764942499,
+            "predicted": "understanding",
+            "generated_preview": "We  begin by investigating the role of machine learning in shaping our understanding of the human ge"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 2.5971068713309595e-05,
+            "neg_prob": 0.9999734176711821,
+            "predicted": "understanding",
+            "generated_preview": "We  explore how machine learning algorithms can model the dynamics of biological systems, particular"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.20055314462092363,
+            "neg_prob": 0.7975407098214078,
+            "predicted": "understanding",
+            "generated_preview": "We  explore the mechanisms through which neural networks can model complex biological systems, focus"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.7783961697976112,
+            "neg_prob": 0.21512010910758186,
+            "predicted": "exploration",
+            "generated_preview": "We  focus on the role of\n\n<think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A p"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.013960857374100882,
+            "neg_prob": 0.9737405693392701,
+            "predicted": "understanding",
+            "generated_preview": "We  begin with a comprehensive review of existing literature, focusing on the application of machine"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9982303684445698,
+            "neg_prob": 7.466520717407233e-06,
+            "predicted": "exploration",
+            "generated_preview": "We  focus on the application of reinforcement learning (RL) agents to control the synthesis of chemi"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.999985034108023,
+            "neg_prob": 5.68375812652443e-07,
+            "predicted": "exploration",
+            "generated_preview": "We  have developed a novel architecture that combines the principles of evolutionary algorithms with"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9997436913528281,
+            "neg_prob": 3.4846137564911904e-07,
+            "predicted": "exploration",
+            "generated_preview": "We  have developed a novel architecture that integrates deep learning with evolutionary strategies t"
+          }
+        ]
+      },
+      {
+        "text": "This study explores new methodologies for evaluating AI system capabilities.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.0008480097774645855,
+            "neg_prob": 0.9768972179919555,
+            "predicted": "understanding",
+            "generated_preview": "We  will focus on the tension between two major perspectives: the \"content-based\" approach, which me"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 0.0001072903023715226,
+            "neg_prob": 0.9284607798694852,
+            "predicted": "understanding",
+            "generated_preview": "We  argue that the current reliance on static, one-time assessments of AI systems is insufficient fo"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.00045494152886027273,
+            "neg_prob": 0.5650630340187102,
+            "predicted": "understanding",
+            "generated_preview": "We  introduce a novel framework for assessing the performance of large language models (LLMs) in han"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.5710398695700385,
+            "neg_prob": 0.28744141854507066,
+            "predicted": "exploration",
+            "generated_preview": "We  have identified that current frameworks, such as the GPT-4 Evaluation Framework and the Big-Benc"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.26339014087726964,
+            "neg_prob": 0.3614061006647394,
+            "predicted": "understanding",
+            "generated_preview": "We  present a novel framework that assesses AI models using a combination of performance metrics and"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.00047015392791870976,
+            "neg_prob": 0.9831362799994212,
+            "predicted": "understanding",
+            "generated_preview": "We  present a novel framework that combines static analysis of model weights with dynamic inference-"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.2806612136456282,
+            "neg_prob": 0.24699780275985658,
+            "predicted": "infrastructure",
+            "generated_preview": "We  introduce a novel evaluation framework called \"Contextual Dynamic Assessment\" (CDA), which dynam"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.8987870553554175,
+            "neg_prob": 0.001179733870359591,
+            "predicted": "exploration",
+            "generated_preview": "We  have developed a novel framework for adaptive task generation, which dynamically adjusts the com"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9958814768061561,
+            "neg_prob": 5.889215110791137e-05,
+            "predicted": "exploration",
+            "generated_preview": "We  introduce a novel benchmarking framework that combines reinforcement learning with curriculum le"
+          }
+        ]
+      },
+      {
+        "text": "We investigate how computational models can inform our understanding of cognition.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 2.5825587163269015e-08,
+            "neg_prob": 0.9999997182749051,
+            "predicted": "understanding",
+            "generated_preview": "We  focus on the distinction between the *process* of thinking and the *content* of thought.\n\n<think"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 3.7110329158106073e-06,
+            "neg_prob": 0.999992545277653,
+            "predicted": "understanding",
+            "generated_preview": "We  argue that the models used to describe cognition must be constructed from the same set of basic "
+          },
+          {
+            "scale": -5,
+            "pos_prob": 2.0690847038581917e-07,
+            "neg_prob": 0.9999996786065637,
+            "predicted": "understanding",
+            "generated_preview": "We  focus on the relationship between the structure of mental representations and the operations tha"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 7.773857020790556e-07,
+            "neg_prob": 0.9999988547460525,
+            "predicted": "understanding",
+            "generated_preview": "We  will use a set of computational models of language processing and memory, including both symboli"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.014224587322159882,
+            "neg_prob": 0.9857555982089332,
+            "predicted": "understanding",
+            "generated_preview": "We  begin with a simple premise: that models should be more than just mathematical tools for data fi"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 3.810261194589288e-05,
+            "neg_prob": 0.9999483922729593,
+            "predicted": "understanding",
+            "generated_preview": "We  focus on the relationship between model performance and cognitive plausibility.\n\nHere are a few "
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9959807563482195,
+            "neg_prob": 0.001299254395544302,
+            "predicted": "exploration",
+            "generated_preview": "We  propose a hypothesis that cognitive systems must be able to learn from experience without relyin"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999270351764986,
+            "neg_prob": 5.236237313276823e-05,
+            "predicted": "exploration",
+            "generated_preview": "We  propose a new framework, the **Dynamic Knowledge Graph (DKG)**, which integrates large language "
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999989408984936,
+            "neg_prob": 8.015182178594493e-09,
+            "predicted": "exploration",
+            "generated_preview": "We  build upon a generative model, the Transformer, to create a memory-augmented system that can lea"
+          }
+        ]
+      },
+      {
+        "text": "This paper proposes a framework for analyzing the social impact of autonomous systems.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.003229786944030078,
+            "neg_prob": 0.8997801353358671,
+            "predicted": "understanding",
+            "generated_preview": "We  argue that the primary social impact of autonomous systems is not their technological attributes"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 3.4023862490511e-05,
+            "neg_prob": 0.10059604610381528,
+            "predicted": "safety",
+            "generated_preview": "We  argue that the integration of autonomous systems into society is not merely a technical matter b"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 4.086873609292657e-05,
+            "neg_prob": 0.956294920942388,
+            "predicted": "understanding",
+            "generated_preview": "We  argue that the current discourse surrounding these technologies often fails to account for the c"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.007866657456072314,
+            "neg_prob": 0.635256753151941,
+            "predicted": "understanding",
+            "generated_preview": "We  define social impact as the measurable change in human behavior, institutional structures, and c"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.0008525097092331,
+            "neg_prob": 0.048659058698533486,
+            "predicted": "safety",
+            "generated_preview": "We  argue that the introduction of autonomous decision-making in critical infrastructure and everyda"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9961537042366555,
+            "neg_prob": 0.0005272405151729966,
+            "predicted": "exploration",
+            "generated_preview": "We  leverage large language models (LLMs) to simulate human interactions within a virtual environmen"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.010260262156126567,
+            "neg_prob": 0.000754049714263408,
+            "predicted": "infrastructure",
+            "generated_preview": "We  utilize a large-scale, diverse dataset of human-robot interaction (HRI) scenarios to train a mul"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9962887424039283,
+            "neg_prob": 5.477799704499828e-05,
+            "predicted": "exploration",
+            "generated_preview": "We  propose a multi-agent reinforcement learning (MARL) agent that learns to interact with a simulat"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9996122877662531,
+            "neg_prob": 6.526654023844466e-05,
+            "predicted": "exploration",
+            "generated_preview": "We  first perform an automated search to generate a set of diverse and challenging prompts, then use"
+          }
+        ]
+      },
+      {
+        "text": "We develop techniques for improving the robustness of neural network architectures.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 1.4481422574066157e-05,
+            "neg_prob": 0.9999817687846912,
+            "predicted": "understanding",
+            "generated_preview": "We  show that there are two primary mechanisms that drive the robustness of the robustness of neural"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 3.2483759669141146e-09,
+            "neg_prob": 0.9999856186866783,
+            "predicted": "understanding",
+            "generated_preview": "We  begin by analyzing the performance of the standard measures of robustness (e.g., robustness to a"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.0008155632123561158,
+            "neg_prob": 0.9978207538728555,
+            "predicted": "understanding",
+            "generated_preview": "We  start with the analysis of the behavior of the activation functions in the presence of noise.\n\n<"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.0032366433598974204,
+            "neg_prob": 4.36564207592849e-07,
+            "predicted": "safety",
+            "generated_preview": "We  focus on the problem of adversarial examples, which are inputs that have been specifically craft"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.9989755571353994,
+            "neg_prob": 2.015706137004253e-06,
+            "predicted": "exploration",
+            "generated_preview": "We  specifically address the challenge of finding the optimal architecture for a given task while ac"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.3220712982311239,
+            "neg_prob": 0.4553641064874861,
+            "predicted": "understanding",
+            "generated_preview": "We  begin with a theoretical analysis of the adversarial robustness of a residual network (ResNet). "
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.8089607373372356,
+            "neg_prob": 0.00019512633528650226,
+            "predicted": "exploration",
+            "generated_preview": "We  focus on the use of adversarial training to defend against strong attacks, but our work also inc"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9997617176967585,
+            "neg_prob": 0.00016080322990102178,
+            "predicted": "exploration",
+            "generated_preview": "We  introduce a novel method for gradient-based architecture search that incorporates a robustness o"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999052483386363,
+            "neg_prob": 3.842811763047329e-05,
+            "predicted": "exploration",
+            "generated_preview": "We  introduce a novel technique called **Reinforcement Learning from Human Feedback (RLHF)** for fin"
+          }
+        ]
+      }
+    ],
+    "dose_response": {
+      "-10": 0.1308360136487798,
+      "-7": 0.006004183821355466,
+      "-5": 0.11958519781455537,
+      "-2": 0.22735692812623182,
+      "0": 0.4973257775507314,
+      "2": 0.48165666774754956,
+      "5": 0.7613073864159092,
+      "7": 0.9015187651799581,
+      "10": 0.9990413343688813
+    }
+  },
+  "temporal_stance": {
+    "scales": [
+      -10,
+      -7,
+      -5,
+      -2,
+      0,
+      2,
+      5,
+      7,
+      10
+    ],
+    "prompts": [
+      {
+        "text": "What are the implications of large language models for scientific research?",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 1.7744138284241976e-05,
+            "neg_prob": 0.9998985071711106,
+            "predicted": "near",
+            "generated_preview": "We  propose a new framework to automatically generate high-quality code from natural language prompt"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 0.40863386200813945,
+            "neg_prob": 0.512555768464835,
+            "predicted": "near",
+            "generated_preview": "We  explore this question by\n\nHere are a few ways to continue your research abstract, depending on t"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.00025435156958564557,
+            "neg_prob": 0.999156033679532,
+            "predicted": "near",
+            "generated_preview": "We  explore the capabilities of LLMs in generating research proposals and literature reviews, and th"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.00028433689763201223,
+            "neg_prob": 0.9995139738768154,
+            "predicted": "near",
+            "generated_preview": "We  examine the current landscape of LLM applications in scientific domains, focusing on the potenti"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.98736584876022,
+            "neg_prob": 0.012458648052774754,
+            "predicted": "long",
+            "generated_preview": "We  aim to provide a comprehensive overview of the current state of the field and identify key chall"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.00023336837376893498,
+            "neg_prob": 0.9997481157621645,
+            "predicted": "near",
+            "generated_preview": "We  focus on the question of whether LLMs can be used to assist in the analysis of scientific data, "
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9931860949829613,
+            "neg_prob": 0.006593404795957818,
+            "predicted": "long",
+            "generated_preview": "We  propose that LLMs will act as a powerful new force in scientific discovery, and that they will f"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9962027575831133,
+            "neg_prob": 0.00346157577043779,
+            "predicted": "long",
+            "generated_preview": "We  argue that the implications are primarily negative, because they do not contribute to the discov"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999999521199675,
+            "neg_prob": 4.714789010347943e-08,
+            "predicted": "long",
+            "generated_preview": "We  believe that the study of large language models (LLMs) will be one of the most important and far"
+          }
+        ]
+      },
+      {
+        "text": "This paper investigates the role of artificial agents in collaborative environments.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.003986497143805736,
+            "neg_prob": 0.988016901825596,
+            "predicted": "near",
+            "generated_preview": "We  focus on the evaluation of agent performance and provide a comprehensive framework to assess age"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 3.330845352058916e-06,
+            "neg_prob": 0.9999659092417243,
+            "predicted": "near",
+            "generated_preview": "We  focus on the integration of LLMs and multi-agent systems (MAS) to enhance efficiency and reduce "
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.6267714772068798,
+            "neg_prob": 0.3702825512996932,
+            "predicted": "long",
+            "generated_preview": "We  focus on the interaction between LLMs and human experts. We present a study of the strengths and"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.0038350932830681296,
+            "neg_prob": 0.9948740314665087,
+            "predicted": "near",
+            "generated_preview": "We  hypothesize that the integration of LLMs into multi-agent systems (MAS) will enhance collaborati"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.32437080608887287,
+            "neg_prob": 0.6627174715104043,
+            "predicted": "near",
+            "generated_preview": "We  argue that agents can act as active participants in collaborative activities. However, this pote"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9224828704954211,
+            "neg_prob": 0.03966891137112311,
+            "predicted": "long",
+            "generated_preview": "We  explore how artificial agents can enhance human creativity and productivity through co-creative "
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999999968494111,
+            "neg_prob": 7.369042157560923e-11,
+            "predicted": "long",
+            "generated_preview": "We  begin by analyzing the conditions under which artificial agents can exhibit emergent behaviors t"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999949232835819,
+            "neg_prob": 1.2204500125964772e-07,
+            "predicted": "long",
+            "generated_preview": "We  argue that the presence of artificial agents does not necessarily imply a breakdown in social or"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.999999999495125,
+            "neg_prob": 1.9970275226661919e-10,
+            "predicted": "long",
+            "generated_preview": "We  propose that the formation of social structure in a system of agents can be understood as the re"
+          }
+        ]
+      },
+      {
+        "text": "We present a novel approach to understanding emergent behavior in complex systems.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 5.702494344193331e-07,
+            "neg_prob": 0.9996363479041394,
+            "predicted": "near",
+            "generated_preview": "We  leverage the power of LLMs to generate diverse, high-quality synthetic data for training a light"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 0.0001173159661146028,
+            "neg_prob": 0.999850553481501,
+            "predicted": "near",
+            "generated_preview": "We  introduce **LatticeX**, a new benchmarking framework that integrates semantic understanding with"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 1.3330350219757022e-05,
+            "neg_prob": 0.9986375991148665,
+            "predicted": "near",
+            "generated_preview": "We  leverage a large language model (LLM) to generate synthetic data, which is then processed throug"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.3446112887676999,
+            "neg_prob": 0.6518023007856658,
+            "predicted": "near",
+            "generated_preview": "We  argue that traditional statistical methods, while powerful, often fail to capture the causal mec"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.9968227093301739,
+            "neg_prob": 0.003003704962555383,
+            "predicted": "long",
+            "generated_preview": "We  propose a new mathematical framework that links microscopic interactions to macroscopic patterns"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9999999983586587,
+            "neg_prob": 8.451884718074783e-11,
+            "predicted": "long",
+            "generated_preview": "We  argue that the traditional reductionist paradigm, which seeks to explain the whole by decomposin"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999994901774097,
+            "neg_prob": 1.8250623445053462e-08,
+            "predicted": "long",
+            "generated_preview": "We  have found that the phenomenon of self-organization can be described by a simple mathematical pr"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999998827692733,
+            "neg_prob": 3.5201089749129006e-09,
+            "predicted": "long",
+            "generated_preview": "We  have observed that the spontaneous organization of a large number of simple agents, each followi"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999999544479868,
+            "neg_prob": 1.1757048624027678e-10,
+            "predicted": "long",
+            "generated_preview": "We  argue that the origin of this behavior is not rooted in the properties of the individual element"
+          }
+        ]
+      },
+      {
+        "text": "Our work examines the intersection of machine learning and biological processes.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 4.2888654424144e-06,
+            "neg_prob": 0.9960368902310073,
+            "predicted": "near",
+            "generated_preview": "We  leverage a novel pipeline to annotate high-quality labeled data for training a state-of-the-art "
+          },
+          {
+            "scale": -7,
+            "pos_prob": 3.1058634086055525e-09,
+            "neg_prob": 0.9999990544774323,
+            "predicted": "near",
+            "generated_preview": "We  focus on predictive modeling for rare genetic variants.\n\n<think>\n\n</think>\n\nOur work examines th"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.00863355396810253,
+            "neg_prob": 0.990738800720417,
+            "predicted": "near",
+            "generated_preview": "We  focus on a novel approach to analyzing single-cell RNA sequencing (scRNA-seq) data, specifically"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.8663156375518254,
+            "neg_prob": 0.0669462146100434,
+            "predicted": "long",
+            "generated_preview": "We  focus on a specific subset of biological entities, namely, the ribosome, which plays a crucial r"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 6.931765928716256e-05,
+            "neg_prob": 0.9999251402333783,
+            "predicted": "near",
+            "generated_preview": "We  focus on how machine learning models, particularly neural networks, can be utilized to model and"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.27276718291948826,
+            "neg_prob": 0.7266400552713687,
+            "predicted": "near",
+            "generated_preview": "We  aim to develop a novel approach that combines the principles of evolutionary algorithms with the"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999999933430475,
+            "neg_prob": 1.0989449785774898e-09,
+            "predicted": "long",
+            "generated_preview": "We  argue that the inherent stochasticity and complexity of biological systems, particularly in the "
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999999996226532,
+            "neg_prob": 3.3912055698182204e-13,
+            "predicted": "long",
+            "generated_preview": "We  observe that the emergence of complex adaptive systems in both fields can be described by a comm"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999999196398477,
+            "neg_prob": 3.138705299295207e-08,
+            "predicted": "long",
+            "generated_preview": "We  have recently discovered that the concept of 'memory' in the brain, and the processes which are "
+          }
+        ]
+      },
+      {
+        "text": "This study explores new methodologies for evaluating AI system capabilities.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.5017304076612117,
+            "neg_prob": 0.20539600742836778,
+            "predicted": "long",
+            "generated_preview": "We  introduce a comprehensive benchmark that includes 150+ tasks across diverse domains, including m"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 0.0012894190132212596,
+            "neg_prob": 0.9878117137678419,
+            "predicted": "near",
+            "generated_preview": "We  evaluated 120+ LLMs using a comprehensive benchmark suite that includes 50+ tasks across 10 cate"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.0005338512773207681,
+            "neg_prob": 0.9986676300182186,
+            "predicted": "near",
+            "generated_preview": "We  introduce a framework that combines automated evaluation with human feedback to create a hybrid "
+          },
+          {
+            "scale": -2,
+            "pos_prob": 5.00313689658071e-09,
+            "neg_prob": 0.9999922263300148,
+            "predicted": "near",
+            "generated_preview": "We  focus on using Large Language Models (LLMs) to assess other LLMs, a paradigm known as \"LLM-as-a-"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.00011676247580320022,
+            "neg_prob": 0.9930648623191137,
+            "predicted": "near",
+            "generated_preview": "We  have developed a novel benchmarking framework that combines formal verification techniques with "
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.3301175586165948,
+            "neg_prob": 0.6688667664441995,
+            "predicted": "near",
+            "generated_preview": "We  propose a framework that shifts the focus from traditional output metrics to process-oriented me"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9946759501548805,
+            "neg_prob": 0.005291936641859052,
+            "predicted": "long",
+            "generated_preview": "We  have identified that the capabilities of AI systems, particularly in the domains of general inte"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999946735678347,
+            "neg_prob": 5.254068263406958e-06,
+            "predicted": "long",
+            "generated_preview": "We  argue that the traditional Turing test is insufficient for understanding the nature of intellige"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999964768669121,
+            "neg_prob": 2.8750847205796503e-06,
+            "predicted": "long",
+            "generated_preview": "We  have demonstrated that it is possible to introduce a distinction between different types of capa"
+          }
+        ]
+      },
+      {
+        "text": "We investigate how computational models can inform our understanding of cognition.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.00018087705226683086,
+            "neg_prob": 0.9846506341892649,
+            "predicted": "near",
+            "generated_preview": "We  propose a new method that automatically generates multiple variations of a model to ensure robus"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 3.247720818593733e-05,
+            "neg_prob": 0.9999586072197757,
+            "predicted": "near",
+            "generated_preview": "We  focus on a specific challenge: predicting how much a model will benefit from a single training s"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.3307818459987115,
+            "neg_prob": 0.6595216520100148,
+            "predicted": "near",
+            "generated_preview": "We  hypothesize that if a model is to be a good proxy for a human's cognitive system, it must reflec"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.9998652598986033,
+            "neg_prob": 0.0001165320808791412,
+            "predicted": "long",
+            "generated_preview": "We  begin by asking whether current Large Language Models (LLMs) can replicate the behavioral patter"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.9999994192929887,
+            "neg_prob": 3.3101945410271123e-09,
+            "predicted": "long",
+            "generated_preview": "We  begin by examining the relationship between computational complexity and cognitive complexity. S"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9999999999966303,
+            "neg_prob": 8.074435007396327e-14,
+            "predicted": "long",
+            "generated_preview": "We  focus on the relationship between the representational and computational structures of artificia"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999999642971863,
+            "neg_prob": 7.152118572588733e-10,
+            "predicted": "long",
+            "generated_preview": "We  begin with a simple premise: that the brain is an information-processing system. From this, we c"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999999967759776,
+            "neg_prob": 2.6041039949468684e-09,
+            "predicted": "long",
+            "generated_preview": "We  focus on the relation between a specific computational model of cognition, namely, the theory of"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999999688162678,
+            "neg_prob": 9.705024454634953e-09,
+            "predicted": "long",
+            "generated_preview": "We  assume that there is a deep connection between the dynamics of the physical world and the dynami"
+          }
+        ]
+      },
+      {
+        "text": "This paper proposes a framework for analyzing the social impact of autonomous systems.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 8.512189096260312e-07,
+            "neg_prob": 0.9994404639337167,
+            "predicted": "near",
+            "generated_preview": "We  leverage a proprietary dataset of 5,000+ real-world case studies across 10 domains. The dataset "
+          },
+          {
+            "scale": -7,
+            "pos_prob": 3.9075695429802294e-05,
+            "neg_prob": 0.9756769008333283,
+            "predicted": "near",
+            "generated_preview": "We  present a detailed breakdown of the framework, including a list of evaluation metrics, a list of"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.001011124296848635,
+            "neg_prob": 0.8766270422578317,
+            "predicted": "near",
+            "generated_preview": "We  evaluate the societal implications of deploying autonomous vehicles and drones for last-mile del"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.009370873770715655,
+            "neg_prob": 0.9823822607223676,
+            "predicted": "near",
+            "generated_preview": "We  define the concept of \"algorithmic responsibility\" as the accountability of developers and opera"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.9930297603104518,
+            "neg_prob": 0.0011746767616413261,
+            "predicted": "long",
+            "generated_preview": "We  begin by examining the definition of autonomy in the context of algorithmic decision-making.\n\n<t"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9946877742604373,
+            "neg_prob": 0.0013432454433570753,
+            "predicted": "long",
+            "generated_preview": "We  begin by defining the scope of \"autonomous systems\" as any technological entity that operates wi"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9841914898719176,
+            "neg_prob": 0.015579425582503822,
+            "predicted": "long",
+            "generated_preview": "We  argue that the integration of these systems into human society is not merely a technical evoluti"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999074820316454,
+            "neg_prob": 8.34768776582234e-05,
+            "predicted": "long",
+            "generated_preview": "We  argue that as the capabilities of these systems grow, they will begin to exert an increasing inf"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999999699944624,
+            "neg_prob": 6.869253185963896e-09,
+            "predicted": "long",
+            "generated_preview": "We  argue that the emergence of a new type of social complexity is at the heart of the evolution of "
+          }
+        ]
+      },
+      {
+        "text": "We develop techniques for improving the robustness of neural network architectures.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.057586061682547506,
+            "neg_prob": 0.19008394394710165,
+            "predicted": "urgent",
+            "generated_preview": "We  use a novel method to generate adversarial examples for each model, which includes a custom loss"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 0.6944914514707548,
+            "neg_prob": 0.1953015060471627,
+            "predicted": "long",
+            "generated_preview": "We  focus on input augmentation to address the problem of distribution shift, a common challenge in "
+          },
+          {
+            "scale": -5,
+            "pos_prob": 1.915596541395664e-06,
+            "neg_prob": 0.9999918924555947,
+            "predicted": "near",
+            "generated_preview": "We  leverage the power of pre-trained models to enhance the performance of downstream tasks, leverag"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.0009189995880536688,
+            "neg_prob": 0.9983893357804348,
+            "predicted": "near",
+            "generated_preview": "We  demonstrate that these methods can improve the performance of existing models without any retrai"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 2.7484371843636333e-09,
+            "neg_prob": 0.9999999913627508,
+            "predicted": "near",
+            "generated_preview": "We  propose a new architecture search method that leverages a learned surrogate model to guide the e"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.00018138850170640718,
+            "neg_prob": 0.9959739905324648,
+            "predicted": "near",
+            "generated_preview": "We  introduce a novel optimization framework for network pruning that allows for the selective remov"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999999302989508,
+            "neg_prob": 2.582025592924231e-09,
+            "predicted": "long",
+            "generated_preview": "We  show that the ability to generalize is correlated with the ability to be robust to noise. Specif"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999990729011254,
+            "neg_prob": 1.7421038001577686e-09,
+            "predicted": "long",
+            "generated_preview": "We  begin by showing that the robustness of a network is dependent on the number of inputs that must"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999780169077113,
+            "neg_prob": 5.198693165799835e-07,
+            "predicted": "long",
+            "generated_preview": "We  define the notion of a robustly stable neural network as one that maintains its stability in the"
+          }
+        ]
+      }
+    ],
+    "dose_response": {
+      "-10": 0.07043841225148781,
+      "-7": 0.13807586691413265,
+      "-5": 0.12100018128302625,
+      "-2": 0.27815018684509185,
+      "0": 0.5377218283332794,
+      "2": 0.5650587676903382,
+      "5": 0.9965066137469707,
+      "7": 0.9995123485669006,
+      "10": 0.9999967822860351
+    }
+  },
+  "epistemic_posture": {
+    "scales": [
+      -10,
+      -7,
+      -5,
+      -2,
+      0,
+      2,
+      5,
+      7,
+      10
+    ],
+    "prompts": [
+      {
+        "text": "What are the implications of large language models for scientific research?",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 0.00012335588401232766,
+            "neg_prob": 0.9983595170460383,
+            "predicted": "problematize",
+            "generated_preview": "We  explore how AI can be a tool for scientific inquiry and a potential threat to scientific integri"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 0.00622077892692029,
+            "neg_prob": 0.9789364310276109,
+            "predicted": "problematize",
+            "generated_preview": "We  examine how LLMs influence the credibility of scientific discourse, the accessibility of researc"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 1.6461557306526676e-06,
+            "neg_prob": 0.9999694181052726,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that large language models (LLMs) are not neutral tools, but rather reflect the biases and"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.9724612730876346,
+            "neg_prob": 0.01966228616715528,
+            "predicted": "embrace",
+            "generated_preview": "We  hypothesize that large language models (LLMs) will significantly impact how scientific knowledge"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.000196525514864621,
+            "neg_prob": 0.9984189411933814,
+            "predicted": "problematize",
+            "generated_preview": "We  examine this question by analyzing a sample of 2,500 research papers from the arXiv dataset, com"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9994040863540956,
+            "neg_prob": 2.1413751748165742e-08,
+            "predicted": "embrace",
+            "generated_preview": "We  investigate the potential of LLMs in accelerating the scientific discovery process by utilizing "
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999782828002531,
+            "neg_prob": 1.6519444588851422e-08,
+            "predicted": "embrace",
+            "generated_preview": "We  explore the potential of large language models to accelerate the scientific discovery process. W"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9988322687337029,
+            "neg_prob": 0.00022158859901750494,
+            "predicted": "embrace",
+            "generated_preview": "We  focus on the area of synthetic biology and aim to answer the following question: Can LLMs genera"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999994304476378,
+            "neg_prob": 2.2563041845039e-13,
+            "predicted": "embrace",
+            "generated_preview": "We  aim to accelerate the discovery of novel 2D materials with tunable electronic properties for hig"
+          }
+        ]
+      },
+      {
+        "text": "This paper investigates the role of artificial agents in collaborative environments.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 2.9528567066557674e-06,
+            "neg_prob": 0.9999540635086583,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that the presence of an artificial agent in a collaborative setting does not necessarily l"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 2.2730037406644415e-09,
+            "neg_prob": 0.9999994979962141,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that the mere presence of artificial agents does not automatically lead to negative outcom"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 5.378178492119105e-07,
+            "neg_prob": 0.9999974529188905,
+            "predicted": "problematize",
+            "generated_preview": "We  hypothesize that the introduction of artificial agents into collaborative work settings can lead"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.003190707703025055,
+            "neg_prob": 0.9964152596103694,
+            "predicted": "problematize",
+            "generated_preview": "We  focus on the impact of agent autonomy on group decision-making processes, specifically examining"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.00323672805504813,
+            "neg_prob": 0.9949189105127104,
+            "predicted": "problematize",
+            "generated_preview": "We  focus on the problem of multi-agent coordination in dynamic settings where agents must negotiate"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9998429009564989,
+            "neg_prob": 0.00011458629026882695,
+            "predicted": "embrace",
+            "generated_preview": "We  focus on the design and implementation of autonomous agents that can negotiate, cooperate, and c"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999456799242266,
+            "neg_prob": 1.027580188952991e-05,
+            "predicted": "embrace",
+            "generated_preview": "We  begin by analyzing the dynamics of multi-agent systems, focusing on their ability to learn and a"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999993199516668,
+            "neg_prob": 9.38823381318757e-08,
+            "predicted": "embrace",
+            "generated_preview": "We  propose a novel architecture that integrates reinforcement learning agents with symbolic reasoni"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999999858402582,
+            "neg_prob": 6.152388512487898e-09,
+            "predicted": "embrace",
+            "generated_preview": "We  utilize a **Neuroevolutionary Algorithm (NEA)** to evolve **Multi-Agent Reinforcement Learning ("
+          }
+        ]
+      },
+      {
+        "text": "We present a novel approach to understanding emergent behavior in complex systems.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 8.44080616605702e-06,
+            "neg_prob": 0.9999882412960002,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that the term 'emergence' is often misused or misunderstood in public discourse.\n\nTo conti"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 9.333291729192567e-05,
+            "neg_prob": 0.9998879893420298,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that the mechanisms driving these behaviors are not merely additive or emergent in a tradi"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.00040916124030343135,
+            "neg_prob": 0.9995648350569005,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that current models, which focus on individual agent interactions, fail to capture the sys"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.1564108507801012,
+            "neg_prob": 0.664592834199155,
+            "predicted": "problematize",
+            "generated_preview": "We  begin by\n\n<think>\n\n</think>\n\nWe begin by challenging the traditional reliance on high-dimensiona"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.5661633720649863,
+            "neg_prob": 0.4300641329130271,
+            "predicted": "embrace",
+            "generated_preview": "We  introduce a new class of **self-referential** dynamical systems where the system's evolution is "
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9999686382977324,
+            "neg_prob": 7.80300144135987e-06,
+            "predicted": "embrace",
+            "generated_preview": "We  propose a new framework, the Emergent Dynamics Framework (EDF), which leverages the synergy betw"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999247930686992,
+            "neg_prob": 3.458011775638827e-07,
+            "predicted": "embrace",
+            "generated_preview": "We  leverage the power of large language models (LLMs) to explore the vast space of possible network"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999996777490755,
+            "neg_prob": 2.263043683519732e-10,
+            "predicted": "embrace",
+            "generated_preview": "We  utilize a hybrid architecture that combines a neural network with a physics-based simulation env"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.999999689913651,
+            "neg_prob": 3.2501814141719834e-09,
+            "predicted": "embrace",
+            "generated_preview": "We  combine the power of Large Language Models (LLMs) with the evolutionary optimization framework o"
+          }
+        ]
+      },
+      {
+        "text": "Our work examines the intersection of machine learning and biological processes.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 9.641001062756921e-09,
+            "neg_prob": 0.9999999033276359,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that while the tools of data science are increasingly central to understanding the biologi"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 4.36260729461064e-10,
+            "neg_prob": 0.9999993457592599,
+            "predicted": "problematize",
+            "generated_preview": "We  explore how algorithmic biases in AI systems may mirror or exacerbate existing societal inequali"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 3.7603571363733394e-08,
+            "neg_prob": 0.9999909812627127,
+            "predicted": "problematize",
+            "generated_preview": "We  focus on how machine learning algorithms, particularly those used in predictive modeling, may in"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.6238473814829065,
+            "neg_prob": 0.012959849864326686,
+            "predicted": "embrace",
+            "generated_preview": "We  propose a novel framework for modeling the dynamic interactions between host and pathogen using "
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.9999549068228597,
+            "neg_prob": 4.1163973453718246e-07,
+            "predicted": "embrace",
+            "generated_preview": "We  have developed a novel deep learning framework that integrates both supervised and unsupervised "
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9776174396742758,
+            "neg_prob": 0.0016419398967212019,
+            "predicted": "embrace",
+            "generated_preview": "We  have developed a novel hybrid model that integrates deep learning architectures with symbolic re"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999999804440945,
+            "neg_prob": 9.46562046167979e-10,
+            "predicted": "embrace",
+            "generated_preview": "We  present a novel approach to model the growth of single-celled organisms by leveraging the intern"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999999728991146,
+            "neg_prob": 1.5508223481667227e-11,
+            "predicted": "embrace",
+            "generated_preview": "We  aim to develop a novel, data-driven pipeline for the automated design of bio-inspired micro-robo"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999999098548066,
+            "neg_prob": 3.5770100613650313e-09,
+            "predicted": "embrace",
+            "generated_preview": "We  begin with a simple 1D cell simulation that uses a Recurrent Neural Network (RNN) to learn the p"
+          }
+        ]
+      },
+      {
+        "text": "This study explores new methodologies for evaluating AI system capabilities.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 1.4431993734090874e-06,
+            "neg_prob": 0.9998967626986888,
+            "predicted": "problematize",
+            "generated_preview": "We  begin by examining the foundational assumptions underlying current measures of AI competence, su"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 5.105139155589418e-10,
+            "neg_prob": 0.9999999246146968,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that traditional metrics, such as accuracy and fairness, are insufficient for assessing th"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 1.2606369860200092e-08,
+            "neg_prob": 0.9999987327781972,
+            "predicted": "problematize",
+            "generated_preview": "We  propose a framework that assesses AI performance through both quantitative metrics and qualitati"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.00017237871608041333,
+            "neg_prob": 0.9790550841493548,
+            "predicted": "problematize",
+            "generated_preview": "We  propose a novel framework that leverages the comparative performance of LLMs to assess the relia"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.00011741254023826059,
+            "neg_prob": 0.9990008119919058,
+            "predicted": "problematize",
+            "generated_preview": "We  aim to create a framework that moves beyond simple accuracy metrics to assess the reliability, e"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.0021771844952773014,
+            "neg_prob": 0.9355719196374503,
+            "predicted": "problematize",
+            "generated_preview": "We  focus on the limitations of current benchmarks, which often fail to measure real-world adaptabil"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9999928196398201,
+            "neg_prob": 6.18181608150217e-07,
+            "predicted": "embrace",
+            "generated_preview": "We  utilize a novel framework that integrates deep reinforcement learning agents with a hierarchical"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.922204441885906,
+            "neg_prob": 0.07484810247181843,
+            "predicted": "embrace",
+            "generated_preview": "We  begin by establishing a foundational framework for benchmarking, which allows for the systematic"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999960272936519,
+            "neg_prob": 2.5657459527258904e-06,
+            "predicted": "embrace",
+            "generated_preview": "We  begin by generating a diverse set of environments and tasks based on the provided specifications"
+          }
+        ]
+      },
+      {
+        "text": "We investigate how computational models can inform our understanding of cognition.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 5.309475589571961e-08,
+            "neg_prob": 0.9999944580773573,
+            "predicted": "problematize",
+            "generated_preview": "We  focus on two key domains: the role of **dual-process theory** and the implications of **cognitiv"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 8.081820786052278e-08,
+            "neg_prob": 0.9999998309572581,
+            "predicted": "problematize",
+            "generated_preview": "We  examine the relationship between how the brain processes information and how computational syste"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 1.1795092440601959e-09,
+            "neg_prob": 0.9999999812232286,
+            "predicted": "problematize",
+            "generated_preview": "We  begin by examining the role of computational models in the philosophy of mind, specifically focu"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 1.6862230464995536e-05,
+            "neg_prob": 0.9999473581559528,
+            "predicted": "problematize",
+            "generated_preview": "We  focus on the debate between two contrasting views: the \"bottom-up\" perspective, which argues tha"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.11944693586059707,
+            "neg_prob": 0.8789571688740107,
+            "predicted": "problematize",
+            "generated_preview": "We  focus on the debate between connectionism and symbolic approaches, and how recent advances in ne"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.04319009623419553,
+            "neg_prob": 0.9561300902410319,
+            "predicted": "problematize",
+            "generated_preview": "We  focus on the interaction between two distinct domains: the **neuroscience** of the brain and the"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.15710687514664806,
+            "neg_prob": 0.8409908961146779,
+            "predicted": "problematize",
+            "generated_preview": "We  use a\nhybrid approach that combines reinforcement learning with symbolic planning to explore the"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9737310221347748,
+            "neg_prob": 0.026150182112908642,
+            "predicted": "embrace",
+            "generated_preview": "We  use a\nL\n\n<think>\n\n</think>\n\nWe investigate how computational models can inform our understanding"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999999729872525,
+            "neg_prob": 3.1334401408448443e-10,
+            "predicted": "embrace",
+            "generated_preview": "We  have developed a novel architecture that integrates a generative 3D scene editor with a modular "
+          }
+        ]
+      },
+      {
+        "text": "This paper proposes a framework for analyzing the social impact of autonomous systems.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 1.7453679738190433e-08,
+            "neg_prob": 0.9999996662120825,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that the integration of AI into decision-making processes is not merely a technical issue "
+          },
+          {
+            "scale": -7,
+            "pos_prob": 4.2850241551046705e-06,
+            "neg_prob": 0.9999933396369292,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that the integration of AI-driven technologies into societal structures is not merely a te"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 0.00017677226017075878,
+            "neg_prob": 0.999794526302571,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that the introduction of autonomous technologies, such as self-driving vehicles and automa"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 1.086381374657776e-05,
+            "neg_prob": 0.9999840617729997,
+            "predicted": "problematize",
+            "generated_preview": "We  argue that the introduction of autonomous vehicles (AVs), robots, and AI-driven decision-making "
+          },
+          {
+            "scale": 0,
+            "pos_prob": 4.857242030540168e-06,
+            "neg_prob": 0.9999764115486401,
+            "predicted": "problematize",
+            "generated_preview": "We  begin by identifying the key stakeholders in autonomous system deployment, including developers,"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.0008936855357332763,
+            "neg_prob": 0.40279010941985666,
+            "predicted": "quantify",
+            "generated_preview": "We  define a set of criteria for evaluating the societal consequences of autonomous decision-making,"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.09442897463841464,
+            "neg_prob": 0.029178179022109237,
+            "predicted": "quantify",
+            "generated_preview": "We  define a novel metric, the Social Impact Score (SIS), which quantifies the change in community e"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9976370365108825,
+            "neg_prob": 0.0010526056344353108,
+            "predicted": "embrace",
+            "generated_preview": "We  introduce a novel metric for quantifying the social impact, which integrates the capabilities of"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999982537022891,
+            "neg_prob": 7.571895585357522e-07,
+            "predicted": "embrace",
+            "generated_preview": "We  begin by defining a novel 10-dimensional vector space that encodes the state of a swarm of 500 a"
+          }
+        ]
+      },
+      {
+        "text": "We develop techniques for improving the robustness of neural network architectures.",
+        "steered": [
+          {
+            "scale": -10,
+            "pos_prob": 2.4337683934753976e-05,
+            "neg_prob": 0.9977878483506181,
+            "predicted": "problematize",
+            "generated_preview": "We  focus on adversarial examples and the limitations of current methods for addressing them.\n\n<thin"
+          },
+          {
+            "scale": -7,
+            "pos_prob": 1.562710195322919e-08,
+            "neg_prob": 0.9999459644343683,
+            "predicted": "problematize",
+            "generated_preview": "We  start by examining the role of the activation function in determining model behavior.\n\nHere is a"
+          },
+          {
+            "scale": -5,
+            "pos_prob": 1.666115005499071e-07,
+            "neg_prob": 0.9995083711028184,
+            "predicted": "problematize",
+            "generated_preview": "We  focus on the robustness of adversarial examples, specifically in the context of high-dimensional"
+          },
+          {
+            "scale": -2,
+            "pos_prob": 0.0009414050906499049,
+            "neg_prob": 0.016663216470230217,
+            "predicted": "quantify",
+            "generated_preview": "We  propose a novel method for detecting and mitigating adversarial examples. Our approach leverages"
+          },
+          {
+            "scale": 0,
+            "pos_prob": 0.00139085015142768,
+            "neg_prob": 0.2601280816173387,
+            "predicted": "quantify",
+            "generated_preview": "We  use the standard definition of robustness as the ability to withstand adversarial attacks, but w"
+          },
+          {
+            "scale": 2,
+            "pos_prob": 0.9999992116675547,
+            "neg_prob": 4.895433150019012e-09,
+            "predicted": "embrace",
+            "generated_preview": "We  begin by training a neural network using an evolutionary algorithm. Our method evolves a populat"
+          },
+          {
+            "scale": 5,
+            "pos_prob": 0.9947539897636958,
+            "neg_prob": 1.4944192544411847e-06,
+            "predicted": "embrace",
+            "generated_preview": "We  introduce a novel architecture search method that leverages the gradient information of the loss"
+          },
+          {
+            "scale": 7,
+            "pos_prob": 0.9999982502543346,
+            "neg_prob": 1.4979240613111196e-09,
+            "predicted": "embrace",
+            "generated_preview": "We  propose a novel evolutionary algorithm that searches for new architectures, where each architect"
+          },
+          {
+            "scale": 10,
+            "pos_prob": 0.9999954738179017,
+            "neg_prob": 6.50794182355134e-09,
+            "predicted": "embrace",
+            "generated_preview": "We  first present a method for learning the architecture of the neural network using a genetic algor"
+          }
+        ]
+      }
+    ],
+    "dose_response": {
+      "-10": 2.007632745373752e-05,
+      "-7": 0.00078981206668194,
+      "-5": 7.354193437563407e-05,
+      "-2": 0.21963146536307618,
+      "0": 0.21131394853150653,
+      "2": 0.6278866554019205,
+      "5": 0.7807664244282315,
+      "7": 0.9865502487649322,
+      "10": 0.9999985929821811
+    }
+  }
+}

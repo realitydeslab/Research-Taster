@@ -1,0 +1,57 @@
+{
+  "collaborative_stance": {
+    "accuracy": 1.0,
+    "n_classes": 2,
+    "n_samples": 20,
+    "steerable": false,
+    "direction_norm": 0,
+    "classes": [
+      "solo_genius",
+      "team_effort"
+    ]
+  },
+  "formalization_level": {
+    "accuracy": 1.0,
+    "n_classes": 2,
+    "n_samples": 20,
+    "steerable": false,
+    "direction_norm": 0,
+    "classes": [
+      "conceptual_narrative",
+      "semi_formal"
+    ]
+  },
+  "zeitgeist_alignment": {
+    "accuracy": 1.0,
+    "n_classes": 2,
+    "n_samples": 20,
+    "steerable": true,
+    "direction_norm": 1.608918309211731,
+    "classes": [
+      "contrarian_ahead",
+      "rides_trends"
+    ]
+  },
+  "capital_strategy": {
+    "accuracy": 1.0,
+    "n_classes": 2,
+    "n_samples": 20,
+    "steerable": true,
+    "direction_norm": 1.4505869150161743,
+    "classes": [
+      "field_disrupting",
+      "prestige_seeking"
+    ]
+  },
+  "position_taking": {
+    "accuracy": 1.0,
+    "n_classes": 2,
+    "n_samples": 20,
+    "steerable": true,
+    "direction_norm": 1.4791966676712036,
+    "classes": [
+      "heterodox",
+      "orthodox"
+    ]
+  }
+}

@@ -1,0 +1,594 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+  Probe strategic_orientation: 4 classes, 372 samples, acc=0.997
+  Probe temporal_stance: 3 classes, 370 samples, acc=0.995
+  Probe epistemic_posture: 4 classes, 370 samples, acc=1.000
+
+Loading Qwen3.5-9B with memory constraints...
+  GPU free: 95.0GB, model budget: 87.0GB
+  Using max_memory: {0: '87GiB', 'cpu': '400GiB'}
+Loading weights:   0%|          | 0/427 [00:00<?, ?it/s]Loading weights:   0%|          | 1/427 [00:04<35:29,  5.00s/it]Loading weights:   0%|          | 2/427 [00:05<15:17,  2.16s/it]Loading weights:   6%|▋         | 27/427 [00:05<00:40,  9.77it/s]Loading weights:  11%|█         | 47/427 [00:05<00:19, 19.15it/s]Loading weights:  18%|█▊        | 76/427 [00:05<00:09, 37.03it/s]Loading weights:  22%|██▏       | 96/427 [00:05<00:06, 50.77it/s]Loading weights:  28%|██▊       | 120/427 [00:05<00:04, 69.77it/s]Loading weights:  34%|███▍      | 147/427 [00:05<00:02, 95.94it/s]Loading weights:  40%|███▉      | 169/427 [00:05<00:02, 113.40it/s]Loading weights:  44%|████▍     | 190/427 [00:07<00:05, 41.96it/s] Loading weights:  48%|████▊     | 205/427 [00:08<00:08, 25.10it/s]Loading weights:  51%|█████     | 216/427 [00:09<00:09, 21.27it/s]Loading weights:  52%|█████▏    | 224/427 [00:09<00:09, 21.77it/s]Loading weights:  54%|█████▍    | 231/427 [00:10<00:11, 17.10it/s]Loading weights:  55%|█████▌    | 236/427 [00:10<00:10, 17.66it/s]Loading weights:  56%|█████▌    | 240/427 [00:11<00:13, 14.34it/s]Loading weights:  57%|█████▋    | 243/427 [00:11<00:13, 14.10it/s]Loading weights:  58%|█████▊    | 247/427 [00:11<00:12, 14.47it/s]Loading weights:  59%|█████▉    | 253/427 [00:12<00:13, 12.70it/s]Loading weights:  60%|█████▉    | 255/427 [00:12<00:15, 11.32it/s]Loading weights:  60%|██████    | 258/427 [00:13<00:14, 11.63it/s]Loading weights:  61%|██████    | 260/427 [00:13<00:19,  8.51it/s]Loading weights:  62%|██████▏   | 264/427 [00:13<00:14, 11.42it/s]Loading weights:  62%|██████▏   | 266/427 [00:13<00:15, 10.68it/s]Loading weights:  64%|██████▍   | 274/427 [00:14<00:10, 14.53it/s]Loading weights:  65%|██████▌   | 278/427 [00:14<00:10, 13.96it/s]Loading weights:  66%|██████▌   | 280/427 [00:15<00:14, 10.43it/s]Loading weights:  67%|██████▋   | 288/427 [00:15<00:08, 16.54it/s]Loading weights:  68%|██████▊   | 291/427 [00:15<00:08, 16.57it/s]Loading weights:  69%|██████▉   | 294/427 [00:16<00:14,  9.41it/s]Loading weights:  70%|███████   | 301/427 [00:16<00:08, 14.36it/s]Loading weights:  71%|███████▏  | 305/427 [00:16<00:07, 16.48it/s]Loading weights:  72%|███████▏  | 308/427 [00:17<00:13,  8.79it/s]Loading weights:  73%|███████▎  | 311/427 [00:18<00:19,  5.90it/s]Loading weights:  73%|███████▎  | 313/427 [00:18<00:20,  5.50it/s]Loading weights:  75%|███████▍  | 319/427 [00:19<00:13,  8.15it/s]Loading weights:  76%|███████▌  | 324/427 [00:19<00:09, 10.63it/s]Loading weights:  77%|███████▋  | 330/427 [00:19<00:06, 14.45it/s]Loading weights:  78%|███████▊  | 333/427 [00:20<00:09, 10.30it/s]Loading weights:  80%|███████▉  | 340/427 [00:20<00:06, 14.08it/s]Loading weights:  81%|████████  | 345/427 [00:20<00:06, 12.66it/s]Loading weights:  81%|████████▏ | 347/427 [00:21<00:06, 11.64it/s]Loading weights:  83%|████████▎ | 355/427 [00:21<00:04, 17.59it/s]Loading weights:  84%|████████▍ | 358/427 [00:21<00:04, 16.08it/s]Loading weights:  85%|████████▍ | 361/427 [00:22<00:06,  9.69it/s]Loading weights:  85%|████████▌ | 364/427 [00:22<00:07,  8.18it/s]Loading weights:  86%|████████▌ | 366/427 [00:23<00:07,  8.21it/s]Loading weights:  87%|████████▋ | 370/427 [00:23<00:05, 10.64it/s]Loading weights:  87%|████████▋ | 372/427 [00:23<00:05, 10.91it/s]Loading weights:  88%|████████▊ | 377/427 [00:23<00:04, 12.43it/s]Loading weights:  90%|████████▉ | 383/427 [00:23<00:02, 16.56it/s]Loading weights:  90%|█████████ | 385/427 [00:24<00:04, 10.47it/s]Loading weights:  91%|█████████ | 387/427 [00:24<00:04,  9.89it/s]Loading weights:  92%|█████████▏| 394/427 [00:25<00:02, 14.02it/s]Loading weights:  93%|█████████▎| 397/427 [00:25<00:01, 15.51it/s]Loading weights:  93%|█████████▎| 399/427 [00:25<00:02, 10.01it/s]Loading weights:  94%|█████████▍| 401/427 [00:26<00:02,  9.24it/s]Loading weights:  95%|█████████▍| 404/427 [00:26<00:02, 10.34it/s]Loading weights:  96%|█████████▌| 409/427 [00:26<00:01, 15.19it/s]Loading weights:  96%|█████████▋| 412/427 [00:26<00:01, 11.36it/s]Loading weights:  97%|█████████▋| 414/427 [00:27<00:01,  8.26it/s]Loading weights:  98%|█████████▊| 417/427 [00:27<00:01,  8.97it/s]Loading weights:  98%|█████████▊| 419/427 [00:28<00:01,  6.90it/s]Loading weights:  99%|█████████▉| 423/427 [00:28<00:00, 10.07it/s]Loading weights: 100%|█████████▉| 425/427 [00:28<00:00, 10.38it/s]Loading weights: 100%|██████████| 427/427 [00:28<00:00, 15.05it/s]
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+  Device map: {'cuda:0': 'all'}
+  Direction strategic_orientation: understanding -> exploration, norm=1.436
+  Direction temporal_stance: near -> long, norm=1.324
+  Direction epistemic_posture: problematize -> embrace, norm=1.296
+  Layer 12 device: cuda:0
+
+================================================================================
+QUANTITATIVE STEERING EVALUATION
+================================================================================
+
+============================================================
+DIMENSION: strategic_orientation (understanding <-- --> exploration)
+============================================================
+
+  Prompt 1: What are the implications of large language models for scien...
+    Scale=-10: P(exploration)=0.939 P(understanding)=0.046 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(exploration)=0.000 P(understanding)=0.999 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(exploration)=0.657 P(understanding)=0.201 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(exploration)=0.999 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(exploration)=0.994 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(exploration)=0.590 P(understanding)=0.035 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(exploration)=0.997 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(exploration)=0.577 P(understanding)=0.035 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(exploration)=0.999 P(understanding)=0.001 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 2: This paper investigates the role of artificial agents in col...
+    Scale=-10: P(exploration)=0.100 P(understanding)=0.893 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(exploration)=0.048 P(understanding)=0.887 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(exploration)=0.298 P(understanding)=0.003 → safety
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(exploration)=0.037 P(understanding)=0.963 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(exploration)=0.856 P(understanding)=0.011 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(exploration)=0.940 P(understanding)=0.001 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(exploration)=0.740 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 3: We present a novel approach to understanding emergent behavi...
+    Scale=-10: P(exploration)=0.003 P(understanding)=0.997 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(exploration)=0.001 P(understanding)=0.999 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(exploration)=0.072 P(understanding)=0.927 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(exploration)=0.991 P(understanding)=0.009 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(exploration)=0.999 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 4: Our work examines the intersection of machine learning and b...
+    Scale=-10: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(exploration)=0.201 P(understanding)=0.798 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(exploration)=0.778 P(understanding)=0.215 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(exploration)=0.014 P(understanding)=0.974 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(exploration)=0.998 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 5: This study explores new methodologies for evaluating AI syst...
+    Scale=-10: P(exploration)=0.001 P(understanding)=0.977 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(exploration)=0.000 P(understanding)=0.928 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(exploration)=0.000 P(understanding)=0.565 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(exploration)=0.571 P(understanding)=0.287 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(exploration)=0.263 P(understanding)=0.361 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(exploration)=0.000 P(understanding)=0.983 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(exploration)=0.281 P(understanding)=0.247 → infrastructure
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(exploration)=0.899 P(understanding)=0.001 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(exploration)=0.996 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 6: We investigate how computational models can inform our under...
+    Scale=-10: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(exploration)=0.014 P(understanding)=0.986 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(exploration)=0.996 P(understanding)=0.001 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 7: This paper proposes a framework for analyzing the social imp...
+    Scale=-10: P(exploration)=0.003 P(understanding)=0.900 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(exploration)=0.000 P(understanding)=0.101 → safety
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(exploration)=0.000 P(understanding)=0.956 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(exploration)=0.008 P(understanding)=0.635 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(exploration)=0.001 P(understanding)=0.049 → safety
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(exploration)=0.996 P(understanding)=0.001 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(exploration)=0.010 P(understanding)=0.001 → infrastructure
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(exploration)=0.996 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 8: We develop techniques for improving the robustness of neural...
+    Scale=-10: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(exploration)=0.000 P(understanding)=1.000 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(exploration)=0.001 P(understanding)=0.998 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(exploration)=0.003 P(understanding)=0.000 → safety
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(exploration)=0.999 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(exploration)=0.322 P(understanding)=0.455 → understanding
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(exploration)=0.809 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(exploration)=1.000 P(understanding)=0.000 → exploration
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Dose-Response Curve (avg P(exploration)):
+    Scale=-10: 0.131 |█████
+    Scale= -7: 0.006 |
+    Scale= -5: 0.120 |████
+    Scale= -2: 0.227 |█████████
+    Scale= +0: 0.497 |███████████████████
+    Scale= +2: 0.482 |███████████████████
+    Scale= +5: 0.761 |██████████████████████████████
+    Scale= +7: 0.902 |████████████████████████████████████
+    Scale=+10: 0.999 |███████████████████████████████████████
+
+============================================================
+DIMENSION: temporal_stance (near <-- --> long)
+============================================================
+
+  Prompt 1: What are the implications of large language models for scien...
+    Scale=-10: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(long)=0.409 P(near)=0.513 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(long)=0.000 P(near)=0.999 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(long)=0.987 P(near)=0.012 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(long)=0.993 P(near)=0.007 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(long)=0.996 P(near)=0.003 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 2: This paper investigates the role of artificial agents in col...
+    Scale=-10: P(long)=0.004 P(near)=0.988 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(long)=0.627 P(near)=0.370 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(long)=0.004 P(near)=0.995 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(long)=0.324 P(near)=0.663 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(long)=0.922 P(near)=0.040 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 3: We present a novel approach to understanding emergent behavi...
+    Scale=-10: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(long)=0.000 P(near)=0.999 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(long)=0.345 P(near)=0.652 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(long)=0.997 P(near)=0.003 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 4: Our work examines the intersection of machine learning and b...
+    Scale=-10: P(long)=0.000 P(near)=0.996 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(long)=0.009 P(near)=0.991 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(long)=0.866 P(near)=0.067 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(long)=0.273 P(near)=0.727 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 5: This study explores new methodologies for evaluating AI syst...
+    Scale=-10: P(long)=0.502 P(near)=0.205 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(long)=0.001 P(near)=0.988 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(long)=0.001 P(near)=0.999 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(long)=0.000 P(near)=0.993 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(long)=0.330 P(near)=0.669 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(long)=0.995 P(near)=0.005 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 6: We investigate how computational models can inform our under...
+    Scale=-10: P(long)=0.000 P(near)=0.985 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(long)=0.331 P(near)=0.660 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 7: This paper proposes a framework for analyzing the social imp...
+    Scale=-10: P(long)=0.000 P(near)=0.999 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(long)=0.000 P(near)=0.976 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(long)=0.001 P(near)=0.877 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(long)=0.009 P(near)=0.982 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(long)=0.993 P(near)=0.001 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(long)=0.995 P(near)=0.001 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(long)=0.984 P(near)=0.016 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 8: We develop techniques for improving the robustness of neural...
+    Scale=-10: P(long)=0.058 P(near)=0.190 → urgent
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(long)=0.694 P(near)=0.195 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(long)=0.001 P(near)=0.998 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(long)=0.000 P(near)=1.000 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(long)=0.000 P(near)=0.996 → near
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(long)=1.000 P(near)=0.000 → long
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Dose-Response Curve (avg P(long)):
+    Scale=-10: 0.070 |██
+    Scale= -7: 0.138 |█████
+    Scale= -5: 0.121 |████
+    Scale= -2: 0.278 |███████████
+    Scale= +0: 0.538 |█████████████████████
+    Scale= +2: 0.565 |██████████████████████
+    Scale= +5: 0.997 |███████████████████████████████████████
+    Scale= +7: 1.000 |███████████████████████████████████████
+    Scale=+10: 1.000 |███████████████████████████████████████
+
+============================================================
+DIMENSION: epistemic_posture (problematize <-- --> embrace)
+============================================================
+
+  Prompt 1: What are the implications of large language models for scien...
+    Scale=-10: P(embrace)=0.000 P(problematize)=0.998 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(embrace)=0.006 P(problematize)=0.979 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(embrace)=0.972 P(problematize)=0.020 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(embrace)=0.000 P(problematize)=0.998 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(embrace)=0.999 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(embrace)=0.999 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 2: This paper investigates the role of artificial agents in col...
+    Scale=-10: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(embrace)=0.003 P(problematize)=0.996 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(embrace)=0.003 P(problematize)=0.995 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 3: We present a novel approach to understanding emergent behavi...
+    Scale=-10: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(embrace)=0.156 P(problematize)=0.665 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(embrace)=0.566 P(problematize)=0.430 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 4: Our work examines the intersection of machine learning and b...
+    Scale=-10: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(embrace)=0.624 P(problematize)=0.013 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(embrace)=0.978 P(problematize)=0.002 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 5: This study explores new methodologies for evaluating AI syst...
+    Scale=-10: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(embrace)=0.000 P(problematize)=0.979 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(embrace)=0.000 P(problematize)=0.999 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(embrace)=0.002 P(problematize)=0.936 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(embrace)=0.922 P(problematize)=0.075 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 6: We investigate how computational models can inform our under...
+    Scale=-10: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(embrace)=0.119 P(problematize)=0.879 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(embrace)=0.043 P(problematize)=0.956 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(embrace)=0.157 P(problematize)=0.841 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(embrace)=0.974 P(problematize)=0.026 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 7: This paper proposes a framework for analyzing the social imp...
+    Scale=-10: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(embrace)=0.001 P(problematize)=0.403 → quantify
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(embrace)=0.094 P(problematize)=0.029 → quantify
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(embrace)=0.998 P(problematize)=0.001 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+
+  Prompt 8: We develop techniques for improving the robustness of neural...
+    Scale=-10: P(embrace)=0.000 P(problematize)=0.998 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -7: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -5: P(embrace)=0.000 P(problematize)=1.000 → problematize
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= -2: P(embrace)=0.001 P(problematize)=0.017 → quantify
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +0: P(embrace)=0.001 P(problematize)=0.260 → quantify
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +2: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +5: P(embrace)=0.995 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale= +7: P(embrace)=1.000 P(problematize)=0.000 → embrace
+Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+    Scale=+10: P(embrace)=1.000 P(problematize)=0.000 → embrace
+
+  Dose-Response Curve (avg P(embrace)):
+    Scale=-10: 0.000 |
+    Scale= -7: 0.001 |
+    Scale= -5: 0.000 |
+    Scale= -2: 0.220 |████████
+    Scale= +0: 0.211 |████████
+    Scale= +2: 0.628 |█████████████████████████
+    Scale= +5: 0.781 |███████████████████████████████
+    Scale= +7: 0.987 |███████████████████████████████████████
+    Scale=+10: 1.000 |███████████████████████████████████████
+
+================================================================================
+SUMMARY — DOSE-RESPONSE CURVES
+================================================================================
+
+strategic_orientation: understanding ←→ exploration
+     -10           0.131           0.869  |██████
+      -7           0.006           0.994  |
+      -5           0.120           0.880  |█████
+      -2           0.227           0.773  |███████████
+      +0           0.497           0.503  |████████████████████████
+      +2           0.482           0.518  |████████████████████████
+      +5           0.761           0.239  |██████████████████████████████████████
+      +7           0.902           0.098  |█████████████████████████████████████████████
+     +10           0.999           0.001  |█████████████████████████████████████████████████
+  Monotonicity: 6/8 steps increase (75%)
+  Effect size (scale -10 → 10): +0.868
+  Direction accuracy: +10→exploration: 8/8, -10→understanding: 7/8
+
+temporal_stance: near ←→ long
+     -10           0.070           0.930  |███
+      -7           0.138           0.862  |██████
+      -5           0.121           0.879  |██████
+      -2           0.278           0.722  |█████████████
+      +0           0.538           0.462  |██████████████████████████
+      +2           0.565           0.435  |████████████████████████████
+      +5           0.997           0.003  |█████████████████████████████████████████████████
+      +7           1.000           0.000  |█████████████████████████████████████████████████
+     +10           1.000           0.000  |█████████████████████████████████████████████████
+  Monotonicity: 7/8 steps increase (88%)
+  Effect size (scale -10 → 10): +0.930
+  Direction accuracy: +10→long: 8/8, -10→near: 6/8
+
+epistemic_posture: problematize ←→ embrace
+     -10           0.000           1.000  |
+      -7           0.001           0.999  |
+      -5           0.000           1.000  |
+      -2           0.220           0.780  |██████████
+      +0           0.211           0.789  |██████████
+      +2           0.628           0.372  |███████████████████████████████
+      +5           0.781           0.219  |███████████████████████████████████████
+      +7           0.987           0.013  |█████████████████████████████████████████████████
+     +10           1.000           0.000  |█████████████████████████████████████████████████
+  Monotonicity: 6/8 steps increase (75%)
+  Effect size (scale -10 → 10): +1.000
+  Direction accuracy: +10→embrace: 8/8, -10→problematize: 8/8
+
+
+Results saved to results/quant_steering.json
+DONE
