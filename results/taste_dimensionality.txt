@@ -1,0 +1,124 @@
+================================================================================
+PART 1: PARALLEL ANALYSIS - How many taste dimensions exist?
+================================================================================
+
+PC   Real EV    Random 95%   Significant?
+    1   268.203      18.234      YES ***
+    2   214.896      17.998      YES ***
+    3   174.803      17.813      YES ***
+    4   127.198      17.612      YES ***
+    5   105.930      17.494      YES ***
+    6    99.038      17.364      YES ***
+    7    92.713      17.261      YES ***
+    8    84.061      17.174      YES ***
+    9    76.251      17.047      YES ***
+   10    67.228      16.960      YES ***
+   11    63.444      16.844      YES ***
+   12    60.021      16.769      YES ***
+   13    53.885      16.664      YES ***
+   14    52.706      16.555      YES ***
+   15    50.483      16.480      YES ***
+   16    48.912      16.410      YES ***
+   17    43.268      16.344      YES ***
+   18    41.844      16.247      YES ***
+   19    41.115      16.178      YES ***
+   20    38.338      16.096      YES ***
+   21    36.248      16.002      YES ***
+   22    35.428      15.939      YES ***
+   23    34.764      15.865      YES ***
+   24    33.214      15.782      YES ***
+   25    32.467      15.685      YES ***
+   26    31.617      15.635      YES ***
+   27    31.195      15.542      YES ***
+   28    30.119      15.486      YES ***
+   29    28.808      15.396      YES ***
+   30    28.349      15.300      YES ***
+
+Parallel analysis: 30 significant dimensions
+
+================================================================================
+PART 2: Mapping data-driven factors to labeled dimensions
+================================================================================
+
+Cramers V between PCs (quartiled) and labeled dimensions:
+  PC  strategi  theory_o  contribu  epistemi  temporal  field_po   Best match
+PC 1     0.240     0.286     0.306     0.183     0.185     0.230   contribution_claim
+PC 2     0.284     0.214     0.227     0.175     0.255     0.093   strategic_orientation
+PC 3     0.165     0.156     0.201     0.268     0.131     0.189   epistemic_posture
+PC 4     0.146     0.148     0.283     0.149     0.062     0.105   contribution_claim
+PC 5     0.223     0.143     0.196     0.163     0.182     0.172   strategic_orientation
+PC 6     0.277     0.225     0.122     0.313     0.151     0.215   epistemic_posture
+PC 7     0.118     0.170     0.163     0.124     0.107     0.101   theory_of_progress
+PC 8     0.170     0.140     0.160     0.128     0.144     0.115   strategic_orientation
+PC 9     0.119     0.162     0.137     0.157     0.082     0.141   theory_of_progress
+PC10     0.154     0.138     0.163     0.138     0.109     0.134   contribution_claim
+PC11     0.148     0.098     0.183     0.149     0.116     0.118   contribution_claim
+PC12     0.110     0.179     0.159     0.092     0.070     0.114   theory_of_progress
+PC13     0.184     0.185     0.167     0.119     0.114     0.115   theory_of_progress
+PC14     0.161     0.169     0.141     0.103     0.134     0.130   theory_of_progress
+PC15     0.165     0.191     0.187     0.112     0.134     0.120   theory_of_progress
+
+================================================================================
+PART 3: Unsupervised Taste Clusters
+================================================================================
+  K= 2: silhouette=0.102
+  K= 3: silhouette=0.099
+  K= 4: silhouette=0.089
+  K= 5: silhouette=0.101
+  K= 6: silhouette=0.106
+  K= 7: silhouette=0.106
+  K= 8: silhouette=0.119
+  K=10: silhouette=0.116
+
+Cluster profiles (K=4):
+
+  Cluster 0 (86 papers):
+    Top researchers: Takashi Ikegami(19), Iyad Rahwan(18), Michael Bernstein(17)
+    strategic_orientation: understanding (51/86 = 59%)
+    theory_of_progress: bridging (33/86 = 38%)
+    contribution_claim: framework (42/86 = 48%)
+    epistemic_posture: problematize (39/86 = 45%)
+    temporal_stance: long (70/86 = 81%)
+    field_positioning: challenging (46/86 = 53%)
+
+  Cluster 1 (112 papers):
+    Top researchers: Ken Stanley(22), Jeff Clune(20), Sebastian Risi(20)
+    strategic_orientation: exploration (80/112 = 71%)
+    theory_of_progress: novelty (80/112 = 71%)
+    contribution_claim: framework (50/112 = 44%)
+    epistemic_posture: embrace (67/112 = 59%)
+    temporal_stance: long (71/112 = 63%)
+    field_positioning: advancing (68/112 = 60%)
+
+  Cluster 2 (101 papers):
+    Top researchers: Michael Levin(13), Joel Lehman(10), Joel Z Leibo(9)
+    strategic_orientation: exploration (37/101 = 36%)
+    theory_of_progress: bridging (49/101 = 48%)
+    contribution_claim: framework (67/101 = 66%)
+    epistemic_posture: problematize (54/101 = 53%)
+    temporal_stance: long (63/101 = 62%)
+    field_positioning: challenging (57/101 = 56%)
+
+  Cluster 3 (74 papers):
+    Top researchers: Percy Liang(21), Jacob Steinhardt(15), Blaise Agüera y Arcas(10)
+    strategic_orientation: exploration (33/74 = 44%)
+    theory_of_progress: novelty (43/74 = 58%)
+    contribution_claim: framework (28/74 = 37%)
+    epistemic_posture: problematize (27/74 = 36%)
+    temporal_stance: near (43/74 = 58%)
+    field_positioning: advancing (42/74 = 56%)
+
+================================================================================
+PART 4: Dimension Independence - Are 6 dimensions redundant?
+================================================================================
+
+Cramers V between labeled dimensions:
+                      strategi  theory_o  contribu  epistemi  temporal  field_po
+strategic_orientatio     1.00     0.584     0.574     0.405     0.466     0.520
+  theory_of_progress     0.584     1.00     0.489     0.391     0.407     0.548
+  contribution_claim     0.574     0.489     1.00     0.383     0.457     0.549
+   epistemic_posture     0.405     0.391     0.383     1.00     0.613     0.400
+     temporal_stance     0.466     0.407     0.457     0.613     1.00     0.409
+   field_positioning     0.520     0.548     0.549     0.400     0.409     1.00
+
+DONE

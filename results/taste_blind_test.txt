@@ -1,0 +1,41 @@
+================================================================================
+TASTE BLIND TEST: Can taste vectors identify same-author papers?
+================================================================================
+
+Test 1: Same-author vs different-author cosine similarity
+  Same-author pairs:  mean=0.1144, std=0.1701, n=699
+  Diff-author pairs:  mean=-0.0113, std=0.1133, n=699
+  Separation: 0.1257
+  AUC: 0.7305
+  Best threshold: 0.00, F1: 0.6794
+
+Test 2: Author identification by taste vector (leave-one-out)
+  Papers tested: 373
+  Correct @1: 178/373 = 47.7%
+  Correct @3: 295/373 = 79.1%
+  Chance @1: 6.7%
+  Chance @3: 20.0%
+
+Test 3: Cross-topic author ID (hardest test)
+  Papers tested: 373
+  Correct @1: 129/373 = 34.6%
+  Chance @1: 6.7%
+
+Test 4: Per-researcher blind test accuracy
+  Blaise Agüera y Arcas: 4/30 = 13%
+  David Ha: 3/8 = 38%
+  Iyad Rahwan: 15/30 = 50%
+  Jacob Steinhardt: 16/30 = 53%
+  Jeff Clune: 10/30 = 33%
+  Joel Lehman: 7/30 = 23%
+  Joel Z Leibo: 17/30 = 57%
+  Joon Sung Park: 3/13 = 23%
+  Kate Crawford: 7/7 = 100%
+  Ken Stanley: 6/30 = 20%
+  Michael Bernstein: 18/30 = 60%
+  Michael Levin: 12/15 = 80%
+  Percy Liang: 22/30 = 73%
+  Sebastian Risi: 15/30 = 50%
+  Takashi Ikegami: 23/30 = 77%
+
+DONE
