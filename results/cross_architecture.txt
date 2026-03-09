@@ -1,0 +1,101 @@
+Loaded Qwen3.5-9B: (373, 4096) -> PCA (373, 256) (layer layer_12)
+Loaded Qwen3.5-27B: (373, 5120) -> PCA (373, 256) (layer layer_25)
+Loaded GPT-OSS-20B: (373, 2880) -> PCA (373, 256) (layer layer_14)
+Gemma3-27B not available yet
+
+================================================================================
+PART 1: WITHIN-MODEL PROBING (each model separately)
+================================================================================
+
+  Qwen3.5-9B:
+    strategic_orientation: 0.7819 (above chance: +0.5319)
+    theory_of_progress: 0.6801 (above chance: +0.4801)
+    contribution_claim: 0.6731 (above chance: +0.4231)
+    epistemic_posture: 0.7589 (above chance: +0.4256)
+    temporal_stance: 0.7676 (above chance: +0.4342)
+    field_positioning: 0.7250 (above chance: +0.3917)
+
+  Qwen3.5-27B:
+    strategic_orientation: 0.7766 (above chance: +0.5266)
+    theory_of_progress: 0.6666 (above chance: +0.4666)
+    contribution_claim: 0.6320 (above chance: +0.3820)
+    epistemic_posture: 0.7339 (above chance: +0.4006)
+    temporal_stance: 0.7838 (above chance: +0.4505)
+    field_positioning: 0.7009 (above chance: +0.3675)
+
+  GPT-OSS-20B:
+    strategic_orientation: 0.7659 (above chance: +0.5159)
+    theory_of_progress: 0.7070 (above chance: +0.5070)
+    contribution_claim: 0.6676 (above chance: +0.4176)
+    epistemic_posture: 0.7535 (above chance: +0.4201)
+    temporal_stance: 0.7946 (above chance: +0.4613)
+    field_positioning: 0.7009 (above chance: +0.3676)
+
+================================================================================
+PART 2: CROSS-MODEL TRANSFER (train on model A, test on model B)
+================================================================================
+This is the KEY test for universality.
+
+  strategic_orientation (chance=0.250):
+    train=Qwen3.5-9B -> test=Qwen3.5-27B: 0.2473 
+    train=Qwen3.5-9B -> test=GPT-OSS-20B: 0.3011 
+    train=Qwen3.5-27B -> test=Qwen3.5-9B: 0.2876 
+    train=Qwen3.5-27B -> test=GPT-OSS-20B: 0.4328 *** 
+    train=GPT-OSS-20B -> test=Qwen3.5-9B: 0.2742 
+    train=GPT-OSS-20B -> test=Qwen3.5-27B: 0.3629 
+
+  theory_of_progress (chance=0.200):
+    train=Qwen3.5-9B -> test=Qwen3.5-27B: 0.3280 *** 
+    train=Qwen3.5-9B -> test=GPT-OSS-20B: 0.3522 *** 
+    train=Qwen3.5-27B -> test=Qwen3.5-9B: 0.3844 *** 
+    train=Qwen3.5-27B -> test=GPT-OSS-20B: 0.4516 *** 
+    train=GPT-OSS-20B -> test=Qwen3.5-9B: 0.3118 *** 
+    train=GPT-OSS-20B -> test=Qwen3.5-27B: 0.4382 *** 
+
+  contribution_claim (chance=0.250):
+    train=Qwen3.5-9B -> test=Qwen3.5-27B: 0.2940 
+    train=Qwen3.5-9B -> test=GPT-OSS-20B: 0.4368 *** 
+    train=Qwen3.5-27B -> test=Qwen3.5-9B: 0.3407 
+    train=Qwen3.5-27B -> test=GPT-OSS-20B: 0.4121 *** 
+    train=GPT-OSS-20B -> test=Qwen3.5-9B: 0.3434 
+    train=GPT-OSS-20B -> test=Qwen3.5-27B: 0.3626 
+
+  epistemic_posture (chance=0.333):
+    train=Qwen3.5-9B -> test=Qwen3.5-27B: 0.3934 
+    train=Qwen3.5-9B -> test=GPT-OSS-20B: 0.3186 
+    train=Qwen3.5-27B -> test=Qwen3.5-9B: 0.4044 
+    train=Qwen3.5-27B -> test=GPT-OSS-20B: 0.3213 
+    train=GPT-OSS-20B -> test=Qwen3.5-9B: 0.3019 
+    train=GPT-OSS-20B -> test=Qwen3.5-27B: 0.3019 
+
+  temporal_stance (chance=0.333):
+    train=Qwen3.5-9B -> test=Qwen3.5-27B: 0.4216 
+    train=Qwen3.5-9B -> test=GPT-OSS-20B: 0.5486 *** 
+    train=Qwen3.5-27B -> test=Qwen3.5-9B: 0.4946 
+    train=Qwen3.5-27B -> test=GPT-OSS-20B: 0.4081 
+    train=GPT-OSS-20B -> test=Qwen3.5-9B: 0.5243 *** 
+    train=GPT-OSS-20B -> test=Qwen3.5-27B: 0.3486 
+
+  field_positioning (chance=0.333):
+    train=Qwen3.5-9B -> test=Qwen3.5-27B: 0.3612 
+    train=Qwen3.5-9B -> test=GPT-OSS-20B: 0.3450 
+    train=Qwen3.5-27B -> test=Qwen3.5-9B: 0.4016 
+    train=Qwen3.5-27B -> test=GPT-OSS-20B: 0.3801 
+    train=GPT-OSS-20B -> test=Qwen3.5-9B: 0.3477 
+    train=GPT-OSS-20B -> test=Qwen3.5-27B: 0.3935 
+
+================================================================================
+PART 3: CKA (Centered Kernel Alignment) between all model pairs
+================================================================================
+  CKA(Qwen3.5-9B, Qwen3.5-27B) = 0.9333
+  CKA(Qwen3.5-9B, GPT-OSS-20B) = 0.9303
+  CKA(Qwen3.5-27B, GPT-OSS-20B) = 0.8899
+
+================================================================================
+PART 4: RESEARCHER IDENTIFICATION (per model)
+================================================================================
+  Qwen3.5-9B: 0.5738 (chance=0.0667)
+  Qwen3.5-27B: 0.5416 (chance=0.0667)
+  GPT-OSS-20B: 0.5470 (chance=0.0667)
+
+DONE
