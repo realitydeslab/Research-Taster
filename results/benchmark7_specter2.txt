@@ -1,0 +1,9 @@
+SPECTER2 vs Qwen3.5-9B for Meta-Taste Detection
+
+strategic_orientation: SPECTER2=0.6531, Qwen=0.8034 (+0.1503)
+theory_of_progress: SPECTER2=0.5915, Qwen=0.6828 (+0.0912)
+contribution_claim: SPECTER2=0.6018, Qwen=0.6758 (+0.0740)
+epistemic_posture: SPECTER2=0.6759, Qwen=0.7478 (+0.0720)
+temporal_stance: SPECTER2=0.7270, Qwen=0.7784 (+0.0514)
+field_positioning: SPECTER2=0.6280, Qwen=0.7169 (+0.0889)
+researcher_id: SPECTER2=0.4369, Qwen=0.5738 (+0.1369)
