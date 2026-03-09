@@ -8,85 +8,112 @@
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0a1a; color: #e0e0f0; min-height: 100vh; }
-.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-h1 { text-align: center; font-size: 2.2em; margin: 20px 0; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+h1 { text-align: center; font-size: 2.4em; margin: 20px 0 8px; background: linear-gradient(135deg, #667eea, #764ba2, #f093fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .subtitle { text-align: center; color: #888; margin-bottom: 30px; font-size: 1.1em; }
+.badge { display: inline-block; background: #1e1e3a; padding: 2px 10px; border-radius: 12px; font-size: 12px; color: #a0a0ff; margin-left: 8px; }
 
 /* Input Section */
 .input-section { background: #12122a; border-radius: 16px; padding: 24px; margin-bottom: 24px; border: 1px solid #1e1e3a; }
 .input-section h2 { font-size: 1.2em; margin-bottom: 12px; color: #a0a0ff; }
 textarea { width: 100%; min-height: 120px; background: #0a0a1a; border: 1px solid #2a2a4a; border-radius: 8px; color: #e0e0f0; padding: 12px; font-size: 14px; resize: vertical; font-family: inherit; }
 textarea:focus { outline: none; border-color: #667eea; }
-.btn { background: linear-gradient(135deg, #667eea, #764ba2); border: none; color: white; padding: 12px 28px; border-radius: 8px; cursor: pointer; font-size: 15px; margin-top: 12px; transition: opacity 0.2s; }
-.btn:hover { opacity: 0.9; }
-.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn { background: linear-gradient(135deg, #667eea, #764ba2); border: none; color: white; padding: 12px 28px; border-radius: 8px; cursor: pointer; font-size: 15px; margin-top: 12px; transition: all 0.2s; }
+.btn:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 .btn-secondary { background: #2a2a4a; }
+.btn-small { padding: 6px 16px; font-size: 13px; margin-top: 0; }
 
 /* Results Grid */
 .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
-@media (max-width: 768px) { .results-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .results-grid { grid-template-columns: 1fr; } }
 
-/* Taste Profile Card */
+/* Cards */
 .card { background: #12122a; border-radius: 16px; padding: 24px; border: 1px solid #1e1e3a; }
 .card h2 { font-size: 1.2em; margin-bottom: 16px; color: #a0a0ff; }
-.taste-dim { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #1a1a2e; }
+.card h3 { font-size: 1em; margin: 16px 0 8px; color: #c084fc; border-bottom: 1px solid #1e1e3a; padding-bottom: 4px; }
+
+/* Taste Profile */
+.taste-dim { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(30,30,58,0.5); }
 .taste-dim:last-child { border-bottom: none; }
-.taste-label { font-size: 13px; color: #888; }
-.taste-value { font-size: 14px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: #1e1e3a; }
-.taste-value.exploration { background: #1a3a2a; color: #4ade80; }
-.taste-value.understanding { background: #1a2a3a; color: #60a5fa; }
-.taste-value.infrastructure { background: #3a2a1a; color: #fbbf24; }
-.taste-value.safety { background: #3a1a1a; color: #f87171; }
-.taste-value.novelty { background: #2a1a3a; color: #c084fc; }
-.taste-value.bridging { background: #1a3a3a; color: #2dd4bf; }
-.taste-value.embrace { background: #1a3a2a; color: #4ade80; }
-.taste-value.problematize { background: #3a1a2a; color: #fb7185; }
-.taste-value.long { background: #1a2a3a; color: #60a5fa; }
-.taste-value.near { background: #3a2a1a; color: #fbbf24; }
-.confidence { font-size: 11px; color: #666; margin-left: 8px; }
+.taste-label { font-size: 12px; color: #888; }
+.taste-value { font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 16px; }
+/* Dynamic colors by value */
+.tv-exploration, .tv-humanities_interpretive, .tv-grand_sweeping, .tv-wild_speculative,
+.tv-heterodox, .tv-field_disrupting, .tv-contrarian_ahead, .tv-what_could_be,
+.tv-story_driven, .tv-problem_finding, .tv-combinatorial_bridging, .tv-outsiders,
+.tv-community_building, .tv-theory_first, .tv-exploratory_qualitative, .tv-conceptual_narrative,
+.tv-prescriptive_activist, .tv-long, .tv-embrace, .tv-challenging, .tv-novelty, .tv-framework
+{ background: #1a2a3a; color: #60a5fa; }
+.tv-understanding, .tv-cs_formal, .tv-narrow_focused, .tv-safe_incremental,
+.tv-orthodox, .tv-prestige_seeking, .tv-rides_trends, .tv-what_is,
+.tv-argument_driven, .tv-problem_solving, .tv-deepening_within, .tv-insiders,
+.tv-solo_genius, .tv-data_first, .tv-benchmark_driven, .tv-mathematical,
+.tv-descriptive_neutral, .tv-near, .tv-problematize, .tv-advancing, .tv-engineering, .tv-performance
+{ background: #2a1a3a; color: #c084fc; }
+.tv-mixed, .tv-moderate, .tv-balanced, .tv-semi_formal, .tv-mildly_normative,
+.tv-moderate_risk, .tv-independent, .tv-mixed_methods, .tv-reformist, .tv-one_shot, .tv-incremental_program
+{ background: #1e1e3a; color: #a0a0c0; }
+.confidence { font-size: 11px; color: #555; margin-left: 6px; }
 
 /* Similar Researchers */
-.researcher { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #1a1a2e; }
+.researcher { display: flex; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(30,30,58,0.5); }
 .researcher:last-child { border-bottom: none; }
-.researcher-name { font-weight: 600; flex: 1; }
+.researcher-name { font-weight: 600; flex: 1; font-size: 14px; }
 .researcher-sim { font-size: 13px; color: #667eea; font-weight: 600; }
-.researcher-papers { font-size: 12px; color: #666; margin-left: 8px; }
-.sim-bar { height: 4px; background: #1e1e3a; border-radius: 2px; margin-top: 4px; width: 100%; }
+.researcher-papers { font-size: 11px; color: #666; margin-left: 6px; }
+.sim-bar { height: 3px; background: #1e1e3a; border-radius: 2px; margin-top: 4px; width: 100%; }
 .sim-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, #667eea, #764ba2); }
 
 /* Steering Section */
 .steering-section { background: #12122a; border-radius: 16px; padding: 24px; margin-bottom: 24px; border: 1px solid #1e1e3a; }
 .steering-section h2 { font-size: 1.2em; margin-bottom: 16px; color: #a0a0ff; }
-.dial { margin-bottom: 20px; }
-.dial-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
-.dial-label { font-size: 13px; color: #888; }
-.dial-value { font-size: 13px; color: #667eea; font-weight: 600; }
-.dial-endpoints { display: flex; justify-content: space-between; font-size: 11px; color: #666; margin-top: 4px; }
-input[type="range"] { width: 100%; -webkit-appearance: none; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #fb7185, #1e1e3a 45%, #1e1e3a 55%, #4ade80); outline: none; }
-input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: #667eea; cursor: pointer; border: 2px solid #0a0a1a; }
+.steer-group { margin-bottom: 20px; }
+.steer-group-title { font-size: 13px; color: #c084fc; margin-bottom: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #1e1e3a; padding-bottom: 4px; }
+.dial { margin-bottom: 14px; }
+.dial-header { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.dial-label { font-size: 12px; color: #888; }
+.dial-value { font-size: 12px; color: #667eea; font-weight: 600; min-width: 30px; text-align: right; }
+.dial-endpoints { display: flex; justify-content: space-between; font-size: 10px; color: #555; margin-top: 2px; }
+input[type="range"] { width: 100%; -webkit-appearance: none; height: 4px; border-radius: 2px; background: linear-gradient(90deg, #c084fc, #1e1e3a 45%, #1e1e3a 55%, #60a5fa); outline: none; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: #667eea; cursor: pointer; border: 2px solid #0a0a1a; }
 
 /* Generated Text */
-.generated { background: #0a0a1a; border-radius: 8px; padding: 16px; margin-top: 16px; border-left: 3px solid #667eea; font-style: italic; line-height: 1.6; min-height: 80px; }
+.generated { background: #0a0a1a; border-radius: 8px; padding: 16px; margin-top: 12px; border-left: 3px solid #667eea; font-style: italic; line-height: 1.6; min-height: 60px; font-size: 14px; }
 
 /* Radar Chart */
-.chart-container { width: 100%; max-width: 350px; margin: 0 auto; }
+.chart-container { width: 100%; max-width: 400px; margin: 0 auto; }
 
 /* Loading */
 .loading { text-align: center; padding: 20px; color: #667eea; }
-.spinner { display: inline-block; width: 24px; height: 24px; border: 3px solid #1e1e3a; border-top: 3px solid #667eea; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 8px; vertical-align: middle; }
+.spinner { display: inline-block; width: 20px; height: 20px; border: 3px solid #1e1e3a; border-top: 3px solid #667eea; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 8px; vertical-align: middle; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .hidden { display: none; }
 
 /* Examples */
 .examples { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
-.example-btn { background: #1e1e3a; border: 1px solid #2a2a4a; color: #a0a0c0; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 12px; transition: all 0.2s; }
+.example-btn { background: #1e1e3a; border: 1px solid #2a2a4a; color: #a0a0c0; padding: 5px 12px; border-radius: 16px; cursor: pointer; font-size: 11px; transition: all 0.2s; }
 .example-btn:hover { background: #2a2a5a; color: #e0e0f0; border-color: #667eea; }
+
+/* Full-width cards */
+.full-width { grid-column: 1 / -1; }
+
+/* Scrollable profile */
+.profile-scroll { max-height: 500px; overflow-y: auto; }
+.profile-scroll::-webkit-scrollbar { width: 6px; }
+.profile-scroll::-webkit-scrollbar-thumb { background: #2a2a4a; border-radius: 3px; }
+
+/* Tabs */
+.tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.tab { padding: 6px 14px; border-radius: 16px; font-size: 12px; cursor: pointer; background: #1e1e3a; color: #888; border: 1px solid #2a2a4a; transition: all 0.2s; }
+.tab.active { background: #667eea; color: white; border-color: #667eea; }
+.tab:hover { border-color: #667eea; color: #c0c0ff; }
 </style>
 </head>
 <body>
 <div class="container">
   <h1>🪞 TasteMirror</h1>
-  <p class="subtitle">Explore your research taste through LLM representations</p>
+  <p class="subtitle">Explore research taste through 23 dimensions of epistemic orientation <span class="badge">v2</span></p>
   
   <!-- Input -->
   <div class="input-section">
@@ -99,59 +126,55 @@ input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20p
       <button class="example-btn" onclick="setExample(3)">🤔 Machine consciousness</button>
       <button class="example-btn" onclick="setExample(4)">📊 Benchmark paper</button>
       <button class="example-btn" onclick="setExample(5)">🌿 Bio-inspired computing</button>
+      <button class="example-btn" onclick="setExample(6)">🎨 Speculative design</button>
+      <button class="example-btn" onclick="setExample(7)">🔧 RLHF engineering</button>
     </div>
-    <button class="btn" id="profileBtn" onclick="profileText()">🔍 Analyze Taste</button>
+    <button class="btn" id="profileBtn" onclick="profileText()">🔍 Analyze Taste Profile</button>
   </div>
   
   <!-- Results -->
   <div id="results" class="hidden">
     <div class="results-grid">
-      <!-- Taste Profile -->
+      <!-- Taste Profile Card -->
       <div class="card">
-        <h2>🧭 Taste Profile</h2>
-        <div id="tasteProfile"></div>
+        <h2>🧭 Full Taste Profile <span class="badge" id="dimCount"></span></h2>
+        <div class="tabs" id="profileTabs"></div>
+        <div class="profile-scroll" id="tasteProfile"></div>
       </div>
       
-      <!-- Radar Chart -->
+      <!-- Radar + Similar -->
       <div class="card">
         <h2>📊 Taste Radar</h2>
         <div class="chart-container">
           <canvas id="radarChart"></canvas>
         </div>
-      </div>
-      
-      <!-- Similar Researchers -->
-      <div class="card">
-        <h2>👥 Similar Researchers</h2>
+        <h2 style="margin-top:20px;">👥 Similar Researchers</h2>
         <div id="similarResearchers"></div>
-      </div>
-      
-      <!-- Researcher Taste Match -->
-      <div class="card">
-        <h2>🎯 Taste Match Details</h2>
-        <div id="matchDetails"></div>
       </div>
     </div>
     
-    <!-- Steering -->
+    <!-- Steering — Full Width -->
     <div class="steering-section">
-      <h2>🎛️ Taste Steering — Adjust the Dials</h2>
-      <p style="color:#666;font-size:13px;margin-bottom:16px;">Move the sliders to steer the epistemic orientation. Click "Generate" to see how the output changes.</p>
+      <h2>🎛️ Taste Steering — 23-Dimensional Dial Board</h2>
+      <p style="color:#666;font-size:13px;margin-bottom:16px;">Move sliders to steer the model's epistemic orientation. Scale ±5-10 for subtle shifts, ±15 max for strong effects.</p>
       <div id="steeringDials"></div>
-      <button class="btn" id="steerBtn" onclick="steerGenerate()">⚡ Generate Steered Output</button>
-      <button class="btn btn-secondary" onclick="resetDials()">↺ Reset</button>
+      <div style="display:flex;gap:8px;margin-top:16px;">
+        <button class="btn" id="steerBtn" onclick="steerGenerate()">⚡ Generate Steered Output</button>
+        <button class="btn btn-secondary" onclick="resetDials()">↺ Reset All</button>
+        <button class="btn btn-secondary" onclick="randomizeDials()">🎲 Randomize</button>
+      </div>
       
       <div id="steeredOutput" class="hidden">
         <h3 style="margin-top:20px;color:#a0a0ff;">Generated Text:</h3>
         <div id="generatedText" class="generated"></div>
         <h3 style="margin-top:16px;color:#a0a0ff;">Steered Taste Profile:</h3>
-        <div id="steeredProfile"></div>
+        <div id="steeredProfile" class="profile-scroll"></div>
       </div>
     </div>
   </div>
   
   <div id="loading" class="loading hidden">
-    <span class="spinner"></span> Analyzing taste through LLM representations...
+    <span class="spinner"></span> Analyzing taste through LLM hidden states...
   </div>
 </div>
 
@@ -161,16 +184,18 @@ const EXAMPLES = [
   "What are the social implications of deploying large language models in criminal justice systems, and how do they reproduce existing biases?",
   "Can we improve the efficiency of transformer inference by 10x through novel quantization and pruning techniques?",
   "What does it mean for a machine to die, and how should we design end-of-life protocols for autonomous agents?",
-  "We propose a benchmark for evaluating code generation capabilities of language models across 15 programming languages.",
+  "We propose a comprehensive benchmark for evaluating code generation capabilities of language models across 15 programming languages.",
   "How do slime mold networks solve optimization problems, and what can artificial life learn from biological computation?",
+  "We present a speculative design exploration of what futures might emerge when AI agents develop their own cultural practices and rituals.",
+  "We fine-tune language models using reinforcement learning from human feedback, achieving state-of-the-art performance on safety benchmarks.",
 ];
 
 let radarChart = null;
 let steeringDims = {};
+let dimGroups = {};
+let currentProfileTab = 'all';
 
-function setExample(i) {
-  document.getElementById('inputText').value = EXAMPLES[i];
-}
+function setExample(i) { document.getElementById('inputText').value = EXAMPLES[i]; }
 
 async function profileText() {
   const text = document.getElementById('inputText').value.trim();
@@ -181,43 +206,64 @@ async function profileText() {
   document.getElementById('results').classList.add('hidden');
   
   try {
-    const resp = await fetch('/api/profile', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({text})
-    });
-    const data = await resp.json();
+    const [profResp, sdResp, grpResp] = await Promise.all([
+      fetch('/api/profile', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({text}) }),
+      fetch('/api/steering_dims'),
+      fetch('/api/dim_groups'),
+    ]);
+    const data = await profResp.json();
+    steeringDims = await sdResp.json();
+    dimGroups = await grpResp.json();
     
-    renderProfile(data.profile, 'tasteProfile');
+    document.getElementById('dimCount').textContent = Object.keys(data.profile).length + ' dimensions';
+    renderProfileTabs(data.profile);
+    renderProfile(data.profile, 'tasteProfile', 'all');
     renderRadar(data.profile);
     renderSimilar(data.similar_researchers);
-    renderMatchDetails(data.similar_researchers[0]);
-    
-    document.getElementById('results').classList.remove('hidden');
-    
-    // Load steering dims
-    const sdResp = await fetch('/api/steering_dims');
-    steeringDims = await sdResp.json();
     renderDials(steeringDims);
     
-  } catch(e) {
-    alert('Error: ' + e.message);
-  }
+    document.getElementById('results').classList.remove('hidden');
+  } catch(e) { alert('Error: ' + e.message); }
   
   document.getElementById('profileBtn').disabled = false;
   document.getElementById('loading').classList.add('hidden');
 }
 
-function renderProfile(profile, containerId) {
+function renderProfileTabs(profile) {
+  const container = document.getElementById('profileTabs');
+  container.innerHTML = '<div class="tab active" onclick="filterProfile(\'all\', this)">All</div>';
+  for (const [group, dims] of Object.entries(dimGroups)) {
+    const available = dims.filter(d => d in profile).length;
+    if (available > 0) {
+      container.innerHTML += `<div class="tab" onclick="filterProfile('${group}', this)">${group} (${available})</div>`;
+    }
+  }
+  window._lastProfile = profile;
+}
+
+function filterProfile(group, el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  currentProfileTab = group;
+  renderProfile(window._lastProfile, 'tasteProfile', group);
+}
+
+function renderProfile(profile, containerId, group) {
   const container = document.getElementById(containerId);
   container.innerHTML = '';
-  for (const [dim, info] of Object.entries(profile)) {
+  
+  const dimsToShow = group === 'all' ? Object.keys(profile) :
+    (dimGroups[group] || []).filter(d => d in profile);
+  
+  for (const dim of dimsToShow) {
+    const info = profile[dim];
     const conf = Math.round(info.confidence * 100);
+    const tvClass = 'tv-' + info.predicted.replace(/\s+/g, '_');
     container.innerHTML += `
       <div class="taste-dim">
         <span class="taste-label">${info.icon} ${info.label}</span>
         <span>
-          <span class="taste-value ${info.predicted}">${info.predicted}</span>
+          <span class="taste-value ${tvClass}">${info.predicted.replace(/_/g, ' ')}</span>
           <span class="confidence">${conf}%</span>
         </span>
       </div>`;
@@ -226,8 +272,9 @@ function renderProfile(profile, containerId) {
 
 function renderRadar(profile) {
   const ctx = document.getElementById('radarChart').getContext('2d');
-  const labels = Object.values(profile).map(p => p.icon + ' ' + p.label);
-  const values = Object.values(profile).map(p => p.confidence * 100);
+  const entries = Object.entries(profile).slice(0, 12); // top 12 for readability
+  const labels = entries.map(([_, p]) => p.icon + ' ' + p.label.substring(0, 15));
+  const values = entries.map(([_, p]) => p.confidence * 100);
   
   if (radarChart) radarChart.destroy();
   radarChart = new Chart(ctx, {
@@ -238,11 +285,11 @@ function renderRadar(profile) {
         label: 'Confidence',
         data: values,
         fill: true,
-        backgroundColor: 'rgba(102, 126, 234, 0.2)',
+        backgroundColor: 'rgba(102, 126, 234, 0.15)',
         borderColor: '#667eea',
         pointBackgroundColor: '#667eea',
         pointBorderColor: '#0a0a1a',
-        pointRadius: 4,
+        pointRadius: 3,
       }]
     },
     options: {
@@ -251,7 +298,7 @@ function renderRadar(profile) {
           min: 0, max: 100,
           ticks: { display: false },
           grid: { color: '#1e1e3a' },
-          pointLabels: { color: '#888', font: { size: 11 } },
+          pointLabels: { color: '#888', font: { size: 10 } },
           angleLines: { color: '#1e1e3a' },
         }
       },
@@ -273,41 +320,46 @@ function renderSimilar(researchers) {
           <div class="sim-bar"><div class="sim-fill" style="width:${barWidth}%"></div></div>
         </div>
         <span class="researcher-sim">${simPct}%</span>
-        <span class="researcher-papers">(${r.n_papers} papers)</span>
+        <span class="researcher-papers">(${r.n_papers})</span>
       </div>`;
   }
-}
-
-function renderMatchDetails(researcher) {
-  const container = document.getElementById('matchDetails');
-  if (!researcher) { container.innerHTML = '<p style="color:#666">No match data</p>'; return; }
-  let html = `<p style="margin-bottom:12px;"><strong>${researcher.name}</strong> — closest taste match</p>`;
-  for (const [dim, info] of Object.entries(researcher.profile || {})) {
-    html += `<div class="taste-dim">
-      <span class="taste-label">${dim.replace(/_/g, ' ')}</span>
-      <span class="taste-value ${info.value}">${info.value} (${info.count}/${info.total})</span>
-    </div>`;
-  }
-  container.innerHTML = html;
 }
 
 function renderDials(dims) {
   const container = document.getElementById('steeringDials');
   container.innerHTML = '';
-  for (const [dim, info] of Object.entries(dims)) {
-    container.innerHTML += `
-      <div class="dial">
-        <div class="dial-header">
-          <span class="dial-label">${info.icon} ${info.label}</span>
-          <span class="dial-value" id="val_${dim}">0</span>
-        </div>
-        <input type="range" id="dial_${dim}" min="-20" max="20" value="0" step="1"
-               oninput="document.getElementById('val_${dim}').textContent=this.value">
-        <div class="dial-endpoints">
-          <span>← ${info.neg}</span>
-          <span>${info.pos} →</span>
-        </div>
-      </div>`;
+  
+  // Group the steering dims
+  const grouped = {};
+  for (const [group, groupDims] of Object.entries(dimGroups)) {
+    const available = groupDims.filter(d => d in dims);
+    if (available.length > 0) grouped[group] = available;
+  }
+  // Ungrouped
+  const allGrouped = new Set(Object.values(dimGroups).flat());
+  const ungrouped = Object.keys(dims).filter(d => !allGrouped.has(d));
+  if (ungrouped.length > 0) grouped['Other'] = ungrouped;
+  
+  for (const [group, groupDims] of Object.entries(grouped)) {
+    let html = `<div class="steer-group"><div class="steer-group-title">${group}</div>`;
+    for (const dim of groupDims) {
+      const info = dims[dim];
+      html += `
+        <div class="dial">
+          <div class="dial-header">
+            <span class="dial-label">${info.icon} ${info.label}</span>
+            <span class="dial-value" id="val_${dim}">0</span>
+          </div>
+          <input type="range" id="dial_${dim}" min="-15" max="15" value="0" step="1"
+                 oninput="document.getElementById('val_${dim}').textContent=this.value">
+          <div class="dial-endpoints">
+            <span>← ${info.neg.replace(/_/g, ' ')}</span>
+            <span>${info.pos.replace(/_/g, ' ')} →</span>
+          </div>
+        </div>`;
+    }
+    html += '</div>';
+    container.innerHTML += html;
   }
 }
 
@@ -315,6 +367,17 @@ function resetDials() {
   for (const dim of Object.keys(steeringDims)) {
     const el = document.getElementById('dial_' + dim);
     if (el) { el.value = 0; document.getElementById('val_' + dim).textContent = '0'; }
+  }
+}
+
+function randomizeDials() {
+  for (const dim of Object.keys(steeringDims)) {
+    const el = document.getElementById('dial_' + dim);
+    if (el) {
+      const val = Math.floor(Math.random() * 21) - 10;
+      el.value = val;
+      document.getElementById('val_' + dim).textContent = val;
+    }
   }
 }
 
@@ -338,14 +401,10 @@ async function steerGenerate() {
       body: JSON.stringify({text, steering})
     });
     const data = await resp.json();
-    
     document.getElementById('generatedText').textContent = data.generated;
-    renderProfile(data.profile, 'steeredProfile');
+    renderProfile(data.profile, 'steeredProfile', 'all');
     document.getElementById('steeredOutput').classList.remove('hidden');
-    
-  } catch(e) {
-    alert('Error: ' + e.message);
-  }
+  } catch(e) { alert('Error: ' + e.message); }
   
   document.getElementById('steerBtn').disabled = false;
   document.getElementById('loading').classList.add('hidden');
